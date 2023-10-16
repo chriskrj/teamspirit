@@ -1,0 +1,76 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" >
+
+<f:layout name="Container"/>
+
+<f:section name="Main">
+
+  <!--TYPO3SEARCH_end-->
+
+  <div class="u-stack-xl">
+    <f:render section="InlineStyles"/>
+    <f:render partial="Base/Colorpalette" section="Example"/>
+    <f:render partial="Base/Symbols" section="Example" />
+    <f:render partial="Base/Webfonts" section="Example"/>
+    <f:render partial="Base/Themes" section="Example"/>
+    <f:render partial="Base/Spacing" section="Example"/>
+    <f:render partial="Base/Grid" section="Example"/>
+    <f:render partial="Base/Headlines" section="Example"/>
+    <f:render partial="Base/Paragraphs" section="Example"/>
+    <f:render partial="Base/InlineElements" section="Example"/>
+    <f:render partial="Base/Hr" section="Example"/>
+    <f:render partial="Base/Lists" section="Example"/>
+    <f:render partial="Base/Buttons" section="Example"/>
+
+    <f:render partial="Base/Tables" section="Example"/>
+    <f:render partial="Base/Form" section="Example"/>
+    <f:render partial="Base/Figure" section="Example"/>
+  </div>
+  <!--TYPO3SEARCH_begin-->
+
+</f:section>
+
+
+<f:section name="InlineStyles">
+  <style>
+    .sg-h2 {
+      font-size: 1.5em;
+      display: block;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1;
+      color: #000;
+      margin-bottom: 0.25em;
+    }
+
+    .sg-h3 {
+      font-size: 1.25em;
+      display: block;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1;
+      color: #000;
+      margin-bottom: 0.25em;
+    }
+
+    .sg-h4 {
+      font-size: 1em;
+      display: block;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1;
+      color: #000;
+      margin-bottom: 0.25em;
+    }
+
+    .sg-grid-col {
+      background-color: #efefef;
+      border: 1px solid #ffffff;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      word-break: break-all;
+    }
+
+  </style>
+</f:section>
+
+</html>

@@ -1,0 +1,72 @@
+@use "../components/Text";
+@use "../components/List";
+@use "../components/Table";
+
+// @use "../themes/Base-blockquote";
+
+.cke_editable,
+.cke_panel_list,
+.RTE {
+  h1 {
+    @extend .Text-heading-4xl;
+  }
+
+  h2 {
+    @extend .Text-heading-3xl;
+  }
+
+  h3 {
+    @extend .Text-heading-2xl;
+  }
+
+  h4 {
+    @extend .Text-heading-xl;
+  }
+
+  h5 {
+    @extend .Text-heading-lg;
+  }
+
+  h6 {
+    @extend .Text-heading-md;
+  }
+
+  p {
+    @extend .Text-body;
+  }
+
+  ul {
+    @extend .List-bullets;
+  }
+
+  ol {
+    @extend .List-numbers;
+  }
+
+  table {
+    @extend .Table;
+  }
+
+  // Modifier classes in RTE
+  // .Base-p--small {
+  //  @extend .Base-p--small;
+  // }
+
+  // .Base-p--large {
+  //  @extend .Base-p--large;
+  // }
+
+  // .Base-ul-check {
+  //  @extend .Base-ul-check;
+  // }
+
+  // blockquote {
+  //  @extend .Base-blockquote;
+  //  @include mixins.margin-top(48px);
+  //  @include mixins.margin-bottom(48px);
+  //
+  //  & > p {
+  //    @extend .Base-blockquote-quote;
+  //  }
+  // }
+}

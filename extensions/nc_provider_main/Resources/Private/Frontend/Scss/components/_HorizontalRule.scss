@@ -1,0 +1,11 @@
+.HorizontalRule {
+  box-sizing: content-box;
+  overflow: visible;
+  width: 100%;
+  border: 0;
+  border-top: 1px solid var(--nc-semantic-color-stroke-subtle);
+  display: block;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+}

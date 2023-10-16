@@ -1,0 +1,13 @@
+####################
+#### TAB CATEGORIES ####
+####################
+mod.wizards.newContentElement.wizardItems {
+  develop.header = Develop
+  content.header = Individuelle Elemente
+}
+
+
+####################################
+# ContentElement collection        #
+####################################
+@import 'EXT:nc_provider_main/Configuration/TsConfig/Page/ContentElements/*.tsconfig'

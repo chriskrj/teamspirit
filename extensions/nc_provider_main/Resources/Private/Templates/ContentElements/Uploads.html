@@ -1,0 +1,40 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="FrameLimit"/>
+<f:section name="Main">
+
+  <div>
+    <div class="u-stack-lg">
+
+      <f:render partial="Header/All" arguments="{_all}"/>
+
+      <f:if condition="{files}">
+        <ul class="DownloadList u-print-hide" role="list">
+          <f:for each="{files}" as="file" iteration="fileIterator">
+            <li class="DownloadList-item">
+              <div class="Downloadlist-colExtension">
+                <span class="Downloadlist-extension">{file.properties.extension}</span>
+              </div>
+              <div class="Downloadlist-colText u-stack-sm">
+                <a class="DownloadList-link" href="{file.publicUrl}" >
+                  {f:if(condition: file.properties.title, then: file.properties.title, else: file.name) -> f:format.htmlspecialchars()}
+                </a>
+                <f:if condition="{file.properties.description}"><p class="Text-body">{file.properties.description}</p></f:if>
+                <div class="Text-body">
+                  <span class="Link">
+                    <span class="Link-icon"><f:render partial="Base/Symbols" section="Symbol" arguments="{name:'arrow-down'}" /></span>
+                    <span>Download</span>
+                  </span>
+                </div>
+              </div>
+            </li>
+          </f:for>
+        </ul>
+      </f:if>
+    </div>
+  </div>
+
+
+</f:section>
+
+</html>

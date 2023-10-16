@@ -1,0 +1,351 @@
+# Pages
+TCEFORM.pages {
+  # overwrite Label Zusammenfassung
+#  subtitle.label = Alternative Überschrift
+  abstract.label = Teasertext
+
+  nav_title.disabled = 1
+  subtitle.disabled = 1
+}
+
+
+# Content
+TCEFORM.tt_content {
+  bodytext.RTEfullScreenWidth = 100%
+  # Remove Default Content Elements
+  # header, text, textpic, image, bullets, table, uploads, multimedia, media, mailform, search, login, menu, shortcut, html, script, splash, div, list, menu_abstract, menu_categorized_content, menu_categorized_pages, menu_pages, menu_recently_updated, menu_related_pages, menu_section, menu_section_pages, menu_sitemap, menu_sitemap_pages, menu_subpages
+  CType {
+    removeItems = textpic, bullets, mailform, table, search, login, media, form_formframework, menu_abstract, menu_categorized_content, menu_categorized_pages, menu_pages, menu_recently_updated, menu_related_pages, menu_section, menu_section_pages, menu_subpages, menu_sitemap
+  }
+
+  # Hide non used Image Fields
+  #  imagecols.disabled = 1
+  image_effects.disabled = 1
+  #  imageheight.disabled = 1
+  #  imagewidth.disabled = 1
+  imageborder.disabled = 1
+  image_zoom.disabled = 1
+
+  # image orient
+  #0 = Above, center
+  #1 = Above, right
+  #2 = Above, left
+  #8 = Below, center
+  #9 = Below, right
+  #10 = Below, left
+  #17 = In text, right
+  #18 = In text, left
+  #25 = In text, right (nowrap)
+  #26 = In text, left (nowrap)
+
+  #  imageorient.disabled = 1
+  imageorient.removeItems = 17, 18, 25, 26
+
+  space_before_class.disabled = 1
+  space_after_class.disabled = 1
+  header_link.disabled = 1
+  date.disabled = 1
+  header_position.disabled = 1
+  subheader.disabled = 1
+  linkToTop.disabled = 1
+  table_class.disabled = 1
+
+  # FCE specific header configurations
+  header {
+#    types.summarybox.label = Interner Backend Titel
+  }
+
+  # FCE specific subheader configurations
+  subheader {
+#        types.menuspeechbubbleteaserpages.disabled = 0
+#        types.mapsearch.disabled = 0
+#        types.mapsearch.label = Suche Label
+    #    types.styleguide.disabled = 1
+  }
+
+#  header_link {
+#    types.mapsearch.disabled = 0
+#  }
+
+  background_color_class {
+    types.shortcut.disabled = 1
+    types.accordiongroup.disabled = 1
+    types.list.disabled = 1
+  }
+
+  theme {
+    types.shortcut.disabled = 1
+    types.accordiongroup.disabled = 1
+    types.list.disabled = 1
+  }
+
+#  tx_listelements_layout {
+#    types {
+#      icontextgroup {
+#        removeItems = 1
+#      }
+#    }
+#  }
+
+
+  date {
+    #    types.heroheadline.disabled = 0
+  }
+
+  #  space_before_class {
+  #    types.ncprovidermain_styleguide.disabled = 1
+  #  }
+  #
+  #  space_after_class {
+  #    types.ncprovidermain_styleguide.disabled = 1
+  #  }
+
+
+
+  # Header Label for Backend Title
+  #  header.label {
+  #    default = Backend Title
+  #    de = Content Element Überschrift
+  #  }
+
+  # Header Headlines
+  header_layout {
+
+
+    # Remove "Standard" Option
+    removeItems = 0, 1, 5, 6
+
+    addItems {
+      #      7 =
+    }
+
+    altLabels {
+      1 = [h1] Überschrift
+      2 = [h2] Überschrift
+      3 = [h3] Überschrift
+      4 = [h4] Überschrift
+      5 = [h5] Überschrift
+    }
+
+    types.styleguide.disabled = 1
+
+    # only add h2 and hidden headertypes for grids
+    #types.gridcol1main.removeItems = 0,1,3,4,5,6
+    #types.gridcol2even.removeItems = 0,1,3,4,5,6
+    #types.gridcol3even.removeItems = 0,1,3,4,5,6
+  }
+
+  # Space
+  # ------------------------------------------------
+#  space_before_class {
+#    label = Abstand nach oben
+#    removeItems = extra-small, small, medium, large, extra-large
+#    addItems {
+#      1 =
+#      2 =
+#      3 =
+#      4 =
+#    }
+#
+#    altLabels {
+#      1 = Ein Rasterabstand nach oben
+#      2 = Zwei Rasterabstände nach oben
+#      3 = Drei Rasterabstände nach oben
+#      4 = Vier Rasterabstände nach oben
+#    }
+#  }
+
+  # ------------------------------------------------
+#  space_after_class {
+#    label = Abstand nach unten
+#    removeItems = extra-small, small, medium, large, extra-large
+#    addItems {
+#      1 =
+#      2 =
+#      3 =
+#      4 =
+#    }
+#
+#    altLabels {
+#      1 = Ein Rasterabstand nach unten
+#      2 = Zwei Rasterabstände nach unten
+#      3 = Drei Rasterabstände nach unten
+#      4 = Vier Rasterabstände nach unten
+#    }
+#  }
+
+  # Frame Class
+  frame_class {
+    removeItems = ruler-before, ruler-after, indent, indent-left, indent-right, none
+    disabled = 1
+    types {
+
+#      textmedia {
+#        disabled = 0
+#        addItems {
+#          infobox = Infobox
+#        }
+#      }
+#
+#      text {
+#        disabled = 0
+#        addItems {
+#          infobox = Infobox
+#        }
+#      }
+#
+#      decorativeimagetext {
+#        label = Verhalten des Bildes
+#        disabled = 0
+#        addItems {
+#          contain = Stets vollständig sichtbar
+#        }
+#
+#        altLabels {
+#          default = Auf Höhe und Breite zurecht geschnitten (default)
+#        }
+#      }
+
+    }
+  }
+
+  # Layout
+  layout {
+    removeItems = 1, 2, 3
+    disabled = 1
+
+    types {
+
+#      imagetext {
+#        label = Bild Layout
+#        disabled = 0
+#        addItems {
+#          100 = Bild links
+#          200 = Bild oben
+#        }
+#
+#        altLabels {
+#          0 = Bild rechts
+#        }
+#      }
+#
+#      onlytextgroup {
+#        label = Bild Layout
+#        disabled = 0
+#        addItems {
+#          100 = Bild links
+#          200 = Bild oben
+#        }
+#
+#        altLabels {
+#          0 = Bild rechts
+#        }
+#      }
+#
+#      imagetextgroup {
+#        label = Bild Layout
+#        disabled = 0
+#        addItems {
+#          100 = Bild links
+#          200 = Bild oben
+#        }
+#
+#        altLabels {
+#          0 = Bild rechts
+#        }
+#      }
+
+#      blockquotegroup {
+#        label = Bild Layout
+#        disabled = 0
+#        addItems {
+#          100 = Bild links
+#          200 = Bild oben
+#        }
+#
+#        altLabels {
+#          0 = Bild rechts
+#        }
+#      }
+
+
+
+      pageteaser {
+        label = Teaser Layout
+        disabled = 0
+        addItems {
+          100 = Teaser gekachelt nebeneinander
+        }
+#
+        altLabels {
+          0 = Teaser untereinander
+        }
+      }
+
+#      gridcol2even {
+#        disabled = 0
+#        label = Layout
+#        addItems {
+#          100 = Offset Links
+#          200 = Offset Rechts
+#        }
+#      }
+
+
+
+      #      textmedia {
+      #        disabled = 0
+      #        addItems {
+      #          100 = Infobox
+      #        }
+      #      }
+
+#      image {
+#        disabled = 0
+#        addItems {
+#          100 = Bild Media Element
+#          200 = Icon Media Element
+#        }
+#      }
+
+#      menu_pages {
+#        disabled = 0
+#        addItems {
+#          100 = Small Image Teaser
+#          200 = Large Image Teaser
+#          300 = Short Text Media
+#        }
+#      }
+#
+#      menu_subpages {
+#        disabled = 0
+#        addItems {
+#          100 = Small Image Teaser
+#          200 = Large Image Teaser
+#          300 = Short Text Media
+#        }
+#      }
+
+    }
+  }
+
+#  sectionIndex.description = Wenn aktiviert, wird dieses Element am Seitenanfang in der Navigation verlinkt und User können am Seitenfang direkt zu diesem Inhalt springen.
+
+
+  filelink_size.disabled = 1
+  uploads_description.disabled = 1
+  target.disabled = 1
+
+  uploads_type {
+
+    removeItems = 1, 2
+    label = Darstellung
+    disabled = 1
+
+#    altLabels {
+#      1 = DownloadLinkTeaser
+#    }
+  }
+}
+
+

@@ -1,0 +1,15 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:nc="http://typo3.org/ns/NC/NcProviderMain/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+  <f:section name="Label">
+    <f:for each="{event.category}" as="category" iteration="iterator">
+      {category.title}
+      <f:if condition="{iterator.isLast}">
+        <f:then> </f:then>
+        <f:else>,</f:else>
+      </f:if>
+    </f:for>
+  </f:section>
+
+</html>

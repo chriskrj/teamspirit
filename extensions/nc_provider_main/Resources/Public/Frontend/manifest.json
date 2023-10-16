@@ -1,0 +1,36 @@
+{
+  "Resources/Private/Frontend/Scss/rte.scss": {
+    "file": "assets/rte.css",
+    "isEntry": true,
+    "src": "Resources/Private/Frontend/Scss/rte.scss"
+  },
+  "Resources/Private/Frontend/Webfonts/chocolate.woff2": {
+    "file": "assets/chocolate.woff2",
+    "src": "Resources/Private/Frontend/Webfonts/chocolate.woff2"
+  },
+  "Resources/Private/Frontend/Webfonts/poppins-v20-latin-300.woff2": {
+    "file": "assets/poppins-v20-latin-300.woff2",
+    "src": "Resources/Private/Frontend/Webfonts/poppins-v20-latin-300.woff2"
+  },
+  "Resources/Private/Frontend/Webfonts/poppins-v20-latin-regular.woff2": {
+    "file": "assets/poppins-v20-latin-regular.woff2",
+    "src": "Resources/Private/Frontend/Webfonts/poppins-v20-latin-regular.woff2"
+  },
+  "Resources/Private/Frontend/main.css": {
+    "file": "assets/main.css",
+    "src": "Resources/Private/Frontend/main.css"
+  },
+  "Resources/Private/Frontend/main.js": {
+    "assets": [
+      "assets/poppins-v20-latin-300.woff2",
+      "assets/poppins-v20-latin-regular.woff2",
+      "assets/chocolate.woff2"
+    ],
+    "css": [
+      "assets/main.css"
+    ],
+    "file": "assets/main.js",
+    "isEntry": true,
+    "src": "Resources/Private/Frontend/main.js"
+  }
+}

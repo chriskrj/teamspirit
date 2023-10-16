@@ -1,0 +1,36 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+
+<f:section name="Example">
+  <div>
+    <f:render partial="Styleguide/Headline" section="Headline" arguments="{title:'Paragraphs'}"/>
+
+    <div class="u-container u-mb-r4">
+      <div class="u-limitWidth-12 u-align-center">
+        <section class="GridCol2Even-row u-row">
+          <div class="GridCol2Even-col u-col u-py-sm u-bg-default u-stack-text" data-theme="light">
+            <f:render section="ExampleContent" />
+          </div>
+          <div class="GridCol2Even-col u-col u-py-sm u-bg-default u-stack-text" data-theme="dark">
+            <f:render section="ExampleContent" />
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</f:section>
+
+<f:section name="ExampleContent">
+  <p class="Text-body">Das ist ein normaler Textabsatz. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+    duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+  <p class="Text-body Text-body--small">Das ist ein small Textabsatz. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+    accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+  <p class="Text-body Text-body--large">Das ist ein large Textabsatz. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+</f:section>
+
+
+</html>
+
+
+

@@ -1,0 +1,69 @@
+@use "sass:math";
+@use "../abstracts/coreTokenIndexes";
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+
+
+.CookieBar {
+  padding: 0;
+  border: none;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: functions.z(coreTokenIndexes.$z-root, cookiebar);
+
+  &.is-open {
+    display: block;
+  }
+
+}
+
+.CookiebBar-barContent {
+  pointer-events: auto;
+  margin: 0 2rem 8rem 2rem;
+  max-width: 960px;
+  background-color: var(--nc-semantic-color-bg-accent);
+  padding: 1rem;
+}
+
+.CookieBar-barInteraction {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-end;
+
+  .Link {
+    margin-right: auto;
+  }
+}
+
+.CookieBar-dialog {
+  background-color: #fff;
+  padding: 2rem;
+  margin: auto;
+  border: none;
+  width: 100%;
+  max-width: 960px;
+  overflow-y: auto;
+
+  &::backdrop {
+    background: rgba(0,0,0,60%);
+  }
+}
+
+.CookieBar-dialogContent {
+  background-color: #fff;
+}
+
+.CookieBar-dialogInteraction {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-end;
+
+  .Link {
+    margin-right: auto;
+  }
+}

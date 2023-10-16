@@ -1,0 +1,41 @@
+base: 'https://www.teamspirit-therapie.de/'
+baseVariants:
+  -
+    base: 'https://www.teamspirit-therapie.intern/'
+    condition: 'applicationContext == "Development"'
+errorHandling:
+  -
+    errorCode: 404
+    errorHandler: Page
+    errorContentSource: 't3://page?uid=2'
+languages:
+  -
+    title: Deutsch
+    enabled: true
+    languageId: 0
+    base: /
+    typo3Language: de
+    locale: de_DE.UTF-8
+    iso-639-1: de
+    navigationTitle: De
+    hreflang: de-DE
+    direction: ltr
+    flag: de
+rootPageId: 1
+routeEnhancers:
+  PageTypeSuffix:
+    type: PageType
+    default: /
+    suffix: /
+    index: ''
+    map:
+      /: 0
+      sitemap.xml: 1533906435
+routes:
+  -
+    route: robots.txt
+    type: staticText
+    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /typo3_src/\r\nAllow: /typo3conf/ext/\r\nAllow: /typo3temp/\r\nAllow: /typo3/sysext/frontend/Resources/Public/*\r\nAllow: /typo3conf/ext/nc_provider_main/Resources/Public/*\r\n\r\nUser-agent: Googlebot\r\nAllow: *.js\r\nAllow: *.css\r\nSitemap: https://www.teamspirit-therapie.de/sitemap.xml\r\n"
+websiteTitle: 'Team Spirit'
+settings:
+  pidStartpage: 1

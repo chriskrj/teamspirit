@@ -1,0 +1,42 @@
+// https://scottaohara.github.io/a11y_styled_form_controls/
+.Checkbox {
+  appearance: none;
+  background-color: var(--nc-semantic-color-bg-default);
+  border: 1px solid var(--nc-semantic-color-stroke-default);
+  height: 1.5rem;
+  width: 1.5rem;
+  display: block;
+  border-radius: 0;
+  vertical-align: text-bottom;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+  flex-grow: 0;
+
+  &[disabled],
+  &[aria-disabled="true"] {
+    opacity: .4;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    margin: auto;
+    inset: 0;
+    overflow: hidden;
+  }
+
+  // &:focus {
+  //  outline: 2px solid;
+  //  outline-offset: 2px;
+  // }
+
+  &:checked::before {
+    border-right: 2px solid var(--nc-semantic-color-fg-action);
+    border-bottom: 2px solid var(--nc-semantic-color-fg-action);
+    height: 60%;
+    width: 30%;
+    transform: rotate(45deg);
+  }
+}

@@ -1,0 +1,230 @@
+# PAGE - Setup
+page = PAGE
+page {
+  typeNum = 0
+
+  // template css class
+  bodyTag >
+  bodyTagCObject = TEXT
+  bodyTagCObject.data = pagelayout
+  bodyTagCObject.split {
+    token = pagets__
+    cObjNum = 1
+    1.current = 1
+  }
+  bodyTagCObject.wrap = <body class="Body--|">
+
+}
+
+
+# TEMPLATE
+# Template names will be generated automaticly by converting the applied
+# backend_layout, there is no explicit mapping nessesary anymore.
+#
+# BackendLayout Key
+# subnavigation_right_2_columns -> SubnavigationRight2Columns.html
+#
+# Backend Record
+# uid: 1 -> 1.html
+#
+# Database Entry
+# value: -1 -> None.html
+# value: pagets__subnavigation_right_2_columns -> SubnavigationRight2Columns.html
+page.10 = FLUIDTEMPLATE
+page.10 {
+  templateRootPaths.0 = EXT:nc_provider_main/Resources/Private/Templates/Page/
+  partialRootPaths.0 = EXT:nc_provider_main/Resources/Private/Partials/
+  layoutRootPaths.0 = EXT:nc_provider_main/Resources/Private/Layouts/Page/
+
+  templateName = TEXT
+  templateName {
+    cObject = TEXT
+    cObject {
+      data = pagelayout
+      required = 1
+      case = uppercamelcase
+      split {
+        token = pagets__
+        cObjNum = 1
+        1.current = 1
+      }
+    }
+
+    ifEmpty = Default
+  }
+
+  dataProcessing {
+
+    10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+    10 {
+      special = directory
+      special.value = {$pidStartpage}
+      levels = 3
+      as = mainNavigation
+      expandAll = 1
+      # includeSpacer = 1
+      titleField = nav_title // title
+    }
+
+    20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+    20 {
+      references.fieldName = media
+      as = media
+    }
+
+    30 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+    30 {
+      special = directory
+      special.value = {$pidMetaNavigation}
+      levels = 1
+      as = metaNavigation
+      expandAll = 1
+      titleField = nav_title // title
+    }
+
+    60 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+    60 {
+      special = rootline
+      special.range = 0|-1
+      # includeNotInMenu = 1
+      as = breadcrumb
+    }
+
+  }
+
+  #include provider extension settings
+  settings {
+    pidStartpage = {$pidStartpage}
+  }
+}
+
+
+# META
+page.meta {
+  date = TEXT
+  date.data = page:SYS_LASTCHANGED // page:crdate
+  date.date = Y-m-d
+
+  viewport = width=device-width, initial-scale=1, shrink-to-fit=no
+  robots = index,follow
+  apple-mobile-web-app-capable = yes
+  mobile-web-app-capable = yes
+  compatible = IE=edge
+  X-UA-Compatible = IE=edge
+  X-UA-Compatible.attribute = http-equiv
+  theme-color = #ffffff
+  msapplication-TileColor = #ffffff
+
+  description {
+    attribute = property
+    field = description
+  }
+
+  keywords {
+    attribute = property
+    field = keywords
+  }
+
+  author = {$config.author}
+  author.override.field = author
+
+
+  og:title {
+    attribute = property
+    field = title
+  }
+
+  og:site_name {
+    attribute = property
+    data = TSFE:tmpl|setup|sitetitle
+  }
+
+  og:description = {$page.meta.description}
+  og:description {
+    attribute = property
+    field = description
+  }
+
+  og:image {
+    attribute = property
+    stdWrap.cObject = FILES
+    stdWrap.cObject {
+      references {
+        data = levelfield:-1, media, slide
+      }
+
+      maxItems = 1
+      renderObj = COA
+      renderObj {
+        10 = IMG_RESOURCE
+        10 {
+          file {
+            import.data = file:current:uid
+            treatIdAsReference = 1
+            width = 1280c
+            height = 720c
+          }
+
+          stdWrap {
+            typolink {
+              parameter.data = TSFE:lastImgResourceInfo|3
+              returnLast = url
+              forceAbsoluteUrl = 1
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+# HEADER
+page.headerData {
+  10 = TEXT
+  10.value (
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#888888">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+  )
+}
+
+
+# HTML Tag
+page.config.htmlTag.attributes.class = no-js
+
+
+# CSS
+page.includeCSS {
+#
+#  screen = EXT:nc_provider_main/Resources/Public/Css/screen.css
+#  screen.media = screen
+#
+#  print = EXT:nc_provider_main/Resources/Public/Frontend/assets/rte.css
+#  print.media = print
+}
+#
+#
+## JavaScripts in footer
+#page.includeJSFooter {
+#  jquery = EXT:nc_provider_main/Resources/Public/JavaScript/Vendors/jquery-3.6.1.min.js
+#  glightbox = EXT:nc_provider_main/Resources/Public/JavaScript/Vendors/glightbox.min.js
+#  global = EXT:nc_provider_main/Resources/Public/JavaScript/Global/global.js
+#}
+
+
+# Compression
+page.config.compressJs = {$config.compress_js_enable}
+page.config.compressCss = {$config.compress_css_enable}
+page.config.concatenateJs = {$config.concatenate_js_enable}
+page.config.concatenateCss = {$config.concatenate_css_enable}
+
+
+# Indexing
+page.config.index_enable = {$config.index_enable}
+page.config.index_externals = {$config.index_externals}
+page.config.index_metatags = {$config.index_metatags}

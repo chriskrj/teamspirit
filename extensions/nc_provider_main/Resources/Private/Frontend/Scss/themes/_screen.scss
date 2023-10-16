@@ -1,0 +1,72 @@
+@use "../abstracts/functions";
+@use "../abstracts/coreTokenSizes";
+@use "../abstracts/coreTokenFonts";
+@use "../abstracts/coreTokenIcons";
+@use "sass:meta";
+
+// Theming: https://codyhouse.co/blog/post/css-custom-properties-vs-sass-variables
+// naming tokens: https://medium.com/eightshapes-llc/naming-tokens-in-design-systems-9e86c7444676
+
+
+:root {
+  // space static
+  --nc-semantic-space-none: #{coreTokenSizes.$static-0};
+  --nc-semantic-space-2xs: #{coreTokenSizes.$static-4};
+  --nc-semantic-space-xs: #{coreTokenSizes.$static-8};
+  --nc-semantic-space-sm: #{coreTokenSizes.$static-12};
+  --nc-semantic-space-md: #{coreTokenSizes.$static-16};
+  --nc-semantic-space-lg: #{coreTokenSizes.$static-32};
+  --nc-semantic-space-xl: #{coreTokenSizes.$static-64};
+  --nc-semantic-space-2xl: #{coreTokenSizes.$static-80};
+  --nc-semantic-space-3xl: #{coreTokenSizes.$static-96};
+
+  // space fluid
+  --nc-semantic-space-fluid-lg: #{coreTokenSizes.$fluid-32};
+  --nc-semantic-space-fluid-xl: #{coreTokenSizes.$fluid-60};
+  --nc-semantic-space-fluid-2xl: #{coreTokenSizes.$fluid-80};
+  --nc-semantic-space-fluid-3xl: #{coreTokenSizes.$fluid-96};
+  --nc-semantic-space-fluid-4xl: #{coreTokenSizes.$fluid-128};
+
+  // font scale
+  --nc-semantic-font-scale-root: #{coreTokenFonts.$scale-100};
+
+  // font coreTokenSizes
+  --nc-semantic-font-size-sm: #{coreTokenSizes.$static-16};
+  --nc-semantic-font-size-base: #{coreTokenSizes.$static-18};
+  --nc-semantic-font-size-md: #{coreTokenSizes.$static-20};
+  --nc-semantic-font-size-lg: #{coreTokenSizes.$static-24};
+  --nc-semantic-font-size-xl: #{coreTokenSizes.$static-28};
+  --nc-semantic-font-size-2xl: #{coreTokenSizes.$fluid-32};
+  --nc-semantic-font-size-3xl: #{coreTokenSizes.$fluid-48};
+  --nc-semantic-font-size-4xl: #{coreTokenSizes.$fluid-72};
+
+  // font family
+  --nc-semantic-font-family-default: #{meta.inspect(coreTokenFonts.$family-poppins)};
+  --nc-semantic-font-family-headline: #{meta.inspect(coreTokenFonts.$family-chocolate)};
+
+  // font weights
+  // --nc-semantic-font-weight-light: #{coreTokenFonts.$weight-300};
+  --nc-semantic-font-weight-regular: #{coreTokenFonts.$weight-400};
+  --nc-semantic-font-weight-bold: #{coreTokenFonts.$weight-800};
+
+  // font line heights
+  --nc-semantic-font-line-height-xs: #{coreTokenFonts.$line-height-100};
+  --nc-semantic-font-line-height-sm: #{coreTokenFonts.$line-height-125};
+  --nc-semantic-font-line-height-md: #{coreTokenFonts.$line-height-150};
+}
+
+
+
+// 64x16 = 1024
+// @media (min-width: 64rem) {
+//  :root, [data-theme="light"] {
+//    --nc-semantic-font-size-sm: #{coreTokenSizes.$static-16};
+//    --nc-semantic-font-size-base: #{coreTokenSizes.$static-18};
+//    --nc-semantic-font-size-md: #{coreTokenSizes.$static-20};
+//    --nc-semantic-font-size-lg: #{coreTokenSizes.$static-32 * coreTokenSizes.$font-size-scale-desktop};
+//    --nc-semantic-font-size-xl: #{coreTokenSizes.$static-36 * coreTokenSizes.$font-size-scale-desktop};
+//    --nc-semantic-font-size-2xl: #{coreTokenSizes.$static-48 * coreTokenSizes.$font-size-scale-desktop};
+//    --nc-semantic-font-size-3xl: #{coreTokenSizes.$static-64 * coreTokenSizes.$font-size-scale-desktop};
+//    --nc-semantic-font-size-4xl: #{coreTokenSizes.$static-80 * coreTokenSizes.$font-size-scale-desktop};
+//  }
+// }

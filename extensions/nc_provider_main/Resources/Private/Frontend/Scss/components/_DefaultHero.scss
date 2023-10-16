@@ -1,0 +1,63 @@
+@use "../abstracts/coreTokenGrid";
+
+.DefaultHero {
+  position: relative;
+}
+
+.DefaultHero-headline {
+  font-weight: var(--nc-semantic-font-weight-regular);
+  color: var(--nc-semantic-color-fg-default);
+  font-size: var(--nc-semantic-font-size-4xl);
+  line-height: 1.6;
+  position: absolute;
+  z-index: 2;
+  padding-left: coreTokenGrid.$container-spacing;
+  padding-right: coreTokenGrid.$container-spacing;
+  margin: 1em auto;
+  width: 100%;
+  left: 0;
+  right: 0;
+  max-width: coreTokenGrid.$col-width * 12 + 2rem;
+}
+
+.DefaultHero-headline-bars {
+  padding: .05em .1em;
+  background-color: var(--nc-semantic-color-bg-default);
+  box-decoration-break: clone;
+}
+
+.DefaultHero-image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  min-height: 500px;
+}
+
+.DefaultHero-overlay {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.DefaultHero-scrollDown {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 3;
+  width: 4rem;
+  color: var(--nc-semantic-color-fg-on-contrast);
+  fill: currentColor;
+  background-color: var(--nc-semantic-color-bg-action-default);
+  display: block;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+  transform: translateX(-50%);
+
+  &:hover {
+    background-color: var(--nc-semantic-color-bg-action-default--hover);
+  }
+}

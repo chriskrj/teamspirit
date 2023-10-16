@@ -1,0 +1,77 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:section name="Example">
+  <div>
+    <f:render partial="Styleguide/Headline" section="Headline" arguments="{title:'Lists'}"/>
+    <div class="u-container u-mb-r4">
+      <div class="u-limitWidth-12 u-align-center">
+        <section class="GridCol2Even-row u-row">
+          <div class="GridCol2Even-col u-col u-py-sm u-bg-default u-stack-text" data-theme="light">
+            <f:render section="ExampleContent" />
+          </div>
+          <div class="GridCol2Even-col u-col u-py-sm u-bg-default u-stack-text" data-theme="dark">
+            <f:render section="ExampleContent" />
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</f:section>
+
+<f:section name="ExampleContent">
+  <ul class="List-bullets" role="list">
+    <li>Das ist eine ungeordnete Liste</li>
+    <li>Das ist eine ungeordnete Liste mit einer untergeordneten Liste
+      <ul>
+        <li>Das ist eine ungeordnete Sub-Liste</li>
+        <li>Das ist eine ungeordnete Sub-Liste mit einem sehr langen Eintrag</li>
+      </ul>
+    </li>
+    <li>Das ist eine ungeordnete Liste mit einem sehr langen Eintrag</li>
+  </ul>
+
+  <ol class="List-numbers" role="list">
+    <li>Das ist eine geordnete Liste</li>
+    <li>Das ist eine geordnete Liste mit einer untergeordneten Liste
+      <ol>
+        <li>Das ist eine geordnete Sub-Liste</li>
+        <li>Das ist eine geordnete Sub-Liste mit einem sehr langen Eintrag. Lorem ipsum dolor sit amet, consetetur sadipscing elitr. At vero eos et accusam et justo duo dolores et ea rebum.</li>
+      </ol>
+    </li>
+    <li>Das ist eine geordnete Liste mit einem sehr langen Eintrag. Lorem ipsum dolor sit amet, consetetur sadipscing elitr. At vero eos et accusam et justo duo dolores et ea rebum.</li>
+    <li>Das ist eine geordnete Liste mit einem sehr langen Eintrag</li>
+    <li>Das ist eine geordnete Liste mit einem sehr langen Eintrag</li>
+    <li>Das ist eine geordnete Liste mit einem sehr langen Eintrag</li>
+    <li>Das ist eine geordnete Liste mit einem sehr langen Eintrag</li>
+    <li>Das ist eine geordnete Liste mit einem sehr langen Eintrag</li>
+    <li>Das ist eine geordnete Liste mit einem sehr langen Eintrag</li>
+    <li>Das ist eine geordnete Liste mit einem sehr langen Eintrag</li>
+    <li>Das ist eine geordnete Liste mit einem sehr langen Eintrag</li>
+    <li>Das ist eine geordnete Liste mit einem sehr langen Eintrag</li>
+  </ol>
+
+  <dl class="List-description">
+
+    <div class="List-description-pair">
+      <dt class="List-description-term">Description List Term</dt>
+      <dd class="List-description-details">Description List Details</dd>
+    </div>
+
+    <div class="List-description-pair">
+      <dt class="List-description-term">A very long Description List Term</dt>
+      <dd class="List-description-details">A very long Description list details text</dd>
+    </div>
+
+    <div class="List-description-pair">
+      <dt class="List-description-term">dl</dt>
+      <dd class="List-description-details">dd</dd>
+    </div>
+
+  </dl>
+</f:section>
+
+</html>
+
+
+

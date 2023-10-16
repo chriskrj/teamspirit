@@ -1,0 +1,104 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:nc="http://typo3.org/ns/NC/NcProviderMain/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:section name="Default">
+
+  <dialog id="cookieconsentdialog" class="CookieBar-dialog u-print-hide">
+    <div class="CookieBar-dialogContent">
+
+
+      <div class="u-stack-lg">
+        <h3 class="Text-heading-lg">Ihre Cookie-Einstellungen für diese Webseite</h3>
+        <p class="Text-body">Treffen Sie hier Ihre persönlichen Einstellungen</p>
+
+
+        <div class="u-stack-md">
+          <div class="FormField-input">
+            <div class="FormField-choice">
+              <input class="Checkbox" type="checkbox" disabled="disabled" checked="checked" id="cookieconsent-check-essentials" name="cookieconsent-check-essentials">
+              <label class="FormField-choiceLabel" for="cookieconsent-check-essentials">Erforderliche Cookies</label>
+            </div>
+          </div>
+          <div class="u-stack-xs">
+            <p class="Text-body">
+              Erforderliche Cookies sind für die Nutzung der Webseite zwingend erforderlich. Die Webseite kann ohne diese Cookies nicht richtig funktionieren.
+            </p>
+            <h4 class="Text-heading-md">Einzelne Cookies</h4>
+            <p class="Text-body">
+              Cookiename: cookieconsent; Anbieter: mobiliteam by NAH.SH; Zweck: Dieser Cookie speichert die Einstellung zu Cookies; Laufzeit: 1 Jahr
+            </p>
+          </div>
+        </div>
+
+        <div class="u-stack-md">
+          <div class="FormField-input">
+            <div class="FormField-choice">
+              <input class="Checkbox" type="checkbox" id="cookieconsent-check-matomo" name="cookieconsent-check-matomo">
+              <label class="FormField-choiceLabel" for="cookieconsent-check-matomo">Statistik</label>
+            </div>
+          </div>
+          <div class="u-stack-xs">
+            <p class="Text-body">
+              Diese Cookies helfen uns bei der Analyse des Nutzerverhaltens, um die Qualität unserer Webseite fortlaufend zu verbessern.
+            </p>
+            <h4 class="Text-heading-md">Einzelne Cookies</h4>
+            <p class="Text-body">
+              Cookiename: _pk_id.*; Anbieter: mobiliteam by NAH.SH; Zweck: Erhebung statistischer Daten in Matomo darüber, wie die Webseite von Besucher*innen genutzt wird; Laufzeit: 13 Monate
+            </p>
+            <p class="Text-body">
+              Cookiename: _pk_ref.*; Anbieter: mobiliteam by NAH.SH; Zweck: Erhebung statistischer Daten in Matomo darüber, woher die Besucher*innen dieser Webseite gekommen sind; Laufzeit: 6 Monate
+            </p>
+            <p class="Text-body">
+              Cookiename: _pk_ses.*, _pk_cvar.*; Anbieter: mobiliteam by NAH.SH; Zweck: Erhebung statistischer Daten in Matomo darüber, wie die Webseite von Besucher*innen genutzt wird; Laufzeit: 30 Minuten
+            </p>
+            <p class="Text-body">
+              <f:link.page pageUid="6" class="Link">Zur Datenschutzerklärung</f:link.page>
+            </p>
+          </div>
+        </div>
+
+        <div class="u-stack-md">
+          <div class="FormField-input">
+            <div class="FormField-choice">
+              <input class="Checkbox" type="checkbox" id="cookieconsent-check-youtube" name="cookieconsent-check-youtube">
+              <label class="FormField-choiceLabel" for="cookieconsent-check-youtube">YouTube</label>
+            </div>
+          </div>
+          <div class="u-stack-xs">
+            <p class="Text-body">
+              Sie können YouTube-Videos direkt auf unserer Internetseite anschauen. Wir weisen darauf hin, dass dabei personenbezogene Daten (z.B. IP-Adresse) an YouTube übermittelt werden.
+            </p>
+            <p class="Text-body">
+              <a class="Link" href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Zur Datenschutzerklärung</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="CookieBar-dialogInteraction">
+          <button class="Button js-cookieconsent-trigger-close-dialog">Abbrechen</button>
+          <button class="Button js-cookieconsent-trigger-save">Speichern</button>
+        </div>
+
+      </div>
+    </div>
+  </dialog>
+
+  <div id="cookieconsentbar" class="CookieBar u-print-hide">
+    <div class="CookiebBar-barContent u-stack-md">
+      <p class="Text-body Text-body--small">Wir nutzen Cookies, um Ihnen die bestmögliche Nutzung unserer Webseite zu ermöglichen. Dabei berücksichtigen wir Ihre Einstellungen. Wir verarbeiten Ihre Daten nur, wenn Sie uns durch Klicken auf
+        „Zustimmen und weiter“ Ihr Einverständnis geben. Sie können Ihre Einwilligung jederzeit widerrufen (
+        <f:link.page pageUid="6" class="Link">zur Datenschutzerklärung</f:link.page>
+        ). Weitere Informationen zu den Cookies und Anpassungsmöglichkeiten finden Sie unter „Cookie-Einstellungen“.
+      </p>
+      <div class="CookieBar-barInteraction">
+        <button class="Link js-cookieconsent-trigger-open-dialog">Cookie-Einstellungen</button>
+        <button class="Button js-cookieconsent-trigger-decline">Ablehnen</button>
+        <button class="Button js-cookieconsent-trigger-accept">Zustimmen und weiter</button>
+      </div>
+    </div>
+  </div>
+
+
+</f:section>
+</html>

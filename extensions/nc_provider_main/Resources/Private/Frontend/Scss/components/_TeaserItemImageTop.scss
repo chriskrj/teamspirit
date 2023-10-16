@@ -1,0 +1,45 @@
+@use "sass:math";
+@use "../abstracts/mixins";
+
+.TeaserItemImageTop {
+  position: relative;
+}
+
+
+.TeaserItemImageTop-imageBox {
+  position: relative;
+  display: block;
+}
+
+.TeaserItemImageTop-textBox {
+  padding: 1rem;
+}
+
+.TeaserItemImageTop-image {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+
+.TeaserItemImageTop-headline {
+  font-weight: var(--nc-semantic-font-weight-regular);
+  color: var(--nc-semantic-color-fg-default);
+  font-size: var(--nc-semantic-font-size-3xl);
+  line-height: 1.6;
+  position: absolute;
+  z-index: 2;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 1rem;
+  text-decoration: none;
+  hyphens: auto;
+}
+
+.TeaserItemImageTop-headline-bars {
+  padding: .05em .1em;
+  background-color: var(--nc-semantic-color-bg-accent);
+  box-decoration-break: clone;
+}

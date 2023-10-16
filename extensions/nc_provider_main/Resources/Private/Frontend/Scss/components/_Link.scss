@@ -1,0 +1,146 @@
+.Link {
+  --nc-component-link-color: var(--nc-semantic-color-fg-action);
+
+  font-size: inherit;
+  color: var(--nc-component-link-color);
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--nc-component-link-color);
+  padding: 0;
+  margin: 0;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+  display: inline;
+
+  &:hover {
+    --nc-component-link-color: var(--nc-semantic-color-fg-action--hover);
+  }
+
+}
+
+.Link-icon {
+  display: inline-block;
+  width: 1rem;
+  fill: currentColor;
+  margin-right: 0.25rem;
+}
+
+// https://css-irl.info/styling-external-links-with-attribute-selectors/
+//.Base-svgIconLink {
+//  --nc-component-link-color: var(--nc-semantic-color-link-default);
+//
+//  color: var(--nc-component-link-color);
+//  border: none;
+//  cursor: pointer;
+//  background-color: transparent;
+//  text-decoration: underline;
+//  text-underline-offset: 0.2em;
+//  text-decoration-thickness: 3px;
+//  text-decoration-color: var(--nc-component-link-color);
+//  padding: 0;
+//  margin: 0;
+//  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+//
+//  &:hover {
+//    --nc-component-link-color: var(--nc-semantic-color-link-hover);
+//  }
+//}
+//
+//.Base-svgIconLink-icon {
+//  display: inline-block;
+//  color: colors.$baltic-blue-100;
+//  fill: currentColor;
+//  width: 1em;
+//  margin-left: 0;
+//  margin-right: 0.333em;
+//  line-height: inherit;
+//  vertical-align: text-bottom;
+//
+//  .Base-theme--dark & {
+//    color: colors.$white;
+//  }
+//
+//}
+//
+//// https://css-tricks.com/snippets/css/style-links-depending-on-destination/
+// .Link-withIcon,
+// .Link-withIcon-page,
+// .Link-withIcon-section,
+// .Link-withIcon-url,
+// .Link-withIcon-file,
+// .Link-withIcon-email,
+// .Link-withIcon-phone,
+// .Link-withIcon-back {
+//   --nc-component-link-with-icon-color: var(--nc-semantic-color-fg-action);
+//   --nc-component-link-with-icon-icon: var(--nc-semantic-icon-arrow-right-double);
+//
+//   color: var(--nc-component-link-with-icon-color);
+//   border: none;
+//   cursor: pointer;
+//   background-color: transparent;
+//   text-decoration: underline;
+//   text-underline-offset: 0.2em;
+//   text-decoration-thickness: 2px;
+//   text-decoration-color: var(--nc-component-link-with-icon-color);
+//   padding: 0;
+//   margin: 0;
+//   transition: text-underline-offset 0.1s ease, text-decoration-color 0.1s ease;
+//
+//   &::before {
+//     content: "";
+//     display: inline;
+//     vertical-align: baseline;
+//     padding-left: 1.333em;
+//     background-repeat: no-repeat;
+//     background-position: left center;
+//     background-size: 1em;
+//     background-image: var(--nc-component-link-with-icon-icon);
+//   }
+//
+//   &:hover {
+//     --nc-component-link-with-icon-color: var(--nc-semantic-color-fg-action--hover);
+//   }
+// }
+//
+// .Link-withIcon-page,
+// .Link-withIcon[href^="t3://page"],
+// .Link-withIcon[href^="t3://record"],
+// .Link-withIcon[href^="/"] {
+//   --nc-component-link-with-icon-icon: var(--nc-semantic-icon-arrow-right-double);
+// }
+//
+// .Link-withIcon-section,
+// .Link-withIcon[href*="#"] {
+//   --nc-component-link-with-icon-icon: var(--nc-semantic-icon-arrow-down-double);
+// }
+//
+// .Link-withIcon-url,
+// .Link-withIcon[href^="http"] {
+//   --nc-component-link-with-icon-icon: var(--nc-semantic-icon-arrow-up-right-double);
+// }
+//
+// .Link-withIcon-file,
+// .Link-withIcon[href^="t3://file"],
+// .Link-withIcon[href$=".zip"],
+// .Link-withIcon[href$=".pdf"],
+// .Link-withIcon[href$=".xlsx"],
+// .Link-withIcon[href$=".docx"] {
+//   --nc-component-link-with-icon-icon: var(--nc-semantic-icon-download);
+// }
+//
+// .Link-withIcon-email,
+// .Link-withIcon[href^="mailto:"] {
+//   --nc-component-link-with-icon-icon: var(--nc-semantic-icon-mail);
+// }
+//
+// .Link-withIcon-phone,
+// .Link-withIcon[href^="tel:"] {
+//   --nc-component-link-with-icon-icon: var(--nc-semantic-icon-phone);
+// }
+//
+// .Link-withIcon-back {
+//   --nc-component-link-with-icon-icon: var(--nc-semantic-icon-arrow-right-double);
+// }

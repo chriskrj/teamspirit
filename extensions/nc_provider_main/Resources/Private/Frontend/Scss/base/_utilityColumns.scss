@@ -1,0 +1,13 @@
+.u-columns-2 {
+  columns: 600px 2;  // max number of columns  // min width of column
+  column-gap: 2rem;
+}
+
+.u-columns-4 {
+  columns: 300px 4;  // max number of columns  // min width of column
+  column-gap: 2rem;
+}
+
+.u-columns-avoidbreak {
+  break-inside: avoid;
+}

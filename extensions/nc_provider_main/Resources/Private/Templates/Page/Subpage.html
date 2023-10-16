@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+      xmlns:nc="http://typo3.org/ns/NC/NcProviderMain/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Default"/>
+
+<f:section name="Main">
+
+  <!--TYPO3SEARCH_begin-->
+
+  <main id="main" class="SectionMain">
+    <div id="maincontent">
+
+      <f:variable name="h1" value="{f:if(condition: data.headline, then:data.headline, else: data.title)}"/>
+
+
+      <f:if condition="{media}">
+        <f:then>
+          <div class="u-container u-my-fluid-3xl">
+
+            <div class="u-limitWidth-12 u-align-center u-stack-xl">
+              <h1 class="Text-heading-4xl">
+                <f:format.htmlentitiesDecode><f:format.nl2br>{h1}</f:format.nl2br></f:format.htmlentitiesDecode>
+              </h1>
+
+              <div class="GridCol2Even-row u-row">
+                <div class="GridCol2Even-col u-col">
+                  <div class="u-stack-xl">
+                    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}"/>
+                  </div>
+                </div>
+                <div class="GridCol2Even-col GridCol2Even--colOrderTop u-col">
+                  <f:alias map="{firstMedia:media.0}">
+                    <f:image class="" image="{firstMedia}" cropVariant="4:3" width="960" alt="{firstMedia.alternative}"/>
+                  </f:alias>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </f:then>
+        <f:else>
+          <div class="u-container u-my-fluid-3xl u-stack-xl">
+            <div class="u-limitWidth-12 u-align-center">
+              <h1 class="Text-heading-4xl">
+                <f:format.htmlentitiesDecode><f:format.nl2br>{h1}</f:format.nl2br></f:format.htmlentitiesDecode>
+              </h1>
+            </div>
+
+            {f:cObject(typoscriptObjectPath: 'lib.dynamicContent', data: {colPos: 1}) -> f:variable(name: 'introContent')}
+            <f:if condition="{introContent}">
+              <div class="u-limitWidth-7 u-align-center u-stack-xl">
+                {introContent -> f:format.raw()}
+              </div>
+            </f:if>
+
+          </div>
+        </f:else>
+      </f:if>
+
+
+      <div class="u-stack-xl">
+        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}"/>
+      </div>
+    </div>
+  </main>
+
+  <nc:viteAsset extension="nc_provider_main" entry="main.js"/>
+
+  <!--TYPO3SEARCH_end-->
+
+</f:section>
+
+
+</html>

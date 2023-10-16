@@ -1,0 +1,45 @@
+@use "sass:math";
+@use "../abstracts/mixins";
+
+.GridCol2MainAside-row {
+  row-gap: var(--nc-semantic-space-md);
+  list-style: none;
+}
+
+.GridCol2MainAside-row--gap-lg {
+  row-gap: var(--nc-semantic-space-lg);
+}
+
+.GridCol2MainAside-row--gap-xl {
+  row-gap: var(--nc-semantic-space-xl);
+}
+
+.GridCol2MainAside-colMain {
+
+  @include mixins.respond-to-grid(5) {
+    width: math.percentage(math.div(7, 12));
+  }
+
+  @include mixins.respond-to-grid(6) {
+    width: math.percentage(math.div(8, 12));
+  }
+}
+
+.GridCol2MainAside-colAside {
+
+  @include mixins.respond-to-grid(5) {
+    width: math.percentage(math.div(5, 12));
+  }
+
+  @include mixins.respond-to-grid(6) {
+    width: math.percentage(math.div(4, 12));
+  }
+}
+
+.GridCol2MainAside--colOrderLeft {
+  order: initial;
+
+  @include mixins.respond-to-grid(5) {
+    order: -1;
+  }
+}

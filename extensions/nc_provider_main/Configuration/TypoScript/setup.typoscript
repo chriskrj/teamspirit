@@ -1,0 +1,22 @@
+# External Extensions
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:seo/Configuration/TypoScript/XmlSitemap/setup.typoscript'
+@import 'EXT:listelements/Configuration/TypoScript/setup.typoscript'
+
+# Configuration
+@import 'EXT:nc_provider_main/Configuration/TypoScript/Setup/config.typoscript'
+@import 'EXT:nc_provider_main/Configuration/TypoScript/Setup/config.recordLinks.typoscript'
+@import 'EXT:nc_provider_main/Configuration/TypoScript/Setup/config.securityheaders.typoscript'
+
+# Main
+@import 'EXT:nc_provider_main/Configuration/TypoScript/Setup/page.typoscript'
+
+# Libs
+@import 'EXT:nc_provider_main/Configuration/TypoScript/Setup/lib.dynamicContent.typoscript'
+#@import 'EXT:nc_provider_main/Configuration/TypoScript/Setup/lib.container.typoscript'
+@import 'EXT:nc_provider_main/Configuration/TypoScript/Setup/lib.contentElement.typoscript'
+@import 'EXT:nc_provider_main/Configuration/TypoScript/Setup/lib.parseFunc_RTE.typoscript'
+
+# Extension Overrides
+@import 'EXT:nc_provider_main/Configuration/TypoScript/Setup/ext.tx_ncprovidermain.typoscript'
+@import 'EXT:nc_provider_main/Configuration/TypoScript/Setup/ext.tx_seo.typoscript'

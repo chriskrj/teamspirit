@@ -1,0 +1,16 @@
+options {
+
+  clearCache.all = 1
+  clearCache.pages = 1
+  clearCache.system = 1
+
+}
+
+admPanel {
+
+  # Force re-loading the cache for external TS
+  override.tsdebug.forceTemplateParsing = 1
+
+  enable.all = 1
+  hide = 0
+}

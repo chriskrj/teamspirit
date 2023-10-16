@@ -1,0 +1,39 @@
+# BACKENDLAYOUT: DETAIL
+# Restrict by ctype: https://github.com/IchHabRecht/content_defender/blob/master/README.md
+mod {
+  web_layout {
+    BackendLayouts {
+      detail {
+        title = Detail
+        config {
+          backend_layout {
+            colCount = 12
+            rowCount = 1
+            rows {
+              1 {
+                columns {
+                  1 {
+                    name = Bereich für Detail PlugIn
+                    colPos = 1
+                    colspan = 12
+                    allowed.CType = list
+                  }
+                }
+              }
+              2 {
+                columns {
+                  1 {
+                    name = Bereich für weitere Inhalte
+                    colPos = 0
+                    colspan = 12
+                  }
+                }
+              }
+            }
+          }
+        }
+        icon = EXT:nc_provider_main/Resources/Public/Backend/BackendLayouts/Detail.svg
+      }
+    }
+  }
+}

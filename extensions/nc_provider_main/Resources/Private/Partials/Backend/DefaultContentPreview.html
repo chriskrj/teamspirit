@@ -1,0 +1,56 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+
+<f:section name="Main">
+  <div class="vstack gap-3">
+
+    <div>
+      <em>Hintergrundfarbe: </em>
+      <span>{content.background_color_class}</span>
+    </div>
+
+    <div>
+      <em>Theme: </em>
+      <span>{content.theme}</span>
+    </div>
+
+    <f:if condition="{content.bodytext}">
+      <div>
+        <f:format.html><f:format.crop maxCharacters="250" respectHtml="1">{content.bodytext}</f:format.crop></f:format.html>
+      </div>
+    </f:if>
+
+    <f:if condition="{content.processedAssets}">
+      <div>
+        <f:for each="{content.processedAssets}" as="asset">
+          <f:image image="{asset}" width="100"/>
+        </f:for>
+      </div>
+    </f:if>
+
+    <f:if condition="{content.processedImage}">
+      <div>
+        <f:for each="{content.processedImage}" as="image">
+          <f:image image="{image}" width="100"/>
+        </f:for>
+      </div>
+    </f:if>
+
+    <f:if condition="{content.processedMedia}">
+      <ul class="list-group" style="max-width: 400px;">
+        <f:for each="{content.processedMedia}" as="file">
+          <li class="list-group-item">
+            <f:link.file file="{file}" target="_blank">{f:if(condition: file.properties.title, then: file.properties.title, else: file.name) -> f:format.htmlspecialchars()}</f:link.file>
+          </li>
+        </f:for>
+      </ul>
+    </f:if>
+
+    <f:if condition="{content.listitems}">
+      <f:render partial="Backend/ListElements" section="Main" arguments="{_all}"/>
+    </f:if>
+  </div>
+</f:section>
+
+</html>

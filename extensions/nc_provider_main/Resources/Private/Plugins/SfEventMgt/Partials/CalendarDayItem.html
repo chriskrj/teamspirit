@@ -1,0 +1,14 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:nc="http://typo3.org/ns/NC/NcProviderMain/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+  <li class="EventCalendar-day {f:if(condition: day.isCurrentMonth, then: '', else: 'EventCalendar-day--otherMonth')}{f:if(condition: day.events, then: ' has-events')}{f:if(condition: day.isCurrentDay, then: ' EventCalendar-day--today')}">
+    <div>{day.day}</div>
+    <f:if condition="{day.events}">
+      <f:for each="{day.events}" as="event">
+        <f:link.action class="EventCalendar-eventLink" action="detail" arguments="{event : event}" pageUid="{settings.detailPid}" title="{event.title}">•</f:link.action>
+      </f:for>
+    </f:if>
+  </li>
+
+</html>

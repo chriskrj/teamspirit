@@ -1,0 +1,2 @@
+# FCEs
+@import 'EXT:nc_provider_main/Configuration/TypoScript/Setup/ContentElements/*.typoscript'

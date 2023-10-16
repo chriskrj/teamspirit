@@ -1,0 +1,4 @@
+tt_content.styleguide =< lib.contentElement
+tt_content.styleguide {
+  templateName = Styleguide
+}

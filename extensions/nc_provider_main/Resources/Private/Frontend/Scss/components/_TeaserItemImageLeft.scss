@@ -1,0 +1,55 @@
+@use "sass:math";
+@use "../abstracts/mixins";
+
+.TeaserItemImageLeft {
+  background-color: var(--nc-semantic-color-bg-accent);
+  position: relative;
+}
+
+.TeaserItemImageLeft-row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex: 1;
+}
+
+.TeaserItemImageLeft-colImage {
+  @include mixins.respond-to-grid(5) {
+    width: math.percentage(math.div(5, 12));
+  }
+
+  @include mixins.respond-to-grid(7) {
+    width: math.percentage(math.div(3, 12));
+  }
+}
+
+.TeaserItemImageLeft-colText {
+  padding: 2rem;
+
+  @include mixins.respond-to-grid(5) {
+    width: math.percentage(math.div(7, 12));
+  }
+
+  @include mixins.respond-to-grid(7) {
+    width: math.percentage(math.div(9, 12));
+  }
+}
+
+.TeaserItemImageLeft-image {
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+}
+
+.TeaserItemImageLeft-link {
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}

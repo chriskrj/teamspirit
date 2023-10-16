@@ -1,0 +1,57 @@
+<html
+  xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+  xmlns:nc="http://typo3.org/ns/NC/NcProviderMain/ViewHelpers"
+  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:section name="Video">
+  <f:switch expression="{file.extension}">
+    <f:case value="vimeo">
+      <f:render section="Vimeo" arguments="{_all}"/>
+    </f:case>
+    <f:case value="youtube">
+      <f:render section="YouTube" arguments="{_all}"/>
+    </f:case>
+    <f:defaultCase>
+      <f:media file="{file}" alt="{file.properties.alternative}" title="{file.properties.title}" additionalConfig="{loop: '0', autoplay: '0', controls:'1'}" />
+    </f:defaultCase>
+  </f:switch>
+</f:section>
+
+<f:section name="YouTube">
+  <f:if condition="{file.id}">
+    <f:then>
+      <f:variable name="youtubeId" value="{nc:youTubeId(url: file.url)}"/>
+    </f:then>
+    <f:else>
+      <f:variable name="youtubeId" value="{file.contents}"/>
+    </f:else>
+  </f:if>
+
+  <div class="Video js-youtubeinject" data-url="https://www.youtube-nocookie.com/embed/{youtubeId}?autohide=1&amp;controls=2&amp;showinfo=0&amp;enablejsapi=1&amp">
+    <div class="Video-layer u-stack u-print-hid">
+      <p class="Text-body Text-body--small">{f:translate(key: 'youtubeinject.copy', extensionName: 'nc_provider_main')} <f:link.page pageUid="6" class="Link">{f:translate(key: 'youtubeinject.dataprotection', extensionName: 'nc_provider_main')}</f:link.page>.</p>
+      <p class="Text-body Text-body--small"><button class="Link js-cookieconsent-trigger-open-dialog">{f:translate(key: 'youtubeinject.cookiedetails', extensionName: 'nc_provider_main')}</button></p>
+    </div>
+    <f:if condition="{file.id}">
+      <f:then>
+        <f:image class="Video-previewImage" src="{file.id}" treatIdAsReference="1" width="1034" alt="Video Preview" loading="lazy"/>
+      </f:then>
+      <f:else>
+        <f:image class="Video-previewImage" image="{file}"  width="1034" alt="Video Preview" loading="lazy"/>
+      </f:else>
+    </f:if>
+  </div>
+
+</f:section>
+
+<f:section name="Vimeo">
+  <f:variable name="vimeoId" value="{file.contents}"/>
+  <f:if condition="{vimeoId}">
+    <div class="Video-container u-print-hide">
+      <iframe class="Video-iframe" src="https://player.vimeo.com/video/{vimeoId}?dnt=1" width="480" height="270" allowfullscreen="" allow="fullscreen"></iframe>
+    </div>
+  </f:if>
+</f:section>
+
+
+</html>

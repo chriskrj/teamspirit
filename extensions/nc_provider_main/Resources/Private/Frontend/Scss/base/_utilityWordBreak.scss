@@ -1,0 +1,36 @@
+// https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
+.u-wordBreak {
+
+  // These are technically the same, but use both
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  // This is the dangerous one in WebKit, as it breaks things wherever
+  word-break: break-all;
+  // Instead use this non-standard one:
+  word-break: break-word;
+
+  // Adds a hyphen where the word breaks, if supported (No Blink)
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.u-noWordBreak {
+  white-space: nowrap;
+}
+
+// https://medium.com/clear-left-thinking/all-you-need-to-know-about-hyphenation-in-css-2baee2d89179
+.u-hyphens {
+  hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+  hyphenate-limit-lines: 2;
+  hyphenate-limit-last: always;
+  hyphenate-limit-zone: 8%;
+}
+
+.u-hyphens-none {
+  hyphens: initial !important;
+}

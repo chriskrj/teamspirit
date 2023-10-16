@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+
+<f:section name="Example">
+
+  <div>
+    <f:render partial="Styleguide/Headline" section="Headline" arguments="{title:'Hr'}"/>
+
+    <div class="u-container u-py-r4">
+      <div class="u-limitWidth-12 u-align-center">
+        <f:render section="ExampleContent" arguments="{id:'light'}"/>
+      </div>
+    </div>
+  </div>
+
+
+</f:section>
+
+<f:section name="ExampleContent">
+  <hr class="HorizontalRule" />
+</f:section>
+
+
+</html>
+
+
+

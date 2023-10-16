@@ -1,0 +1,56 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+
+<f:section name="Example">
+  <div>
+    <f:render partial="Styleguide/Headline" section="Headline" arguments="{title:'InlineElements'}"/>
+    <div class="u-container u-mb-r4">
+      <div class="u-limitWidth-12 u-align-center">
+        <section class="GridCol2Even-row u-row">
+          <div class="GridCol2Even-col u-col u-py-sm u-bg-default u-stack-text" data-theme="light">
+            <f:render section="ExampleContent" />
+          </div>
+          <div class="GridCol2Even-col u-col u-py-sm u-bg-default u-stack-text" data-theme="dark">
+            <f:render section="ExampleContent" />
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</f:section>
+
+<f:section name="ExampleContent">
+
+  <p class="Text-body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr. At vero eos et accusam et justo duo dolores et ea rebum. Es folgt ein <a class="Link" href="/">normaler Link ohne Icon mit viel Text, damit es über zwei
+    Zeilen läuft</a> zur unbestimmten Verlinkung</p>
+
+  <p class="Text-body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr. At vero eos et accusam et justo duo dolores et ea rebum. Es folgt ein <a class="Link" href="/"><span class="Link-icon"><f:render partial="Base/Symbols" section="Symbol" arguments="{name:'arrow-right'}"/></span>SVG Icon Link mit mit viel Text, damit es über zwei Zeilen läuft</a> zur unbestimmten Verlinkung</p>
+  <p class="Text-body">Es folgt ein <button class="Link" >Button im Link Stil</button> um Interaktionen auszuführen.</p>
+
+
+  <p class="Text-body Text-body--large">Es folgt ein <a class="Link" href="#">interner Link mit einem langen Text und Zeilenumbruch</a> zum verlinken auf eine interne Seite auf Large Text</p>
+  <p class="Text-body Text-body--small">Es folgt ein <a class="Link" href="#">interner Link mit einem langen Text und Zeilenumbruch</a> zum verlinken auf eine interne Seite auf Small Text</p>
+
+  <p class="Text-body">Dieser Text ist durch <em>em</em> hervorgehoben</p>
+  <p class="Text-body">Dieser Text ist durch <strong>strong</strong> hervorgehoben</p>
+  <p class="Text-body">Das <u>u Element</u> is unterstrichener Text</p>
+  <p class="Text-body">
+    <del>Dieser Text ist als gelsöscht markiert</del>
+  </p>
+  <p class="Text-body"><s>Dieser Text ist durchgestrichen</s></p>
+  <p class="Text-body">Das folgende Zeichen ist hochgestellt: <sup>®</sup></p>
+  <p class="Text-body">Beispiel für das Zeichen H<sub>2</sub>O</p>
+  <p class="Text-body"><small>Dieser Text ist als small markiert</small></p>
+  <p class="Text-body">Beispiel einer Abkürzung: <abbr title="HyperText Markup Language">HTML</abbr></p>
+  <p class="Text-body">Das
+    <mark>Markierungselement</mark>
+    gibt ein Highlight an
+  </p>
+</f:section>
+
+
+</html>
+
+
+

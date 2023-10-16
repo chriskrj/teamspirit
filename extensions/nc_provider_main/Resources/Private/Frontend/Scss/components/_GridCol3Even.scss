@@ -1,0 +1,25 @@
+@use "sass:math";
+@use "../abstracts/mixins";
+
+.GridCol3Even-row {
+  row-gap: var(--nc-semantic-space-md);
+  list-style: none;
+}
+
+.GridCol3Even-row--gap-lg {
+  row-gap: var(--nc-semantic-space-lg);
+}
+
+.GridCol3Even-row--gap-xl {
+  row-gap: var(--nc-semantic-space-xl);
+}
+
+.GridCol3Even-col {
+  @include mixins.respond-to-grid(5) {
+    width: math.percentage(math.div(6, 12));
+  }
+
+  @include mixins.respond-to-grid(7) {
+    width: math.percentage(math.div(4, 12));
+  }
+}

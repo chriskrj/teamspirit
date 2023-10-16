@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:section name="Example">
+  <div>
+    <f:render partial="Styleguide/Headline" section="Headline" arguments="{title:'Figure'}"/>
+    <div class="u-container">
+      <div class="u-limitWidth-12 u-align-center u-mb-r4">
+        <f:render section="ExampleContent" />
+      </div>
+    </div>
+  </div>
+</f:section>
+
+<f:section name="ExampleContent">
+  <figure class="Base-figure">
+    <img class="Base-figure-image" src="/fileadmin/user_upload/testfiles/640x480.jpg" width="640" height="480" alt="Test Image">
+    <figcaption class="Base-figcaption">Das ist eine Bildunterschrift (figcaption). Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</figcaption>
+  </figure>
+</f:section>
+
+</html>

@@ -1,0 +1,4 @@
+tt_content.accordiongroup =< lib.contentElement
+tt_content.accordiongroup {
+  templateName = AccordionGroup
+}

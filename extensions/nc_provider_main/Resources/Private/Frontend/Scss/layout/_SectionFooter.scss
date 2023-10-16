@@ -1,0 +1,30 @@
+@use "sass:math";
+@use "../abstracts/coreTokenIndexes";
+@use "../abstracts/functions";
+
+.SectionFooter {
+  position: relative;
+  z-index: functions.z(coreTokenIndexes.$z-root, footer);
+  background-color: var(--nc-semantic-color-bg-default);
+  margin-top: 2rem;
+
+  &::before {
+    content: "";
+    background-image: functions.svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="5120px" height="904px" viewBox="0 0 5120 904" enable-background="new 0 0 5120 904" xml:space="preserve" preserveAspectRatio="xMidYMid meet"><polygon points="0,0 5120,0 0,904" style="fill:#FFF;" /></svg>');
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    padding-bottom: 18%;
+  }
+}
+
+.SectionFooter-contentBox {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: flex-end;
+}

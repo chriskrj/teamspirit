@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" target-language="de" datatype="plaintext" original="EXT:nc_provider_main/Resources/Private/Language/locallang.xlf" date="2023-04-04T09:21:15Z" product-name="nc_provider_main">
+		<header/>
+		<body>
+			<trans-unit id="contacts.email.linklabel" resname="contacts.email.linklabel">
+				<source>Write email</source>
+				<target>E-Mail schreiben</target>
+			</trans-unit>
+			<trans-unit id="cookiebanner.accept.linklabel" resname="cookiebanner.accept.linklabel">
+				<source>Agree and continue</source>
+				<target>Zustimmen und weiter</target>
+			</trans-unit>
+			<trans-unit id="cookiebanner.additionaldescription.paragraph" resname="cookiebanner.additionaldescription.paragraph">
+				<source>For more information on cookies and customisation options, see &quot;Cookie settings&quot;.</source>
+				<target>Weitere Informationen zu den Cookies und Anpassungsmöglichkeiten finden Sie unter „Cookie-Einstellungen“.</target>
+			</trans-unit>
+			<trans-unit id="cookiebanner.cookiesettings.linklabel" resname="cookiebanner.cookiesettings.linklabel">
+				<source>Cookie settings</source>
+				<target>Cookie-Einstellungen</target>
+			</trans-unit>
+			<trans-unit id="cookiebanner.decline.linklabel" resname="cookiebanner.decline.linklabel">
+				<source>Decline</source>
+				<target>Ablehnen</target>
+			</trans-unit>
+			<trans-unit id="cookiebanner.description.linkabel" resname="cookiebanner.description.linkabel">
+				<source>to the privacy policy</source>
+				<target>zur Datenschutzerklärung</target>
+			</trans-unit>
+			<trans-unit id="cookiebanner.description.paragraph" resname="cookiebanner.description.paragraph">
+				<source>We use cookies to give you the best possible experience on our website. In doing so, we take your settings into account. We only process your data if you give us your consent by clicking on &quot;Agree and continue&quot;. You can revoke your consent at any time</source>
+				<target>Wir nutzen Cookies, um Ihnen die bestmögliche Nutzung unserer Webseite zu ermöglichen. Dabei berücksichtigen wir Ihre Einstellungen. Wir verarbeiten Ihre Daten nur, wenn Sie uns durch Klicken auf „Zustimmen und weiter“ Ihr Einverständnis geben. Sie können Ihre Einwilligung jederzeit widerrufen</target>
+			</trans-unit>
+			<trans-unit id="cookiesettings.cancel.linklabel" resname="cookiesettings.cancel.linklabel">
+				<source>Cancel</source>
+				<target>Abbrechen</target>
+			</trans-unit>
+			<trans-unit id="cookiesettings.essentials.label" resname="cookiesettings.essentials.label">
+				<source>Required cookies</source>
+				<target>Erforderliche Cookies</target>
+			</trans-unit>
+			<trans-unit id="cookiesettings.essentials.paragraph" resname="cookiesettings.essentials.paragraph">
+				<source><![CDATA[Required cookies are mandatory for the use of the website. Without these cookies, the website cannot function properly.<br><br><strong>Individual cookies</strong><br><br>Cookiename: cookiehint; Provider: mobiliteam by NAH.SH; Purpose: This cookie saves the cookie setting; Duration: 1 year]]></source>
+				<target><![CDATA[Erforderliche Cookies sind für die Nutzung der Webseite zwingend erforderlich. Die Webseite kann ohne diese Cookies nicht richtig funktionieren.<br><br><strong>Einzelne Cookies</strong><br><br>Cookiename: cookiehint; Anbieter: mobiliteam by NAH.SH; Zweck: Dieser Cookie speichert die Einstellung zu Cookies; Laufzeit: 1 Jahr]]></target>
+			</trans-unit>
+			<trans-unit id="cookiesettings.intro.headline" resname="cookiesettings.intro.headline">
+				<source>Your cookie settings for this website</source>
+				<target>Ihre Cookie-Einstellungen für diese Webseite</target>
+			</trans-unit>
+			<trans-unit id="cookiesettings.intro.paragraph" resname="cookiesettings.intro.paragraph">
+				<source>Make your personal settings here</source>
+				<target>Treffen Sie hier Ihre persönlichen Einstellungen</target>
+			</trans-unit>
+			<trans-unit id="cookiesettings.save.linklabel" resname="cookiesettings.save.linklabel">
+				<source>Save</source>
+				<target>Speichern</target>
+			</trans-unit>
+			<trans-unit id="cookiesettings.statistics.label" resname="cookiesettings.statistics.label">
+				<source>Statistics</source>
+				<target>Statistik</target>
+			</trans-unit>
+			<trans-unit id="cookiesettings.statistics.linklabel" resname="cookiesettings.statistics.linklabel">
+				<source>To the privacy policy</source>
+				<target>Zur Datenschutzerklärung</target>
+			</trans-unit>
+			<trans-unit id="cookiesettings.statistics.paragraph" resname="cookiesettings.statistics.paragraph">
+				<source><![CDATA[These cookies help us to analyse user behaviour in order to continuously improve the quality of our website.<br><br><strong>Individual cookies</strong><br><br>
+Cookiename: _pk_id.*; Provider: mobiliteam by NAH.SH; Purpose: Collection of statistical data in Matomo about how the website is used by visitors; Duration: 13 Monate<br><br>
+Cookiename: _pk_ref.*; Provider: mobiliteam by NAH.SH; Purpose: Collection of statistical data in Matomo about where visitors to this website have come from; Duration: 6 month<br><br>
+Cookiename: _pk_ses.*, _pk_cvar.*; Provider: mobiliteam by NAH.SH; Purpose: Collection of statistical data in Matomo about how the website is used by visitors; Duration: 30 minutes<br><br>]]></source>
+				<target><![CDATA[Diese Cookies helfen uns bei der Analyse des Nutzerverhaltens, um die Qualität unserer Webseite fortlaufend zu verbessern.<br><br><strong>Einzelne Cookies</strong><br><br>
+Cookiename: _pk_id.*; Anbieter: mobiliteam by NAH.SH; Zweck: Erhebung statistischer Daten in Matomo darüber, wie die Webseite von Besucher*innen genutzt wird; Laufzeit: 13 Monate<br><br>
+Cookiename: _pk_ref.*; Anbieter: mobiliteam by NAH.SH; Zweck: Erhebung statistischer Daten in Matomo darüber, woher die Besucher*innen dieser Webseite gekommen sind; Laufzeit: 6 Monate<br><br>
+Cookiename: _pk_ses.*, _pk_cvar.*; Anbieter: mobiliteam by NAH.SH; Zweck: Erhebung statistischer Daten in Matomo darüber, wie die Webseite von Besucher*innen genutzt wird; Laufzeit: 30 Minuten<br><br>]]></target>
+			</trans-unit>
+			<trans-unit id="cookiesettings.youtube.label" resname="cookiesettings.youtube.label">
+				<source>YouTube</source>
+				<target>YouTube</target>
+			</trans-unit>
+			<trans-unit id="cookiesettings.youtube.linklabel" resname="cookiesettings.youtube.linklabel">
+				<source>To the privacy policy</source>
+				<target>Zur Datenschutzerklärung</target>
+			</trans-unit>
+			<trans-unit id="cookiesettings.youtube.paragraph" resname="cookiesettings.youtube.paragraph">
+				<source>You can watch YouTube videos directly on our website. We would like to point out that personal data (e.g. IP address) is transmitted to YouTube in the process.</source>
+				<target>Sie können YouTube-Videos direkt auf unserer Internetseite anschauen. Wir weisen darauf hin, dass dabei personenbezogene Daten (z.B. IP-Adresse) an YouTube übermittelt werden.</target>
+			</trans-unit>
+			<trans-unit id="event.backlink.label" resname="event.backlink.label">
+				<source>Event overview</source>
+				<target>Zur Termine-Übersicht</target>
+			</trans-unit>
+			<trans-unit id="event.detaillink.label" resname="event.detaillink.label">
+				<source>Event details</source>
+				<target>Veranstaltungsdetails</target>
+			</trans-unit>
+			<trans-unit id="event.downloads.headline" resname="event.downloads.headline">
+				<source>Downloads</source>
+				<target>Downloads</target>
+			</trans-unit>
+			<trans-unit id="event.enddate.prefix" resname="event.enddate.prefix">
+				<source>to</source>
+				<target>bis</target>
+			</trans-unit>
+			<trans-unit id="event.externallink.label" resname="event.externallink.label">
+				<source>Go to website</source>
+				<target>Zur Website</target>
+			</trans-unit>
+			<trans-unit id="event.imagegallery.headline" resname="event.imagegallery.headline">
+				<source>Image gallery</source>
+				<target>Bildergalerie</target>
+			</trans-unit>
+			<trans-unit id="event.listlink.label" resname="event.listlink.label">
+				<source>All events</source>
+				<target>Alle Termine</target>
+			</trans-unit>
+			<trans-unit id="event.noevents.paragraph" resname="event.noevents.paragraph">
+				<source>Currently there are no events planned. We will keep you up to date!</source>
+				<target>Aktuell sind keine Veranstaltungen geplant. Wir halten Sie auf dem Laufenden!</target>
+			</trans-unit>
+			<trans-unit id="format.date" resname="format.date">
+				<source>%d/%m/%Y %H:%M</source>
+				<target>%d.%m.%Y %H:%M Uhr</target>
+			</trans-unit>
+			<trans-unit id="news.backlink.label" resname="news.backlink.label">
+				<source>News overview</source>
+				<target>Zur News-Übersicht</target>
+			</trans-unit>
+			<trans-unit id="news.downloads.headline" resname="news.downloads.headline">
+				<source>Downloads</source>
+				<target>Downloads</target>
+			</trans-unit>
+			<trans-unit id="news.imagegallery.headline" resname="news.imagegallery.headline">
+				<source>Image gallery</source>
+				<target>Bildergalerie</target>
+			</trans-unit>
+			<trans-unit id="news.listlink.label" resname="news.listlink.label">
+				<source>Show all News</source>
+				<target>Alle Nachrichten</target>
+			</trans-unit>
+			<trans-unit id="news.loadmore.label" resname="news.loadmore.label">
+				<source>Load more</source>
+				<target>Mehr laden</target>
+			</trans-unit>
+			<trans-unit id="news.releatedlinks.headline" resname="news.releatedlinks.headline">
+				<source>Related Links</source>
+				<target>Weiterführende Links</target>
+			</trans-unit>
+			<trans-unit id="news.rss.linklabel" resname="news.rss.linklabel">
+				<source>Subscribe to RSS feed</source>
+				<target>RSS-Feed abbonieren</target>
+			</trans-unit>
+			<trans-unit id="skipnavigation.mainarea.label" resname="skipnavigation.mainarea.label">
+				<source>Main area</source>
+				<target>Hauptbereich</target>
+			</trans-unit>
+			<trans-unit id="stickynavigation.menubutton.label" resname="stickynavigation.menubutton.label">
+				<source>Menu</source>
+				<target>Menü</target>
+			</trans-unit>
+			<trans-unit id="youtubeinject.cookiedetails" resname="youtubeinject.cookiedetails">
+				<source>Adjust your cookie settings</source>
+				<target>Cookie-Einstellungen anpassen</target>
+			</trans-unit>
+			<trans-unit id="youtubeinject.copy" resname="youtubeinject.copy">
+				<source>You can watch this YouTube video directly on our website. Please note that personal data (e.g. IP address) will be transmitted to YouTube.</source>
+				<target>Sie können dieses YouTube-Video direkt auf unserer Website ansehen. Bitte beachten Sie, dass dabei personenbezogene Daten (z.B. IP-Adresse) an YouTube übermittelt werden.</target>
+			</trans-unit>
+			<trans-unit id="youtubeinject.dataprotection" resname="youtubeinject.dataprotection">
+				<source>Data privacy</source>
+				<target>Datenschutz</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,97 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:section name="SkipNavigation">
+  <div role="navigation" aria-label="Sprunghilfen" class="u-print-hide">
+    <a class="SkipNavigation" href="#main">{f:translate(key: 'skipnavigation.mainarea.label', extensionName: 'nc_provider_main')}</a>
+  </div>
+</f:section>
+
+<f:section name="MainNavigation">
+
+  <f:for each="{nav}" as="level1Item" iteration="level1iterator">
+    <li class="MainNavigation-level1-item">
+      <f:if condition="{level1Item.children}">
+        <f:then>
+
+          <a href="{level1Item.link}" class="MainNavigation-level1-link js-disclosure-trigger {f:if(condition:'{level1Item.active}}',then:'is-activePage')}" aria-haspopup="true" aria-controls="mainnavigation-level2-{level1iterator.cycle}" aria-expanded="false">
+
+            <span class="MainNavigation-level1-menuIcon">
+              <f:render partial="Base/Symbols" section="Symbol" arguments="{name:'chevron-down'}"/>
+            </span>
+
+            <span class="MainNavigation-level1-label">{level1Item.title}</span>
+          </a>
+
+          <ul id="mainnavigation-level2-{level1iterator.cycle}" class="MainNavigation-level2 js-disclosure-panel" aria-hidden="true" data-disclosure-group="mainnavigation" role="list">
+            <f:for each="{level1Item.children}" as="level2Item">
+              <li class="MainNavigation-level2-item">
+                <a href="{level2Item.link}" class="MainNavigation-level2-link {f:if(condition:level2Item.current,then:'is-activePage')}">
+                  {level2Item.title}
+                </a>
+              </li>
+            </f:for>
+          </ul>
+
+        </f:then>
+        <f:else>
+          <a href="{level1Item.link}" class="MainNavigation-level1-link {f:if(condition:'{level1Item.active}}',then:'is-activePage')}">
+            <span class="MainNavigation-level1-label">{level1Item.title}</span>
+          </a>
+        </f:else>
+      </f:if>
+    </li>
+  </f:for>
+
+</f:section>
+
+<f:section name="Breadcrumb">
+  <nav aria-label="Breadcrumb">
+    <ul class="Breadcrumb">
+      <f:for each="{breadcrumb}" as="breadcrumbItem" iteration="iterator">
+        <li class="Breadcrumb-item">
+          <a href="{breadcrumbItem.link}" class="Breadcrumb-link">{breadcrumbItem.title}</a>
+          <f:if condition="!{iterator.isLast}">
+            <span class="Breadcrumb-arrowIcon"><f:render partial="Base/Symbols" section="Symbol" arguments="{name:'chevron-right'}"/></span>
+          </f:if>
+        </li>
+      </f:for>
+    </ul>
+  </nav>
+</f:section>
+
+
+<f:section name="FooterNavigation">
+  <f:for each="{nav}" as="level1Item">
+    <li class="FooterNavigation-item">
+      <a href="{level1Item.link}" class="FooterNavigation-link">{level1Item.title}</a>
+    </li>
+  </f:for>
+</f:section>
+
+<f:section name="LanguageNavigation">
+  <f:if condition="{nav}">
+    <ul id="language" class="LanguageNavigation">
+      <f:for each="{nav}" as="item" iteration="iterator">
+
+        <li>
+          <f:if condition="{item.available}">
+            <f:then>
+              <a class="MetaLink {f:if(condition: item.active, then: 'is-active')}" href="{item.link}" hreflang="{item.hreflang}" title="{item.navigationTitle}">
+                {item.navigationTitle}
+              </a>
+            </f:then>
+            <f:else>
+              <f:link.page class="MetaLink" pageUid="{settings.pidStartpage}" title="{item.navigationTitle}" additionalAttributes="{hreflang:item.hreflang}" additionalParams="{L:iterator.index}">
+                {item.navigationTitle}
+              </f:link.page>
+            </f:else>
+          </f:if>
+        </li>
+
+      </f:for>
+    </ul>
+  </f:if>
+</f:section>
+
+</html>

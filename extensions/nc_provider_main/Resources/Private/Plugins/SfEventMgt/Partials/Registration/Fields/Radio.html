@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:e="http://typo3.org/ns/DERHANSEN/SfEventMgt/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<fieldset class="FormField {e:validation.errorClass(registrationField: field)}">
+  <legend class="FormField-label">
+    {field.title}
+    <e:registration.isRequiredField settings="{settings}" registrationField="{field}">
+      <span class="mandatory">*</span>
+    </e:registration.isRequiredField>
+  </legend>
+  <div class="FormField-input">
+    <f:for each="{field.settingsForOption}" as="option" iteration="i">
+      <div class="FormField-choice">
+        <f:form.radio class="RadioButton" id="{field.uid}-{i.cycle}" property="fields.{field.uid}" value="{option.value}" checked="{e:registration.field.prefillMultiValueField(registrationField: field, currentValue: option.value)}"/>
+        <label class="FormField-choiceLabel" for="{field.uid}-{i.cycle}">
+          {option.label}
+        </label>
+      </div>
+    </f:for>
+  </div>
+  <f:render partial="FormErrors" arguments="{field: 'registration.fields.{field.uid}'}"/>
+</fieldset>
+<br/>
+
+</html>

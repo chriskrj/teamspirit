@@ -1,0 +1,3 @@
+lib.parseFunc_RTE.externalBlocks.table.stdWrap.wrap = <div class="Table-overflowContainer">|</div>
+lib.parseFunc_RTE.externalBlocks.table.stdWrap.HTMLparser.tags.table.fixAttrib.class.default = Table
+lib.parseFunc_RTE.externalBlocks.table.stdWrap.HTMLparser.tags.table.fixAttrib.class.list = Table

@@ -1,0 +1,24 @@
+@media print {
+
+  .u-print-pageBreak {
+    page-break-before: always !important;
+  }
+
+  .u-print-hide {
+    display: none !important;
+  }
+
+  .u-print-noPageBreak {
+    page-break-inside: avoid;
+  }
+
+  // use in combination with u-hidden
+  .u-print-only {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .u-print-noReposition {
+    transform: translate(0, 0) !important;
+  }
+}

@@ -1,0 +1,67 @@
+.Table-overflowContainer {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  position: relative;
+
+  // https://www.smashingmagazine.com/2019/01/table-design-patterns-web/
+  background:
+    linear-gradient(to right, white 30%, rgba(255, 255, 255, 0%)),
+    linear-gradient(to right, rgba(255, 255, 255, 0%), white 70%) 0 100%,
+    radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, 50%), rgba(0, 0, 0, 0%)),
+    radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 50%), rgba(0, 0, 0, 0%)) 0 100%;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+  background-position: 0 0, 100%, 0 0, 100%;
+  background-attachment: local, local, scroll, scroll;
+}
+
+.Table {
+  border-collapse: collapse;
+  text-align: left;
+  width: 100%;
+
+  td,
+  th {
+    // hyphens: auto;
+  }
+
+  th {
+    font-weight: var(--nc-semantic-font-weight-bold);
+    color: var(--nc-semantic-color-fg-default);
+    font-size: var(--nc-semantic-font-size-base);
+    text-align: left;
+    vertical-align: middle;
+    padding: var(--nc-semantic-space-sm) var(--nc-semantic-space-lg);
+
+    // background-color: colors.$baltic-blue-100;
+    // border-right: 1px solid colors.$baltic-blue-50;
+  }
+
+  td {
+    font-weight: var(--nc-semantic-font-weight-regular);
+    color: var(--nc-semantic-color-fg-default);
+    font-size: var(--nc-semantic-font-size-base);
+    text-align: left;
+    vertical-align: middle;
+    padding: var(--nc-semantic-space-sm) var(--nc-semantic-space-lg);
+  }
+
+  thead {
+    tr {
+      border: 0;
+      border-bottom: 2px solid var(--nc-semantic-color-fg-highlight);
+    }
+  }
+
+  tbody {
+    tr {
+       border-bottom: 1px solid var(--nc-semantic-color-fg-highlight);
+    }
+
+    // tr:nth-child(odd) {
+    //  background-color: rgba(colors.$grey, 0.1);
+    // }
+  }
+}

@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:nc="http://typo3.org/ns/NC/NcProviderMain/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:section name="Default">
+  <footer class="SectionFooter u-print-hide" data-theme="dark">
+
+    <div class="u-container">
+      <div class="u-limitWidth-12 u-align-center">
+
+        <div class="SectionFooter-contentBox">
+
+          <ul class="FooterNavigation">
+            <f:render partial="Page/Navigations" section="FooterNavigation" arguments="{nav:metaNavigation}"/>
+          </ul>
+
+          <div></div>
+
+          <f:link.page pageUid="{settings.pidStartpage}" additionalAttributes="{title:'Startseite'}">
+            <f:image src="EXT:nc_provider_main/Resources/Public/Images/logo-footer.svg" width="353" height="118" />
+          </f:link.page>
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </footer>
+</f:section>
+
+
+</html>

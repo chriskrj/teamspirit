@@ -1,0 +1,70 @@
+// Inspiration https://polaris.shopify.com/components/typography/text
+
+.Text-heading-4xl {
+  font-weight: var(--nc-semantic-font-weight-regular);
+  color: var(--nc-semantic-color-fg-highlight);
+  font-size: var(--nc-semantic-font-size-4xl);
+  line-height: var(--nc-semantic-font-line-height-sm);
+  hyphens: auto;
+}
+
+.Text-heading-3xl {
+  font-weight: var(--nc-semantic-font-weight-regular);
+  color: var(--nc-semantic-color-fg-highlight);
+  font-size: var(--nc-semantic-font-size-3xl);
+  line-height: var(--nc-semantic-font-line-height-sm);
+  hyphens: auto;
+}
+
+.Text-heading-2xl {
+  font-weight: var(--nc-semantic-font-weight-regular);
+  color: var(--nc-semantic-color-fg-highlight);
+  font-size: var(--nc-semantic-font-size-2xl);
+  line-height: var(--nc-semantic-font-line-height-sm);
+}
+
+.Text-heading-xl {
+  font-weight: var(--nc-semantic-font-weight-regular);
+  color: var(--nc-semantic-color-fg-highlight);
+  font-size: var(--nc-semantic-font-size-xl);
+  line-height: var(--nc-semantic-font-line-height-sm);
+}
+
+.Text-heading-lg {
+  font-weight: var(--nc-semantic-font-weight-bold);
+  color: var(--nc-semantic-color-fg-default);
+  font-size: var(--nc-semantic-font-size-lg);
+  line-height: var(--nc-semantic-font-line-height-sm);
+}
+
+.Text-heading-md {
+  font-weight: var(--nc-semantic-font-weight-bold);
+  color: var(--nc-semantic-color-fg-default);
+  font-size: var(--nc-semantic-font-size-md);
+  line-height: var(--nc-semantic-font-line-height-sm);
+}
+
+.Text-body {
+  --nc-component-text-body-font-size: var(--nc-semantic-font-size-base);
+
+  font-weight: var(--nc-semantic-font-weight-regular);
+  color: var(--nc-semantic-color-fg-default);
+  font-size: var(--nc-component-text-body-font-size);
+}
+
+.Text-body--small {
+  --nc-component-text-body-font-size: var(--nc-semantic-font-size-sm) !important;
+}
+
+.Text-body--large {
+  --nc-component-text-body-font-size: var(--nc-semantic-font-size-md) !important;
+}
+
+.Text--success {
+  color: var(--nc-semantic-color-fg-success);
+}
+
+.Text--error {
+  color: var(--nc-semantic-color-fg-error);
+}
+

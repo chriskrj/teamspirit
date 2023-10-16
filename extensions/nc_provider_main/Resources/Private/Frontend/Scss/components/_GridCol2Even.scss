@@ -1,0 +1,48 @@
+@use "sass:math";
+@use "../abstracts/mixins";
+
+.GridCol2Even-row {
+  row-gap: var(--nc-semantic-space-md);
+  list-style: none;
+}
+
+.GridCol2Even-row--gap-lg {
+  row-gap: var(--nc-semantic-space-lg);
+}
+
+.GridCol2Even-row--gap-xl {
+  row-gap: var(--nc-semantic-space-xl);
+}
+
+.GridCol2Even-col {
+  @include mixins.respond-to-grid(5) {
+    width: math.percentage(math.div(6, 12));
+  }
+}
+
+.GridCol2Even--colOrderTop {
+  order: -1;
+
+  @include mixins.respond-to-grid(5) {
+    order: initial;
+  }
+}
+
+.GridCol2Even--colAlignRight {
+  @include mixins.respond-to-grid(5) {
+    margin-left: auto;
+  }
+}
+
+.GridCol2Even--colOrderLeft {
+  order: initial;
+
+  @include mixins.respond-to-grid(5) {
+    order: -1;
+  }
+}
+
+.GridCol2Even--colCenteredItems {
+  display: flex;
+  align-items: center;
+}

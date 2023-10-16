@@ -1,0 +1,148 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Container"/>
+
+<f:section name="Main">
+
+  <div class="u-limitWidth-12 u-align-center u-print-hide">
+    <div class="u-stack-lg">
+      <f:render partial="Header/All" arguments="{_all}"/>
+
+
+      <f:if condition="{menu}">
+        <f:switch expression="{data.layout}">
+          <f:case value="100">
+            <ul class="GridCol2Even-row GridCol2Even-row--gap-lg u-row" role="list">
+              <f:for each="{menu}" as="page" iteration="iteration">
+                <li class="GridCol2Even-col u-col">
+                  <f:render section="TeaserItemImageTop" arguments="{page:page, data:data}"/>
+                </li>
+              </f:for>
+            </ul>
+          </f:case>
+          <f:defaultCase>
+            <ul class="List-unstyled u-stack-lg" role="list">
+              <f:for each="{menu}" as="page" iteration="iteration">
+                <li>
+                  <f:render section="TeaserItemImageLeft" arguments="{page:page, data:data}"/>
+                </li>
+              </f:for>
+            </ul>
+          </f:defaultCase>
+        </f:switch>
+      </f:if>
+    </div>
+  </div>
+
+</f:section>
+
+
+<f:section name="TeaserItemImageTop">
+
+  <f:variable name="headline" value="{f:if(condition: page.data.headline, then:page.data.headline, else: page.title)}"/>
+  <article class="TeaserItemImageTop">
+
+    <div class="TeaserItemImageTop-row">
+
+      <a href="{page.link}" target="{page.target}" class="TeaserItemImageTop-imageBox" data-theme="dark">
+        <f:render section="ImageTop" arguments="{page:page}"/>
+        <p class="TeaserItemImageTop-headline">
+          <span class="TeaserItemImageTop-headline-bars"><f:format.htmlentitiesDecode>{headline}</f:format.htmlentitiesDecode></span>
+        </p>
+      </a>
+
+      <div class="TeaserItemImageTop-textBox u-stack-text">
+
+          <f:if condition="{page.data.abstract}">
+            <p class="Text-body">
+              <f:format.htmlentitiesDecode>{page.data.abstract}</f:format.htmlentitiesDecode>
+            </p>
+          </f:if>
+
+          <div class="Text-body">
+            <a href="{page.link}" target="{page.target}" class="Button">
+              <span>{f:if(condition: page.data.linklabel, then:page.data.linklabel, else: 'Weitere Informationen')}</span>
+              <span class="Button-icon"><f:render partial="Base/Symbols" section="Symbol" arguments="{name:'arrow-right'}" /></span>
+            </a>
+          </div>
+
+      </div>
+
+    </div>
+
+  </article>
+
+</f:section>
+
+<f:section name="TeaserItemImageLeft">
+
+  <f:variable name="headline" value="{f:if(condition: page.data.headline, then:page.data.headline, else: page.title)}"/>
+  <article class="TeaserItemImageLeft">
+
+    <div class="TeaserItemImageLeft-row">
+
+      <div class="TeaserItemImageLeft-colImage">
+        <f:render section="ImageLeft" arguments="{page:page}"/>
+      </div>
+
+      <div class="TeaserItemImageLeft-colText">
+
+        <div class="u-stack-text">
+
+          <a href="{page.link}" target="{page.target}" class="TeaserItemImageLeft-link Text-heading-md">
+            <f:format.htmlentitiesDecode>{headline}</f:format.htmlentitiesDecode>
+          </a>
+
+          <f:if condition="{page.data.abstract}">
+            <p class="Text-body">
+              <f:format.htmlentitiesDecode>{page.data.abstract}</f:format.htmlentitiesDecode>
+            </p>
+          </f:if>
+
+          <div class="Text-body">
+            <div class="Link">
+              <span class="Link-icon"><f:render partial="Base/Symbols" section="Symbol" arguments="{name:'arrow-right'}" /></span>
+              <span>{f:if(condition: page.data.linklabel, then:page.data.linklabel, else: 'Weitere Informationen')}</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </article>
+
+</f:section>
+
+<f:section name="ImageTop">
+  <f:if condition="{page.media}">
+    <f:then>
+      <f:alias map="{image:page.media.0}">
+        <f:image class="TeaserItemImageTop-image" image="{image}" alt="{image.alternative}" cropVariant="16:9" width="736" loading="lazy"/>
+      </f:alias>
+    </f:then>
+    <f:else>
+      <f:image class="TeaserItemImageTop-image" src="EXT:nc_provider_main/Resources/Public/Images/fallback.svg" loading="lazy"/>
+    </f:else>
+  </f:if>
+</f:section>
+
+<f:section name="ImageLeft">
+  <f:if condition="{page.media}">
+    <f:then>
+      <f:alias map="{image:page.media.0}">
+        <f:image class="TeaserItemImageLeft-image" image="{image}" alt="{image.alternative}" cropVariant="4:3" width="992" loading="lazy"/>
+      </f:alias>
+    </f:then>
+    <f:else>
+      <f:image class="TeaserItemImageLeft-image" src="EXT:nc_provider_main/Resources/Public/Images/fallback.svg" loading="lazy"/>
+    </f:else>
+  </f:if>
+</f:section>
+
+
+
+</html>

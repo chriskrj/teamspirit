@@ -1,0 +1,108 @@
+@use "../abstracts/functions";
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, main,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+html {
+  // 100% = 16px
+  font-size: var(--nc-semantic-font-scale-root);
+  scroll-behavior: smooth;
+
+  // Prevent font size inflation
+  text-size-adjust: none;
+
+  // scroll-padding-top: 60px; // height of sticky header
+
+  // Universal Border Box
+  // https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+  box-sizing: border-box;
+}
+
+// Universal Border Box inheritance
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--nc-semantic-color-bg-default);
+  line-height: var(--nc-semantic-font-line-height-md);
+  overscroll-behavior: none;  // https://www.smashingmagazine.com/2018/08/scroll-bouncing-websites/
+  font-family: var(--nc-semantic-font-family-default);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--nc-semantic-font-family-headline);
+}
+
+b,
+strong {
+  font-weight: var(--nc-semantic-font-weight-bold);
+}
+
+em {
+  font-weight: var(--nc-semantic-font-weight-bold);
+}
+
+small {
+  font-size: 0.75em;
+}
+
+mark {
+  // background-color: colors.$port-orange-100;
+  box-decoration-break: clone;
+  padding: 0 0.25em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+sub,
+sup {
+  font-size: 0.5em;
+}
+
+// global focus styling
+a[href],
+area[href],
+input:not([disabled]),
+select:not([disabled]),
+textarea:not([disabled]),
+button:not([disabled]),
+iframe,
+[tabindex],
+[contentEditable=true] {
+  &:focus-visible {
+   outline: 2px solid var(--nc-semantic-color-fg-highlight);
+   outline-offset: 0;
+  }
+}

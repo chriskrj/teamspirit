@@ -1,0 +1,30 @@
+// Styling form input and textarea
+.TextField {
+  --nc-component-text-field-border-color: var(--nc-semantic-color-stroke-default);
+
+  // appearance: none;
+  resize: vertical;
+  font-family: inherit;
+  font-weight: var(--nc-semantic-font-weight-regular);
+  color: var(--nc-semantic-color-fg-default);
+  font-size: var(--nc-semantic-font-size-base);
+  font-style: normal;
+  line-height: var(--nc-semantic-font-line-height-sm);
+  width: 100%;
+  padding: var(--nc-semantic-space-sm);
+  border: 1px solid var(--nc-component-text-field-border-color);
+  background-color: var(--nc-semantic-color-bg-default);
+  min-height: 2em;
+  overflow: hidden;
+  transition: border-color 0.5s ease;
+  display: block;
+  border-radius: 0;
+
+  &:focus {
+    --nc-component-text-field-border-color: var(--nc-semantic-color-fg-highlight);
+  }
+}
+
+.TextField--error {
+  --nc-component-text-field-border-color: var(--nc-semantic-color-fg-error);
+}

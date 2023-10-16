@@ -1,0 +1,153 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:nc="http://typo3.org/ns/NC/NcProviderMain/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+
+<f:section name="Main">
+
+  <f:if condition="{data.bodytext} || {data.header_layout} != 100 || {data.images}">
+
+    <f:if condition="{images}">
+      <f:then>
+        <f:switch expression="{data.layout}">
+          <f:case value="100">
+            <f:render section="LayoutImageLeft" arguments="{_all}"/>
+          </f:case>
+          <f:case value="200">
+            <f:render section="LayoutImageAbove" arguments="{_all}"/>
+          </f:case>
+          <f:defaultCase>
+            <f:render section="LayoutImageRight" arguments="{_all}"/>
+          </f:defaultCase>
+        </f:switch>
+      </f:then>
+      <f:else>
+        <f:render section="LayoutTextOnly" arguments="{_all}"/>
+      </f:else>
+    </f:if>
+
+  </f:if>
+
+</f:section>
+
+
+<f:section name="LayoutTextOnly">
+  <div class="u-stack-2">
+
+    <f:render partial="Header/All" arguments="{_all}"/>
+
+    <f:if condition="{data.bodytext}">
+      <div class="u-limitWidth-7 u-align-left">
+        <div class="RTE u-stack-text-md">
+          <f:format.html>{data.bodytext}</f:format.html>
+        </div>
+      </div>
+    </f:if>
+
+  </div>
+</f:section>
+
+
+<f:section name="LayoutImageAbove">
+  <div class="u-stack-2">
+
+    <f:render partial="Header/All" arguments="{_all}"/>
+
+    <f:render section="ImageLarge" arguments="{_all}"/>
+
+    <f:if condition="{data.bodytext}">
+      <div class="u-limitWidth-7 u-align-left">
+        <div class="RTE u-stack-text-md">
+          <f:format.html>{data.bodytext}</f:format.html>
+        </div>
+      </div>
+    </f:if>
+
+  </div>
+</f:section>
+
+
+<f:section name="LayoutImageLeft">
+  <div class="u-stack-2">
+
+    <f:render partial="Header/All" arguments="{_all}"/>
+
+    <div class="ImageText-row ImageText--layoutImageLeft u-row">
+
+      <div class="ImageText-colImage u-col">
+        <f:render section="Image" arguments="{_all}"/>
+      </div>
+
+      <f:if condition="{data.bodytext}">
+        <div class="ImageText-colText u-col">
+          <div class="RTE u-stack-text-md">
+            <f:format.html>{data.bodytext}</f:format.html>
+          </div>
+        </div>
+      </f:if>
+    </div>
+
+  </div>
+</f:section>
+
+
+<f:section name="LayoutImageRight">
+  <div class="u-stack-2">
+
+    <f:render partial="Header/All" arguments="{_all}"/>
+
+    <div class="ImageText-row ImageText--layoutImageRight u-row">
+      <div class="ImageText-colImage u-col">
+        <f:render section="Image" arguments="{_all}"/>
+      </div>
+      <f:if condition="{data.bodytext}">
+        <div class="ImageText-colText u-col">
+          <div class="RTE u-stack-text-md">
+            <f:format.html>{data.bodytext}</f:format.html>
+          </div>
+        </div>
+      </f:if>
+    </div>
+
+  </div>
+</f:section>
+
+
+<f:section name="ImageLarge">
+  <f:if condition="{images}">
+    <f:alias map="{image:images.0}">
+      <figure class="CurveImage">
+        <f:image image="{image}" class="CurveImage-image" alt="{image.alternative}" maxWidth="1504" loading="lazy"/>
+        <f:if condition="{data.image_type} == 0">
+          <div class="CurveImage-imageCurve u-print-hide">
+            <svg class="u-scalingInlineSVG" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 1000 74" preserveAspectRatio="xMidYMin slice" style="padding-bottom: 7.4%;">
+              <path fill-rule="evenodd"
+                    d="M0,49.1354156 C114.865691,63.101639 233.797872,70.1841755 352.294548,70 C538.420213,70.1509309 724.960106,53.0977161 895.531915,18.3653358 C930.405585,11.2594182 965.226064,7.13780918 1000,0 L1000,74 L0,74 L0,49.1354156 Z"/>
+            </svg>
+          </div>
+        </f:if>
+      </figure>
+    </f:alias>
+  </f:if>
+</f:section>
+
+<f:section name="Image">
+  <f:if condition="{images}">
+    <f:alias map="{image:images.0}">
+      <figure class="CurveImage u-print-hide">
+        <f:image image="{image}" class="CurveImage-image" alt="{image.alternative}" maxWidth="736" loading="lazy"/>
+        <f:if condition="{data.image_type} == 0">
+          <div class="CurveImage-imageCurve">
+            <svg class="u-scalingInlineSVG" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 1000 140" preserveAspectRatio="xMidYMin slice" style="padding-bottom: 14%;">
+              <path fill-rule="evenodd"
+                    d="M0,99.1999693 C114.865833,125.773291 233.797917,138.803995 352.29375,138.45439 C538.420833,138.741213 724.960417,106.739044 895.529167,40.6526151 C930.404167,27.1318346 965.225,13.5813219 1000,7.2266168e-15 L1000,140 L0,140 L0,99.1999693 Z"/>
+            </svg>
+          </div>
+        </f:if>
+      </figure>
+    </f:alias>
+  </f:if>
+</f:section>
+
+
+</html>

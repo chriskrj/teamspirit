@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+// https://blog.liamsnowdon.uk/posts/using-the-7-1-pattern-for-better-sass-architecture/
+// https://www.sitepoint.com/architecture-sass-project/
+
+// abstracts
+// @use "abstracts/constants";
+
+// themes
+@use "themes/screen";
+@use "themes/light";
+
+// base
+@use "base/webfonts";
+@use "base/global";
+@use "base/utilityTextAlign";
+
+
+// components
+@use "components/Link";
+@use "components/Button";
+@use "components/Text";
+@use "components/List";
+@use "components/Table";
+@use "components/RTE";
+
+// pages
+
+// vendors
+
+
+// Select group title styling
+.cke_panel_grouptitle {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+// non styled panel list items like List styles
+.cke_panel_list {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+// STACK
+.cke_editable {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #FFF;
+
+  & > * + * {
+    margin-top: 1.25em;
+  }
+}

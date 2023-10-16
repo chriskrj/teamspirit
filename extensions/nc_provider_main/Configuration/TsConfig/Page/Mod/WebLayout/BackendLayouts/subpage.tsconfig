@@ -1,0 +1,43 @@
+# BACKENDLAYOUT: DEFAULT
+# Restrict by ctype: https://github.com/IchHabRecht/content_defender/blob/master/README.md
+mod {
+  web_layout {
+    BackendLayouts {
+      subpage {
+        title = Subpage
+        config {
+          backend_layout {
+            colCount = 12
+            rowCount = 2
+            rows {
+              1 {
+                columns {
+                  1 {
+                    name = Einleitungsbereich
+                    colPos = 1
+                    colspan = 6
+                    allowed.CType = text
+                  }
+                  2 {
+                    name = Bereich für Hero Bild
+                    colspan = 6
+                  }
+                }
+              }
+              2 {
+                columns {
+                  1 {
+                    name = Bereich für Hauptinhalte
+                    colPos = 0
+                    colspan = 12
+                  }
+                }
+              }
+            }
+          }
+        }
+        icon = EXT:nc_provider_main/Resources/Public/Backend/BackendLayouts/Subpage.svg
+      }
+    }
+  }
+}

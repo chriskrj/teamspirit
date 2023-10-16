@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="EXT:nc_provider_main/Resources/Private/Language/locallang.xlf" date="2023-04-04T09:21:15Z" product-name="nc_provider_main">
+		<header/>
+		<body>
+			<trans-unit id="contacts.email.linklabel" resname="contacts.email.linklabel">
+				<source>Write email</source>
+			</trans-unit>
+			<trans-unit id="cookiebanner.accept.linklabel" resname="cookiebanner.accept.linklabel">
+				<source>Agree and continue</source>
+			</trans-unit>
+			<trans-unit id="cookiebanner.additionaldescription.paragraph" resname="cookiebanner.additionaldescription.paragraph">
+				<source>For more information on cookies and customisation options, see &quot;Cookie settings&quot;.</source>
+			</trans-unit>
+			<trans-unit id="cookiebanner.cookiesettings.linklabel" resname="cookiebanner.cookiesettings.linklabel">
+				<source>Cookie settings</source>
+			</trans-unit>
+			<trans-unit id="cookiebanner.decline.linklabel" resname="cookiebanner.decline.linklabel">
+				<source>Decline</source>
+			</trans-unit>
+			<trans-unit id="cookiebanner.description.linkabel" resname="cookiebanner.description.linkabel">
+				<source>to the privacy policy</source>
+			</trans-unit>
+			<trans-unit id="cookiebanner.description.paragraph" resname="cookiebanner.description.paragraph">
+				<source>We use cookies to give you the best possible experience on our website. In doing so, we take your settings into account. We only process your data if you give us your consent by clicking on &quot;Agree and continue&quot;. You can revoke your consent at any time</source>
+			</trans-unit>
+			<trans-unit id="cookiesettings.cancel.linklabel" resname="cookiesettings.cancel.linklabel">
+				<source>Cancel</source>
+			</trans-unit>
+			<trans-unit id="cookiesettings.essentials.label" resname="cookiesettings.essentials.label">
+				<source>Required cookies</source>
+			</trans-unit>
+			<trans-unit id="cookiesettings.essentials.paragraph" resname="cookiesettings.essentials.paragraph">
+				<source><![CDATA[Required cookies are mandatory for the use of the website. Without these cookies, the website cannot function properly.<br><br><strong>Individual cookies</strong><br><br>Cookiename: cookiehint; Provider: mobiliteam by NAH.SH; Purpose: This cookie saves the cookie setting; Duration: 1 year]]></source>
+			</trans-unit>
+			<trans-unit id="cookiesettings.intro.headline" resname="cookiesettings.intro.headline">
+				<source>Your cookie settings for this website</source>
+			</trans-unit>
+			<trans-unit id="cookiesettings.intro.paragraph" resname="cookiesettings.intro.paragraph">
+				<source>Make your personal settings here</source>
+			</trans-unit>
+			<trans-unit id="cookiesettings.save.linklabel" resname="cookiesettings.save.linklabel">
+				<source>Save</source>
+			</trans-unit>
+			<trans-unit id="cookiesettings.statistics.label" resname="cookiesettings.statistics.label">
+				<source>Statistics</source>
+			</trans-unit>
+			<trans-unit id="cookiesettings.statistics.linklabel" resname="cookiesettings.statistics.linklabel">
+				<source>To the privacy policy</source>
+			</trans-unit>
+			<trans-unit id="cookiesettings.statistics.paragraph" resname="cookiesettings.statistics.paragraph">
+				<source><![CDATA[These cookies help us to analyse user behaviour in order to continuously improve the quality of our website.<br><br><strong>Individual cookies</strong><br><br>
+Cookiename: _pk_id.*; Provider: mobiliteam by NAH.SH; Purpose: Collection of statistical data in Matomo about how the website is used by visitors; Duration: 13 Monate<br><br>
+Cookiename: _pk_ref.*; Provider: mobiliteam by NAH.SH; Purpose: Collection of statistical data in Matomo about where visitors to this website have come from; Duration: 6 month<br><br>
+Cookiename: _pk_ses.*, _pk_cvar.*; Provider: mobiliteam by NAH.SH; Purpose: Collection of statistical data in Matomo about how the website is used by visitors; Duration: 30 minutes<br><br>]]></source>
+			</trans-unit>
+			<trans-unit id="cookiesettings.youtube.label" resname="cookiesettings.youtube.label">
+				<source>YouTube</source>
+			</trans-unit>
+			<trans-unit id="cookiesettings.youtube.linklabel" resname="cookiesettings.youtube.linklabel">
+				<source>To the privacy policy</source>
+			</trans-unit>
+			<trans-unit id="cookiesettings.youtube.paragraph" resname="cookiesettings.youtube.paragraph">
+				<source>You can watch YouTube videos directly on our website. We would like to point out that personal data (e.g. IP address) is transmitted to YouTube in the process.</source>
+			</trans-unit>
+			<trans-unit id="event.backlink.label" resname="event.backlink.label">
+				<source>Event overview</source>
+			</trans-unit>
+			<trans-unit id="event.detaillink.label" resname="event.detaillink.label">
+				<source>Event details</source>
+			</trans-unit>
+			<trans-unit id="event.downloads.headline" resname="event.downloads.headline">
+				<source>Downloads</source>
+			</trans-unit>
+			<trans-unit id="event.enddate.prefix" resname="event.enddate.prefix">
+				<source>to</source>
+			</trans-unit>
+			<trans-unit id="event.externallink.label" resname="event.externallink.label">
+				<source>Go to website</source>
+			</trans-unit>
+			<trans-unit id="event.imagegallery.headline" resname="event.imagegallery.headline">
+				<source>Image gallery</source>
+			</trans-unit>
+			<trans-unit id="event.listlink.label" resname="event.listlink.label">
+				<source>All events</source>
+			</trans-unit>
+			<trans-unit id="event.noevents.paragraph" resname="event.noevents.paragraph">
+				<source>Currently there are no events planned. We will keep you up to date!</source>
+			</trans-unit>
+			<trans-unit id="format.date" resname="format.date">
+				<source>%d/%m/%Y</source>
+			</trans-unit>
+			<trans-unit id="news.backlink.label" resname="news.backlink.label">
+				<source>News overview</source>
+			</trans-unit>
+			<trans-unit id="news.downloads.headline" resname="news.downloads.headline">
+				<source>Downloads</source>
+			</trans-unit>
+			<trans-unit id="news.imagegallery.headline" resname="news.imagegallery.headline">
+				<source>Image gallery</source>
+			</trans-unit>
+			<trans-unit id="news.listlink.label" resname="news.listlink.label">
+				<source>Show all News</source>
+			</trans-unit>
+			<trans-unit id="news.loadmore.label" resname="news.loadmore.label">
+				<source>Load more</source>
+			</trans-unit>
+			<trans-unit id="news.releatedlinks.headline" resname="news.releatedlinks.headline">
+				<source>Related Links</source>
+			</trans-unit>
+			<trans-unit id="news.rss.linklabel" resname="news.rss.linklabel">
+				<source>Subscribe to RSS feed</source>
+			</trans-unit>
+			<trans-unit id="skipnavigation.mainarea.label" resname="skipnavigation.mainarea.label">
+				<source>Main area</source>
+			</trans-unit>
+			<trans-unit id="stickynavigation.menubutton.label" resname="stickynavigation.menubutton.label">
+				<source>Menu</source>
+			</trans-unit>
+			<trans-unit id="youtubeinject.cookiedetails" resname="youtubeinject.cookiedetails">
+				<source>Adjust your cookie settings</source>
+			</trans-unit>
+			<trans-unit id="youtubeinject.copy" resname="youtubeinject.copy">
+				<source>You can watch this YouTube video directly on our website. Please note that personal data (e.g. IP address) will be transmitted to YouTube.</source>
+			</trans-unit>
+			<trans-unit id="youtubeinject.dataprotection" resname="youtubeinject.dataprotection">
+				<source>Data privacy</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

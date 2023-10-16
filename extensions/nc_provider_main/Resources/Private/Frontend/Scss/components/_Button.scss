@@ -1,0 +1,89 @@
+.Button {
+  --nc-component-button-font-size: var(--nc-semantic-font-size-base);
+  --nc-component-button-background-color: var(--nc-semantic-color-bg-action-default);
+  --nc-component-button-border-color: var(--nc-semantic-color-bg-action-default);
+  --nc-component-button-color: var(--nc-semantic-color-fg-on-contrast);
+
+  font-family: inherit;
+  line-height: inherit;
+  -webkit-appearance: button;
+  text-decoration: none;
+  font-weight: var(--nc-semantic-font-weight-bold);
+  color: var(--nc-component-button-color);
+  font-size: var(--nc-component-button-font-size);
+  font-style: normal;
+  //text-transform: uppercase;
+  cursor: pointer;
+  background-color: var(--nc-component-button-background-color);
+  border: 1px solid var(--nc-component-button-border-color);
+  padding: 0.75rem 2rem;
+  display: inline-flex;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  align-self: baseline;
+  justify-content: flex-start;
+  align-items: center;
+  outline-offset: 1px !important;
+  border-radius: 2rem;
+
+  &:hover,
+  &.is-active,
+  &:active {
+    --nc-component-button-background-color: var(--nc-semantic-color-bg-action-default--hover);
+    --nc-component-button-border-color: var(--nc-semantic-color-bg-action-default--hover);
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.25;
+    pointer-events: none;
+  }
+
+  // .u-textAlign--center & {
+  //  margin-left: 0;
+  //  margin-right: 0;
+  // }
+
+  // .u-textAlign--right & {
+  //  margin-left: 0.5em;
+  //  margin-right: 0;
+  // }
+}
+
+.Button--iconOnly {
+  padding: 0.75em 1em;
+}
+
+.Button--block {
+  display: flex;
+  width: 100%;
+}
+
+.Button-icon {
+  --nc-component-button-icon-color: var(--nc-semantic-color-fg-on-contrast);
+
+  /* autoprefixer: off */
+  display: inline-flex;
+  fill: currentcolor;
+  width: 2em;
+  padding-left: 1em;
+  flex-shrink: 0;
+  margin-left: auto;
+  margin-right: -0.75em;
+
+  .Button--iconOnly & {
+    margin-right: 0;
+    padding-left: 0;
+    width: 1em;
+  }
+
+  .Button:hover &,
+  .Button.is-active &,
+  .Button:active & {
+    color: var(--nc-component-button-icon-color);
+  }
+}
+
+.Button--alignCenter {
+  margin-left: auto;
+  margin-right: auto;
+}

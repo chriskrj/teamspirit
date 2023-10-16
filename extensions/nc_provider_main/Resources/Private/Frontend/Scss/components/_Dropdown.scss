@@ -1,0 +1,15 @@
+.Dropdown {
+
+}
+
+.Dropdown-trigger {
+
+}
+
+.Dropdown-panel {
+  display: none;
+
+  &.is-open {
+    display: block;
+  }
+}

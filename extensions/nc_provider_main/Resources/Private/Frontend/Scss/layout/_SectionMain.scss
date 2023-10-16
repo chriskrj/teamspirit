@@ -1,0 +1,11 @@
+@use "sass:math";
+@use "../abstracts/coreTokenIndexes";
+@use "../abstracts/functions";
+
+.SectionMain {
+  position: relative;
+  z-index: functions.z(coreTokenIndexes.$z-root, main);
+  background-color: var(--nc-semantic-color-bg-default);
+  // display: flex;
+  // flex-direction: column;
+}

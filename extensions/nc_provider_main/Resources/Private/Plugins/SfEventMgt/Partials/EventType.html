@@ -1,0 +1,12 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:nc="http://typo3.org/ns/NC/NcProviderMain/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+  <f:section name="Label">
+    <f:switch expression="{event.pid}">
+      <f:case value="40">Externer Anbieter </f:case>
+      <f:defaultCase>Intern mobiliteam</f:defaultCase>
+    </f:switch>
+  </f:section>
+
+</html>

@@ -1,0 +1,12 @@
+TCAdefaults.tt_content.imageorient = 2
+
+# default hide Headline
+TCAdefaults.tt_content.header_layout = 2
+
+# default uploads file type
+TCAdefaults.tt_content.uploads_type = 1
+
+# default show content Elements in Menu
+TCAdefaults.tt_content.sectionIndex = 1
+
+TCAdefaults.tt_content.background_color_class = default

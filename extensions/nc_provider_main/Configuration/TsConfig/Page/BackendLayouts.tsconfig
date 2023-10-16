@@ -1,0 +1,6 @@
+
+####################################
+# BackendLayout collection         #
+####################################
+
+@import 'EXT:nc_provider_main/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts/*.tsconfig'

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-06-02T11:48:25Z" product-name="news">
+		<header/>
+		<body>
+			<trans-unit id="tx_news_domain_model_media.showinviews.0" xml:space="preserve">
+				<source>Show only in detail views</source>
+				<target>Nur in der Galerie anzeigen</target>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model_media.showinviews.1" xml:space="preserve">
+				<source>Show in all views</source>
+				<target>Im Teaser, im Hero und in der Galerie anzeigen</target>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model_media.showinviews.2" xml:space="preserve">
+				<source>Show only in list views</source>
+				<target>Nur im Teaser und im Hero anzeigen</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

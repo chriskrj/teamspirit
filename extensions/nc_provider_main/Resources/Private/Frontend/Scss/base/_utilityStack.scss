@@ -1,0 +1,106 @@
+@use "sass:map";
+
+// https://andy-bell.co.uk/my-favourite-3-lines-of-css/
+// https://every-layout.dev/layouts/stack/
+// https://jsfiddle.net/c31hbLm4/
+
+
+.u-stack,
+.u-stack-text,
+.u-stack-none,
+.u-stack-2xs,
+.u-stack-xs,
+.u-stack-sm,
+.u-stack-base,
+.u-stack-md,
+.u-stack-lg,
+.u-stack-xl,
+.u-stack-2xl,
+.u-stack-3xl,
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  & > * + * {
+    margin-top: var(--nc-component-stack-space, 1rem);
+  }
+}
+
+.u-stack-text > * + * {
+  --nc-component-stack-space: 1.25em;
+}
+
+.u-stack-none > * + * {
+  --nc-component-stack-space: 0;
+}
+
+.u-stack-2xs > * + * {
+  --nc-component-stack-space: var(--nc-semantic-space-2xs);
+}
+
+.u-stack-xs > * + * {
+  --nc-component-stack-space: var(--nc-semantic-space-xs);
+}
+
+.u-stack-sm > * + * {
+  --nc-component-stack-space: var(--nc-semantic-space-sm);
+}
+
+.u-stack-md > * + * {
+  --nc-component-stack-space: var(--nc-semantic-space-md);
+}
+
+.u-stack-lg > * + * {
+  --nc-component-stack-space: var(--nc-semantic-space-lg);
+}
+
+.u-stack-xl > * + * {
+  --nc-component-stack-space: var(--nc-semantic-space-xl);
+}
+
+.u-stack-2xl > * + * {
+  --nc-component-stack-space: var(--nc-semantic-space-2xl);
+}
+
+.u-stack-3xl > * + * {
+  --nc-component-stack-space: var(--nc-semantic-space-3xl);
+}
+
+
+
+.u-stack-item--none {
+  --nc-component-stack-space: 0;
+}
+
+.u-stack-item--2xs {
+  --nc-component-stack-space: var(--nc-semantic-space-2xs);
+}
+
+.u-stack-item--xs {
+  --nc-component-stack-space: var(--nc-semantic-space-xs);
+}
+
+.u-stack-item--sm  {
+  --nc-component-stack-space: var(--nc-semantic-space-sm);
+}
+
+.u-stack-item--md {
+  --nc-component-stack-space: var(--nc-semantic-space-md);
+}
+
+.u-stack-item--lg {
+  --nc-component-stack-space: var(--nc-semantic-space-lg);
+}
+
+.u-stack-item--xl {
+  --nc-component-stack-space: var(--nc-semantic-space-xl);
+}
+
+.u-stack-item--2xl{
+  --nc-component-stack-space: var(--nc-semantic-space-2xl);
+}
+
+.u-stack-item--3xl {
+  --nc-component-stack-space: var(--nc-semantic-space-3xl);
+}

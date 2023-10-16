@@ -1,0 +1,166 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:section name="Example">
+
+  <div>
+    <f:render partial="Styleguide/Headline" section="Headline" arguments="{title:'Forms'}"/>
+
+    <div class="u-container u-py-r2">
+      <div class="u-limitWidth-12 u-align-center">
+        <f:render section="ExampleContent" arguments="{id:'light'}"/>
+      </div>
+    </div>
+  </div>
+
+</f:section>
+
+<f:section name="ExampleContent">
+
+  <form class="Form u-stack">
+
+    <div class="FormField">
+      <label class="FormField-label" for="textlight">Label für input<span class="mandatory">*</span></label>
+      <div class="FormField-input">
+        <input class="TextField" id="textlight" type="text" placeholder="Text Input">
+      </div>
+    </div>
+
+    <div class="GridCol2Even-row u-row">
+
+      <div class="GridCol2Even-col u-col">
+        <div class="FormField">
+          <label class="FormField-label" for="texthalfLeft2light">Label für input<span class="mandatory">*</span></label>
+          <div class="FormField-input">
+            <input class="TextField" id="texthalfLeft2light" type="text" placeholder="Text Input">
+          </div>
+        </div>
+      </div>
+
+      <div class="GridCol2Even-col u-col">
+        <div class="FormField">
+          <label class="FormField-label" for="texthalfRightlight">Label für input<span class="mandatory">*</span></label>
+          <div class="FormField-input">
+            <input class="TextField" id="texthalfRightlight" type="text" placeholder="Text Input">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="FormField">
+      <label class="FormField-label" for="textarealight">Label für Textarea<span class="mandatory">*</span></label>
+      <div class="FormField-input">
+        <textarea class="TextField" id="textarealight" placeholder="Text area" rows="5" cols="20"></textarea>
+      </div>
+    </div>
+
+    <div class="GridCol2Even-row u-row">
+
+      <div class="GridCol2Even-col u-col">
+        <div class="FormField">
+          <label class="FormField-label" for="selectlight">Label für disabled Select</label>
+          <div class="FormField-input">
+            <div class="Select">
+              <select disabled id="selectlight">
+                <option>Option One</option>
+                <option>Option Two</option>
+                <option>Option Three</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="GridCol2Even-col u-col">
+        <div class="FormField">
+          <label class="FormField-label" for="selectlight">Label für Select<span class="mandatory">*</span></label>
+          <div class="FormField-input">
+            <div class="Select">
+              <select id="selectlight">
+                <option>Option One</option>
+                <option>Option Two</option>
+                <option disabled>Option Disabled</option>
+                <option>Option Three</option>
+                <optgroup label="Alternate">
+                  <option>Option 4</option>
+                  <option>Option 5</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="GridCol2Even-row u-row">
+
+      <div class="GridCol2Even-col u-col">
+        <div class="FormField ">
+          <label class="FormField-label" for="texthalfLeft4light">Label für input<span class="mandatory">*</span></label>
+          <div class="FormField-input">
+            <input class="TextField" id="texthalfLeft4light" type="text" placeholder="Text Input">
+          </div>
+        </div>
+      </div>
+
+      <div class="GridCol2Even-col u-col">
+        <div class="">
+          <fieldset class="FormField">
+            <legend class="FormField-label">Das ist die Radio Legend<span class="mandatory">*</span></legend>
+            <div class="FormField-input">
+              <div class="FormField-choice ">
+                <input class="RadioButton" type="radio" checked="checked" id="radiolight1" name="radiogrouplight">
+                <label class="FormField-choiceLabel" for="radiolight1">Radio 1</label>
+              </div>
+              <div class="FormField-choice ">
+                <input class="RadioButton" type="radio" id="radiolight2" name="radiogrouplight">
+                <label class="FormField-choiceLabel" for="radiolight2">Radio 2</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
+    </div>
+
+
+    <fieldset class="FormField">
+      <legend class="FormField-label">Das ist die Radio Legend für Inline FormGroups<span class="mandatory">*</span></legend>
+      <div class="FormField-input FormField-input--inline">
+        <div class="FormField-choice ">
+          <input class="RadioButton" type="radio" checked="checked" id="radioinlinelight1" name="radiogroupinlinelight">
+          <label class="FormField-choiceLabel" for="radioinlinelight1">Radio 1</label>
+        </div>
+        <div class="FormField-choice ">
+          <input class="RadioButton" type="radio" id="radioinlinelight2" name="radiogroupinlinelight">
+          <label class="FormField-choiceLabel" for="radioinlinelight2">Radio 2</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="FormField">
+      <legend class="FormField-label">Das ist die Checkbox Legend<span class="mandatory">*</span></legend>
+      <div class="FormField-input">
+        <div class="FormField-choice">
+          <input class="Checkbox" type="checkbox" checked="checked" id="checklight1" name="checklight1">
+          <label class="FormField-choiceLabel" for="checklight1">Check 1</label>
+        </div>
+        <div class="FormField-choice">
+          <input class="Checkbox" type="checkbox" id="checklight2" name="checklight2">
+          <label class="FormField-choiceLabel" for="checklight2">Check 2</label>
+        </div>
+      </div>
+    </fieldset>
+
+  </form>
+
+
+</f:section>
+
+
+</html>
+
+
+

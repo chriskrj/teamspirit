@@ -1,0 +1,76 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:section name="Example">
+
+    <f:comment><!--Generated file from npm build. Do not edit!--></f:comment>
+
+    <style>
+        .sg-colors {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .sg-color {
+            display: block;
+            padding: 0;
+            margin: 0 16px 24px 0;
+            width: 128px;
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.24);
+        }
+
+        .sg-color-data {
+            padding: 8px;
+            display: block;
+        }
+
+        .sg-color-display {
+            width: 100%;
+            height: 140px;
+            border-bottom: 1px solid #e7e7e7;
+        }
+
+        .sg-color-name {
+            font-size: .8em;
+            display: block;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: bold;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .sg-color-hex {
+            font-size: .8em;
+            display: block;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-style: italic;
+            line-height: 1;
+        }
+
+    </style>
+
+    <div>
+        <f:render partial="Styleguide/Headline" section="Headline" arguments="{title:'Colorpalette'}"/>
+        <div class="u-container">
+            <div class="u-limitWidth-12 u-align-center u-mb-r4">
+                <ul class="sg-colors">
+                    {{#each colors as |color|}}
+                        <li class="sg-color">
+                            <div class="sg-color-display" style="background-color: {{color.value}}"></div>
+                            <div class="sg-color-data">
+                                <span class="sg-color-name">{{color.key}}</span>
+                                <span class="sg-color-hex">{{color.value}}</span>
+                            </div>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</f:section>
+</html>

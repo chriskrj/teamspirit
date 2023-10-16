@@ -1,0 +1,46 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:section name="Example">
+  <div>
+    <f:render partial="Styleguide/Headline" section="Headline" arguments="{title:'Themes'}"/>
+
+    <div class="u-container">
+      <div class="u-limitWidth-12 u-align-center">
+        <section class="GridCol2Even-row u-row">
+          <div class="GridCol2Even-col u-col u-stack-text u-bg-default u-py-md" data-theme="light">
+            <f:render section="ExampleContent" arguments="{theme:'light'}" />
+          </div>
+          <div class="GridCol2Even-col u-col u-stack-text u-bg-default u-py-md" data-theme="dark">
+            <f:render section="ExampleContent" arguments="{theme:'dark'}"/>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+</f:section>
+
+<f:section name="ExampleContent">
+  <h3 class="Text-heading-xl">{theme}</h3>
+  <div class="u-bg-default u-pa-md">
+    <p class="Text-body">Neutral backdrop. <a href="#" class="Link">Link</a> <button class="Button">Button</button></p>
+  </div>
+  <div class="u-bg-accent u-pa-md">
+    <p class="Text-body">Accent backdrop. <a href="#" class="Link">Link</a> <button class="Button">Button</button></p>
+  </div>
+  <div class="u-bg-highlight u-pa-md">
+    <p class="Text-body">Highlight backdrop. <a href="#" class="Link">Link</a> <button class="Button">Button</button></p>
+  </div>
+</f:section>
+
+
+
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,260 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:nc="http://typo3.org/ns/NC/NcProviderMain/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+
+<f:section name="Main">
+
+  <f:switch expression="{data.tx_listelements_layout}">
+    <f:case value="0">
+
+      <f:comment>per convention. use number of items to find rows</f:comment>
+      <f:variable name="numItems" value="{listitems -> f:count()}" />
+
+      <f:switch expression="{numItems}">
+        <f:case value="1">
+          <f:render section="LayoutCol1" arguments="{_all}"/>
+        </f:case>
+        <f:case value="2">
+          <f:render section="LayoutCol2" arguments="{_all}"/>
+        </f:case>
+        <f:case value="3">
+          <f:render section="LayoutCol3" arguments="{_all}"/>
+        </f:case>
+        <f:case value="4">
+          <f:render section="LayoutCol4" arguments="{_all}"/>
+        </f:case>
+        <f:defaultCase>
+          <f:comment>More than four elements</f:comment>
+          <f:render section="LayoutCol4" arguments="{_all}"/>
+        </f:defaultCase>
+      </f:switch>
+
+    </f:case>
+    <f:case value="1">
+      <f:render section="LayoutCol1" arguments="{_all}"/>
+    </f:case>
+    <f:case value="2">
+      <f:render section="LayoutCol2" arguments="{_all}"/>
+    </f:case>
+    <f:case value="3">
+      <f:render section="LayoutCol3" arguments="{_all}"/>
+    </f:case>
+    <f:case value="4">
+      <f:render section="LayoutCol4" arguments="{_all}"/>
+    </f:case>
+    <f:defaultCase>
+      <f:render section="LayoutCol1" arguments="{_all}"/>
+    </f:defaultCase>
+  </f:switch>
+
+</f:section>
+
+<f:section name="LayoutCol1">
+  <ul class="u-stack-xl">
+    <f:for each="{listitems}" as="listitem" iteration="iteration">
+      <li>
+        <f:if condition="{listitem.listassets} || {listitem.listimages}">
+          <f:then>
+            <f:if condition="{iteration.isOdd}">
+              <f:then>
+                <f:render section="ListItemLayoutImageRight" arguments="{listitem:listitem, data:data}"/>
+              </f:then>
+              <f:else>
+                <f:render section="ListItemLayoutImageLeft" arguments="{listitem:listitem, data:data}"/>
+              </f:else>
+            </f:if>
+          </f:then>
+          <f:else>
+            <f:render section="ListItemLayoutNoImage" arguments="{listitem:listitem, data:data}"/>
+          </f:else>
+        </f:if>
+      </li>
+    </f:for>
+  </ul>
+</f:section>
+
+<f:section name="LayoutCol2">
+  <ul class="GridCol2Even-row GridCol2Even-row--gap4 u-row">
+    <f:for each="{listitems}" as="listitem" iteration="iteration">
+      <li class="GridCol2Even-col u-col">
+        <f:render section="ListItemImageAbove" arguments="{listitem:listitem, data:data}"/>
+      </li>
+    </f:for>
+  </ul>
+</f:section>
+
+<f:section name="LayoutCol3">
+  <ul class="GridCol3Even-row GridCol3Even-row--gap4 u-row">
+    <f:for each="{listitems}" as="listitem" iteration="iteration">
+      <li class="GridCol3Even-col u-col">
+        <f:render section="ListItemImageAbove" arguments="{listitem:listitem, data:data}"/>
+      </li>
+    </f:for>
+  </ul>
+</f:section>
+
+<f:section name="LayoutCol4">
+  <ul class="GridCol4Even-row GridCol4Even-row--gap4 u-row">
+    <f:for each="{listitems}" as="listitem" iteration="iteration">
+      <li class="GridCol4Even-col u-col">
+        <f:render section="ListItemImageAbove" arguments="{listitem:listitem, data:data}"/>
+      </li>
+    </f:for>
+  </ul>
+</f:section>
+
+<f:section name="ListItemLayoutNoImage">
+  <div class="u-limitWidth-7 u-align-left">
+    <div class="u-stack-lg">
+
+      <f:render section="Header" arguments="{header:listitem.data.header, headerLayout:listitem.data.header_layout, prevHeaderLayout: data.header_layout}"/>
+
+      <f:if condition="{listitem.data.bodytext}">
+        <div class="RTE u-stack-text">
+          <f:format.html>{listitem.data.bodytext}</f:format.html>
+        </div>
+      </f:if>
+
+    </div>
+  </div>
+</f:section>
+
+<f:section name="ListItemLayoutImageLeft">
+  <div class="u-stack-lg">
+
+    <f:render section="Header" arguments="{header:listitem.data.header, headerLayout:listitem.data.header_layout, prevHeaderLayout: data.header_layout}"/>
+
+    <div class="ImageText-row ImageText--layoutImageLeft u-row">
+
+      <div class="ImageText-colImage u-col">
+        <f:if condition="{listitem.listassets}">
+          <nc:inlineSvg image="{listitem.listassets.0}" width="256" height="256" class="ListElementIcon ListElementIcon--centered u-print-hide" />
+        </f:if>
+        <f:if condition="{listitem.listimages}">
+          <f:render section="Image" arguments="{listitem:listitem}"/>
+        </f:if>
+      </div>
+
+      <f:if condition="{listitem.data.bodytext}">
+        <div class="ImageText-colText u-col">
+          <div class="RTE u-stack-text-md">
+            <f:format.html>{listitem.data.bodytext}</f:format.html>
+          </div>
+        </div>
+      </f:if>
+    </div>
+
+  </div>
+</f:section>
+
+
+<f:section name="ListItemLayoutImageRight">
+  <div class="u-stack-2">
+
+    <f:render section="Header" arguments="{header:listitem.data.header, headerLayout:listitem.data.header_layout, prevHeaderLayout: data.header_layout}"/>
+
+    <div class="ImageText-row ImageText--layoutImageRight u-row">
+      <div class="ImageText-colImage u-col">
+        <f:if condition="{listitem.listassets}">
+          <nc:inlineSvg image="{listitem.listassets.0}" width="256" height="256" class="ListElementIcon ListElementIcon--centered u-print-hide"/>
+        </f:if>
+        <f:if condition="{listitem.listimages}">
+          <f:render section="Image" arguments="{listitem:listitem}"/>
+        </f:if>
+      </div>
+      <f:if condition="{listitem.data.bodytext}">
+        <div class="ImageText-colText u-col">
+          <div class="RTE u-stack-text-md">
+            <f:format.html>{listitem.data.bodytext}</f:format.html>
+          </div>
+        </div>
+      </f:if>
+    </div>
+
+  </div>
+</f:section>
+
+<f:section name="ListItemImageAbove">
+  <div class="u-stack-text-md">
+
+    <f:if condition="{listitem.listassets}">
+      <nc:inlineSvg image="{listitem.listassets.0}" width="128" height="128" class="ListElementIcon u-print-hide"/>
+    </f:if>
+
+    <f:if condition="{listitem.listimages}">
+      <f:render section="Image" arguments="{listitem:listitem}"/>
+    </f:if>
+
+    <f:render section="Header" arguments="{header:listitem.data.header, headerLayout:listitem.data.header_layout, prevHeaderLayout: data.header_layout}"/>
+
+    <f:if condition="{listitem.data.bodytext}">
+      <div class="RTE u-stack-text-md">
+        <f:format.html>{listitem.data.bodytext}</f:format.html>
+      </div>
+    </f:if>
+  </div>
+</f:section>
+
+<f:section name="Header">
+  <f:switch expression="{headerLayout}">
+    <f:case value="0">
+      <f:switch expression="{prevHeaderLayout}">
+        <f:case value="2">
+          <f:render section="Header" arguments="{header:header, headerLayout:3}"/>
+        </f:case>
+        <f:case value="3">
+          <f:render section="Header" arguments="{header:header, headerLayout:4}"/>
+        </f:case>
+        <f:case value="5">
+          <f:render section="Header" arguments="{header:header, headerLayout:6}"/>
+        </f:case>
+        <f:case value="100">
+          <f:render section="Header" arguments="{header:header, headerLayout:2}"/>
+        </f:case>
+        <f:defaultCase>
+          <f:render section="Header" arguments="{header:header, headerLayout:3}"/>
+        </f:defaultCase>
+      </f:switch>
+    </f:case>
+    <f:case value="2">
+      <h2 class="Base-h2 Base-h2--section u-mb-2"><f:format.htmlentitiesDecode>{header}</f:format.htmlentitiesDecode></h2>
+    </f:case>
+    <f:case value="3">
+      <h3 class="Base-h3"><f:format.htmlentitiesDecode>{header}</f:format.htmlentitiesDecode></h3>
+    </f:case>
+    <f:case value="4">
+      <h4 class="Base-h4"><f:format.htmlentitiesDecode>{header}</f:format.htmlentitiesDecode></h4>
+    </f:case>
+    <f:case value="100">
+      <f:comment> -- do not show header -- </f:comment>
+    </f:case>
+    <f:defaultCase>
+      <f:if condition="{default}">
+        <f:render section="Header" arguments="{header:header, headerLayout:3}"/>
+      </f:if>
+    </f:defaultCase>
+  </f:switch>
+</f:section>
+
+<f:section name="Image">
+  <f:if condition="{listitem.listimages}">
+    <f:alias map="{image:listitem.listimages.0}">
+      <figure class="CurveImage u-print-hide">
+        <f:image image="{image}" class="CurveImage-image" alt="{image.alternative}" width="1504" loading="lazy"/>
+        <f:if condition="{listitem.data.image_type} == 0">
+          <div class="CurveImage-imageCurve">
+            <svg class="u-scalingInlineSVG" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 1000 140" preserveAspectRatio="xMidYMin slice" style="padding-bottom: 14%;">
+              <path fill-rule="evenodd"
+                    d="M0,99.1999693 C114.865833,125.773291 233.797917,138.803995 352.29375,138.45439 C538.420833,138.741213 724.960417,106.739044 895.529167,40.6526151 C930.404167,27.1318346 965.225,13.5813219 1000,7.2266168e-15 L1000,140 L0,140 L0,99.1999693 Z"/>
+            </svg>
+          </div>
+        </f:if>
+      </figure>
+    </f:alias>
+  </f:if>
+</f:section>
+
+
+
+</html>

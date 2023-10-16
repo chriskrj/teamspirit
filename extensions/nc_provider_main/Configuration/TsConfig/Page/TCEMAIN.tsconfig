@@ -1,0 +1,50 @@
+# ==================================================
+# TCEMAIN
+# ==================================================
+# Seitenbaumrechte
+# --------------------------------------------------
+TCEMAIN.permissions {
+  # Permission for group Seitenbaumrechte
+  groupid = 1
+  user = show, editcontent, edit, delete, new
+  group = show, editcontent, edit, delete, new
+  everybody =
+}
+
+
+# --------------------------------------------------
+# Content
+# --------------------------------------------------
+TCEMAIN.table.tt_content {
+  disablePrependAtCopy = 1
+  disableHideAtCopy = 1
+}
+
+
+# Add News to Linkwizard
+# https://www.clickstorm.de/blog/linkhandler-typo3/
+TCEMAIN {
+  linkHandler {
+    tx_news_news {
+      handler = TYPO3\CMS\Recordlist\LinkHandler\RecordLinkHandler
+      label = Nachricht
+      configuration {
+        table = tx_news_domain_model_news
+        storagePid = 44
+        hidePageTree = 1
+      }
+      scanAfter = page
+    }
+
+#    tx_sfeventmgt_event {
+#      handler = TYPO3\CMS\Recordlist\LinkHandler\RecordLinkHandler
+#      label = Veranstaltung
+#      configuration {
+#        table = tx_sfeventmgt_domain_model_event
+#        storagePid = 40, 41
+#        hidePageTree = 1
+#      }
+#      scanAfter = page
+#    }
+  }
+}

@@ -1,0 +1,42 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="FrameLimit"/>
+
+<f:section name="Main">
+
+  <div class="u-stack-lg">
+    <f:render partial="Header/All" arguments="{_all}"/>
+
+    <f:if condition="{listitems}">
+
+      <ul class="AccordionGroup js-disclosure-list" data-disclosure-multiexpand="false" role="region" aria-label="Akkordeon Gruppe">
+        <f:for each="{listitems}" as="listitem" iteration="iteration">
+          <li class="AccordionGroup-item js-accordion-item" role="presentation">
+            <a id="#accordiontrigger-{data.uid}-{listitem.data.uid}" href="#accordionpanel-{data.uid}-{listitem.data.uid}" class="AccordionGroup-title js-disclosure-trigger"
+               role="tab"
+               aria-controls="accordionpanel-{data.uid}-{listitem.data.uid}"
+               aria-expanded="false">
+              <h3 class="AccordionGroup-label">
+                <f:format.htmlentitiesDecode>{listitem.data.header}</f:format.htmlentitiesDecode>
+              </h3>
+              <span class="AccordionGroup-icon"><f:render partial="Base/Symbols" section="Symbol" arguments="{name:'chevron-down'}"/></span>
+            </a>
+            <div class="AccordionGroup-panel js-disclosure-panel" id="accordionpanel-{data.uid}-{listitem.data.uid}" role="tabpanel" aria-labelledby="accordiontrigger-{data.uid}-{listitem.data.uid}" aria-hidden="true">
+
+              <div class="RTE u-stack-text">
+                <f:format.html>{listitem.data.bodytext}</f:format.html>
+              </div>
+
+            </div>
+          </li>
+        </f:for>
+      </ul>
+
+    </f:if>
+  </div>
+
+</f:section>
+
+
+</html>

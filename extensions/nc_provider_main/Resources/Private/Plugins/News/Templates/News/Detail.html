@@ -1,0 +1,180 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      xmlns:nc="http://typo3.org/ns/NC/NcProviderMain/ViewHelpers"
+      xmlns:schema="http://typo3.org/ns/Brotkrueml/Schema/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Detail"/>
+
+<f:section name="content">
+
+
+  <f:if condition="{newsItem}">
+    <n:format.nothing>
+      <n:excludeDisplayedNews newsItem="{newsItem}"/>
+      <f:if condition="{newsItem.alternativeTitle}">
+        <f:then>
+          <nc:titleTag>
+            <f:format.htmlentitiesDecode>{newsItem.alternativeTitle}</f:format.htmlentitiesDecode>
+          </nc:titleTag>
+        </f:then>
+        <f:else>
+          <nc:titleTag>
+            <f:format.htmlentitiesDecode>{newsItem.title}</f:format.htmlentitiesDecode>
+          </nc:titleTag>
+        </f:else>
+      </f:if>
+    </n:format.nothing>
+
+
+    <schema:type.newsArticle
+      -isMainEntityOfWebPage="1"
+      headline="{newsItem.title}"
+      author="{newsItem.author}"
+      datePublished="{f:format.date(format:'Y-m-d', date: newsItem.datetime)}"
+    >
+      <schema:type.organization -as="publisher" name="mobiliteam by NAH.SH" sameAs="https://mobiliteam.nah.sh" logo="{f:uri.image(src: '/apple-touch-icon.png', absolute:1)}"/>
+
+    </schema:type.newsArticle>
+
+
+    <f:render partial="Detail/Opengraph" arguments="{newsItem: newsItem, settings:settings}"/>
+
+    <article id="maincontent">
+
+
+
+      <f:if condition="{newsItem.mediaPreviews}">
+        <f:then>
+          <div class="u-container u-my-fluid-3xl">
+
+            <div class="u-limitWidth-12 u-align-center u-stack-xl">
+
+              <div>
+                <f:if condition="{newsItem.datetime}">
+                  <p class="Text-body Text-body--small">
+                    <f:format.date format="%d.%m.%Y">{newsItem.datetime}</f:format.date>
+                  </p>
+                </f:if>
+                <h1 class="Text-heading-4xl">
+                  <f:format.htmlentitiesDecode>{newsItem.title}</f:format.htmlentitiesDecode>
+                </h1>
+              </div>
+
+              <div class="GridCol2Even-row u-row">
+                <div class="GridCol2Even-col u-col">
+                  <div class="u-stack-xl">
+                    <f:if condition="{newsItem.teaser}">
+                      <p class="Text-body Text-body--large">
+                        <f:format.htmlentitiesDecode>{newsItem.teaser}</f:format.htmlentitiesDecode>
+                      </p>
+                    </f:if>
+                  </div>
+                </div>
+                <div class="GridCol2Even-col GridCol2Even--colOrderTop u-col">
+                  <f:alias map="{firstMedia:newsItem.firstPreview}">
+                    <f:image class="" image="{firstMedia}" cropVariant="4:3" width="960" alt="{firstMedia.alternative}"/>
+                  </f:alias>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </f:then>
+        <f:else>
+          <div class="u-container u-my-fluid-3xl u-stack-xl">
+            <div class="u-limitWidth-12 u-align-center">
+              <f:if condition="{newsItem.datetime}">
+                <p class="Text-body Text-body--small">
+                  <f:format.date format="%d.%m.%Y">{newsItem.datetime}</f:format.date>
+                </p>
+              </f:if>
+              <h1 class="Text-heading-4xl">
+                <f:format.htmlentitiesDecode>{newsItem.title}</f:format.htmlentitiesDecode>
+              </h1>
+            </div>
+
+            <f:if condition="{newsItem.teaser}">
+              <div class="u-limitWidth-7 u-align-center u-stack-xl">
+                <p class="Text-body Text-body--large">
+                  <f:format.htmlentitiesDecode>{newsItem.teaser}</f:format.htmlentitiesDecode>
+                </p>
+              </div>
+            </f:if>
+
+          </div>
+        </f:else>
+      </f:if>
+
+      <div class="u-container">
+        <div class="u-limitWidth-7 u-align-center u-stack-xl">
+          <div class="RTE u-stack-text-md">
+            <f:format.html>{newsItem.bodytext}</f:format.html>
+          </div>
+
+          <f:if condition="{newsItem.mediaNonPreviews}">
+            <section class="u-stack-lg">
+              <h2 class="Text-heading-2xl">Bildergalerie</h2>
+              <f:render partial="Media/ImageGallery" section="ImageGallery" arguments="{images:newsItem.mediaNonPreviews, id:contentObjectData.uid}"/>
+            </section>
+          </f:if>
+
+          <f:if condition="{newsItem.relatedLinks}">
+            <section class="u-stack-lg">
+
+              <h2 class="Text-heading-2xl">Links</h2>
+
+              <ul class="List-bullets">
+                <f:for each="{newsItem.relatedLinks}" as="relatedLink">
+                  <li>
+                    <f:link.typolink class="Link" parameter="{relatedLink.uri}" title="{relatedLink.title}" target="{n:targetLink(link:relatedLink.uri)}">{f:if(condition: relatedLink.title, then: relatedLink.title, else: relatedLink.uri)}</f:link.typolink>
+                  </li>
+                </f:for>
+              </ul>
+            </section>
+          </f:if>
+
+          <f:if condition="{newsItem.relatedFiles}">
+            <section class="u-stack-lg">
+              <h2 class="Text-heading-2xl">Downloads</h2>
+
+              <ul class="DownloadList u-print-hide" role="list">
+                <f:for each="{newsItem.relatedFiles}" as="file" iteration="fileIterator">
+                  <li class="DownloadList-item">
+                    <div class="Downloadlist-colExtension">
+                      <span class="Downloadlist-extension">{file.originalResource.properties.extension}</span>
+                    </div>
+                    <div class="Downloadlist-colText u-stack-sm">
+                      <a class="DownloadList-link" href="{file.originalResource.publicUrl}" >
+                        {f:if(condition: file.originalResource.properties.title, then: file.originalResource.properties.title, else: file.originalResource.name) -> f:format.htmlspecialchars()}
+                      </a>
+                      <f:if condition="{file.originalResource.properties.description}"><p class="Text-body">{file.originalResource.properties.description}</p></f:if>
+                      <div class="Text-body">
+                    <span class="Link">
+                      <span class="Link-icon"><f:render partial="Base/Symbols" section="Symbol" arguments="{name:'arrow-down'}" /></span>
+                      <span>Download</span>
+                    </span>
+                      </div>
+                    </div>
+                  </li>
+                </f:for>
+              </ul>
+
+            </section>
+          </f:if>
+
+          <nav class="Text-body">
+            <f:link.page class="Link" pageUid="{settings.backPid}"><span class="Link-icon"><f:render partial="Base/Symbols" section="Symbol" arguments="{name:'arrow-left'}"/></span>Zurück zur Übersicht</f:link.page>
+          </nav>
+        </div>
+      </div>
+    </article>
+
+  </f:if>
+
+
+</f:section>
+
+
+</html>

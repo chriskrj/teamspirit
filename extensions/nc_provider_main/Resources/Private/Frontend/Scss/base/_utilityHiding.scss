@@ -1,0 +1,28 @@
+@use "../abstracts/mixins";
+
+// Hide from both screenreaders and browsers: h5bp.com/u
+.u-hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
+.u-visuallyHidden {
+  @include mixins.visuallyHidden;
+}
+
+.u-visuallyHidden--scrollabble {
+  position: static;
+}
+
+.u-visuallyUnhidden {
+  clip: auto;
+  clip-path: none;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit;
+}
+

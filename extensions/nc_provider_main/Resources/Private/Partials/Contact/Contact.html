@@ -1,0 +1,42 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:section name="Contact">
+
+  <div class="ContactList-contact u-stack-md">
+
+    <f:if condition="{contact.image}">
+      <f:then>
+        <f:image class="ContactList-contactImage" image="{contact.image}" alt="{contact.image.originalRessource.alternative}" width="460" cropVariant="4:3" loading="lazy"/>
+      </f:then>
+      <f:else>
+        <f:image class="ContactList-contactImage" src="EXT:nc_provider_main/Resources/Public/Images/fallback.svg" alt="" loading="lazy"/>
+      </f:else>
+    </f:if>
+
+    <div class="u-stack-text">
+      <p class="Text-heading-lg">{contact.fullName}</p>
+      <f:if condition="{contact.responsibilities}">
+        <p class="Text-body">{contact.responsibilities}</p>
+      </f:if>
+      <div class="u-stack-text-xs">
+        <f:if condition="{contact.phone}">
+          <p class="Text-body">
+            <a href="tel:{f:format.urlencode(value: contact.phone)}" class="Link" aria-description="Telefon Link">
+              {contact.phone}
+            </a>
+          </p>
+        </f:if>
+        <f:if condition="{contact.email}">
+          <p class="Text-body">
+            <f:link.email email="{contact.email}" class="Link" additionalAttributes="{aria-description:'E-Mail Link'}"/>
+          </p>
+        </f:if>
+      </div>
+    </div>
+
+  </div>
+
+</f:section>
+
+</html>

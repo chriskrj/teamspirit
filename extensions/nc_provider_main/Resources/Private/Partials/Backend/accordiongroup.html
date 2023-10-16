@@ -1,0 +1,42 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+
+<f:section name="Main">
+  <div class="vstack gap-3">
+
+    <f:if condition="{content.bodytext}">
+      <div>
+        <f:format.html><f:format.crop maxCharacters="250" respectHtml="1">{content.bodytext}</f:format.crop></f:format.html>
+      </div>
+    </f:if>
+
+    <f:if condition="{content.listitems}">
+
+      <ul class="list-group">
+
+        <f:for each="{content.listitems}" as="listitem">
+          <li class="list-group-item">
+
+            <div class="vstack gap-2 {f:if(condition: listitem.hidden, then:'opacity-25')}">
+
+              <f:if condition="{listitem.processedImages}">
+                <div>
+                  <f:image image="{listitem.processedImages.0}" class="ImageText-image" alt="{listitem.processedImages.0.alternative}" width="80" loading="lazy"/>
+                </div>
+              </f:if>
+
+              <h4>{listitem.header}</h4>
+              <f:format.html><f:format.crop maxCharacters="250" respectHtml="1">{listitem.bodytext}</f:format.crop></f:format.html>
+            </div>
+          </li>
+
+        </f:for>
+
+      </ul>
+    </f:if>
+  </div>
+</f:section>
+
+
+</html>

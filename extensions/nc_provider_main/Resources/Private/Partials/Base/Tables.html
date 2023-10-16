@@ -1,0 +1,53 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:section name="Example">
+  <div>
+    <f:render partial="Styleguide/Headline" section="Headline" arguments="{title:'Tables'}"/>
+    <div class="u-container">
+      <div class="u-limitWidth-12 u-align-center u-mb-r4">
+        <f:render section="ExampleContent" />
+      </div>
+    </div>
+  </div>
+</f:section>
+
+<f:section name="ExampleContent">
+  <div class="Table-overflowContainer">
+    <table class="Table">
+      <thead>
+      <tr>
+        <th class="u-textAlign--left">Id</th>
+        <th>Vorname</th>
+        <th>Nachname</th>
+        <th>Alter</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><strong>1</strong></td>
+        <td>Max</td>
+        <td>Mustermann</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td><strong>2</strong></td>
+        <td>Maxi</td>
+        <td>Musterfrau</td>
+        <td>31</td>
+      </tr>
+      <tr>
+        <td><strong>3</strong></td>
+        <td>Klaus</td>
+        <td>Tester</td>
+        <td>28</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</f:section>
+
+</html>
+
+
+

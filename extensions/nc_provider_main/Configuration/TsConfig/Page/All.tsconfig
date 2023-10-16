@@ -1,0 +1,24 @@
+#
+# PageTS for Nc Provider Main
+#
+@import 'EXT:nc_provider_main/Configuration/TsConfig/Page/RTE.tsconfig'
+@import 'EXT:nc_provider_main/Configuration/TsConfig/Page/TCAdefaults.tsconfig'
+@import 'EXT:nc_provider_main/Configuration/TsConfig/Page/TCEFORM.tsconfig'
+@import 'EXT:nc_provider_main/Configuration/TsConfig/Page/TCEMAIN.tsconfig'
+#
+
+@import 'EXT:nc_provider_main/Configuration/TsConfig/Page/BackendLayouts.tsconfig'
+@import 'EXT:nc_provider_main/Configuration/TsConfig/Page/ContentElements.tsconfig'
+
+mod.SHARED {
+  defaultLanguageFlag = de
+  defaultLanguageLabel = Deutsch
+}
+
+# enable/disable localization modes
+mod.web_layout {
+  localization {
+    enableCopy = 1
+    enableTranslate = 1
+  }
+}

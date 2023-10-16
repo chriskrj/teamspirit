@@ -1,0 +1,5 @@
+plugin.tx_ncprovidermain.settings {
+  port = 5173
+  out = Resources/Public/Frontend
+  src = Resources/Private/Frontend
+}

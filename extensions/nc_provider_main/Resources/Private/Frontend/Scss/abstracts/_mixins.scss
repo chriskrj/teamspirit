@@ -1,0 +1,56 @@
+@use "coreTokenGrid";
+
+@mixin visuallyUnhidden {
+  clip: auto;
+  clip-path: none;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit;
+}
+
+@mixin visuallyHidden() {
+  // Hide only visually, but have it available for screenreaders: h5bp.com/v
+  & {
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+  }
+
+  // Extends the .visuallyhidden class to allow the element
+  // to be focusable when navigated to via the keyboard: h5bp.com/p
+  &.focusable:active,
+  &.focusable:focus {
+    @include visuallyUnhidden;
+  }
+}
+
+// http://gridcalculator.dk/#/1200/12/32/16
+
+// :root {
+//  --nc-core-grid-gutter-width: $gutter-width;
+//  --nc-core-grid-col-width: $col-width;
+// }
+
+// @mixin respond-to($size: md) {
+//  @media (min-width: map.get($_breakpoints, $size)) {
+//    @content;
+//  }
+// }
+
+@mixin respond-to-grid($cols) {
+  // $inner-width: math.div(100 + constants.$outer-pad * 2, 100);
+
+  @media (min-width: coreTokenGrid.$col-width * $cols + 2rem) {
+    @content;
+  }
+}

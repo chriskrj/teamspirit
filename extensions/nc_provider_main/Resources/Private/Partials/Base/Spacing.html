@@ -1,0 +1,121 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+
+<f:section name="Example">
+
+  <div>
+
+
+    <f:render partial="Styleguide/Headline" section="Headline" arguments="{title:'Spacing'}"/>
+
+    <style>
+      .sg-spacing {
+        display: block;
+        width: 0px;
+        height: 16px;
+        background-color: #cccccc;
+      }
+    </style>
+
+    <div class="u-container">
+      <div class="u-limitWidth-12 u-align-center">
+        <div class="GridCol2Even-row u-row">
+          <div class="GridCol2Even-col u-col">
+            <div class="u-stack">
+
+              <h3 class="sg-h3">Normal Spacing</h3>
+
+              <div>
+                <h4 class="sg-h4">2xs</h4>
+                <div class="sg-spacing u-pl-2xs"></div>
+              </div>
+
+              <div>
+                <h4 class="sg-h4">xs</h4>
+                <div class="sg-spacing u-pl-xs"></div>
+              </div>
+
+              <div>
+                <h4 class="sg-h4">sm</h4>
+                <div class="sg-spacing u-pl-sm"></div>
+              </div>
+
+              <div>
+                <h4 class="sg-h4">md</h4>
+                <div class="sg-spacing u-pl-md"></div>
+              </div>
+
+              <div>
+                <h4 class="sg-h4">lg</h4>
+                <div class="sg-spacing u-pl-lg"></div>
+              </div>
+
+              <div>
+                <h4 class="sg-h4">xl</h4>
+                <div class="sg-spacing u-pl-xl"></div>
+              </div>
+
+              <div>
+                <h4 class="sg-h4">2xl</h4>
+                <div class="sg-spacing u-pl-2xl"></div>
+              </div>
+
+              <div>
+                <h4 class="sg-h4">3xl</h4>
+                <div class="sg-spacing u-pl-3xl"></div>
+              </div>
+
+            </div>
+          </div>
+          <div class="GridCol2Even-col u-col">
+            <div class="u-stack">
+
+              <h3 class="sg-h3">Fluid Spacing</h3>
+
+              <div>
+                <h4 class="sg-h4">fluid-lg</h4>
+                <div class="sg-spacing u-pl-fluid-lg"></div>
+              </div>
+
+              <div>
+                <h4 class="sg-h4">fluid-xl</h4>
+                <div class="sg-spacing u-pl-fluid-xl"></div>
+              </div>
+
+              <div>
+                <h4 class="sg-h4">fluid-2xl</h4>
+                <div class="sg-spacing u-pl-fluid-2xl"></div>
+              </div>
+
+              <div>
+                <h4 class="sg-h4">fluid-3xl</h4>
+                <div class="sg-spacing u-pl-fluid-3xl"></div>
+              </div>
+
+              <div>
+                <h4 class="sg-h4">fluid-4xl</h4>
+                <div class="sg-spacing u-pl-fluid-4xl"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</f:section>
+
+<f:section name="SpaceEntry">
+
+  <div>
+    <h4 class="sg-h4">{id}</h4>
+    <div class="sg-spacing u-pl-{id}"></div>
+  </div>
+
+</f:section>
+
+</html>
+
+
+

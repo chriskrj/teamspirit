@@ -1,0 +1,115 @@
+@use "sass:map";
+
+// default bullet list
+.List-bullets {
+  font-weight: var(--nc-semantic-font-weight-regular);
+  color: var(--nc-semantic-color-fg-default);
+  font-size: var(--nc-semantic-font-size-base);
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: 1.5em;
+
+  & * + * {
+    margin-top: var(--nc-semantic-space-sm);
+    // map.get(space.$static-sizes, "sm");
+  }
+
+  li {
+    padding-left: 0.25em;
+  }
+
+  ul {
+    list-style-type: disc;
+    list-style-position: outside;
+    padding-left: 1.5em;
+    margin-top: var(--nc-semantic-space-sm);
+
+    li {
+
+    }
+  }
+}
+
+.List-unstyled {
+  list-style: none;
+}
+
+// default ordered list
+.List-numbers {
+  font-weight: var(--nc-semantic-font-weight-regular);
+  color: var(--nc-semantic-color-fg-default);
+  font-size: var(--nc-semantic-font-size-base);
+  font-style: normal;
+  list-style-type: decimal;
+  list-style-position: outside;
+  padding-left: 1em;
+  counter-reset: ol-item;
+
+
+  & > * + * {
+    margin-top: 1rem;
+  }
+
+  & > li,
+  ol > li {
+    counter-increment: ol-item;
+    padding-left: 0.5em;
+
+    &::marker {
+      content: counters(ol-item, '.') '';
+      font-weight: var(--nc-semantic-font-weight-bold);
+      color: var(--nc-semantic-color-fg-default);
+    }
+  }
+
+  ol {
+    list-style-type: decimal;
+    list-style-position: outside;
+    font-size: inherit;
+    padding-left: 1.5em;
+    counter-reset: ol-item;
+
+    li {
+      margin-top: 1rem;
+    }
+  }
+}
+
+// dl
+.List-description {
+  display: block;
+
+  & > * + * {
+    padding-top: var(--nc-semantic-space-sm);
+    border-top: 1px solid var(--nc-semantic-color-stroke-subtle);
+  }
+}
+
+.List-description-pair {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 1rem;
+  margin-bottom: var(--nc-semantic-space-sm);
+}
+
+// dt
+.List-description-term {
+  font-size: var(--nc-semantic-font-size-base);
+  font-weight: var(--nc-semantic-font-weight-bold);
+  color: var(--nc-semantic-color-fg-default);
+  font-style: normal;
+  list-style: none;
+}
+
+// dd
+.List-description-details {
+  font-size: var(--nc-semantic-font-size-base);
+  font-weight: var(--nc-semantic-font-weight-regular);
+  color: var(--nc-semantic-color-fg-default);
+  font-style: normal;
+  list-style: none;
+  text-align: right;
+  margin-right: 0;
+  margin-left: auto;
+}

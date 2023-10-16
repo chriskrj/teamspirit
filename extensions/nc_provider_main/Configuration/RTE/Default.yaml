@@ -1,0 +1,123 @@
+# Load default processing options
+imports:
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml"}
+
+
+# Add configuration for the editor
+# For complete documentation see http://docs.ckeditor.com/#!/api/CKEDITOR.config
+editor:
+  config:
+    contentsCss: ["EXT:nc_provider_main/Resources/Public/Frontend/assets/rte.css"]
+    defaultContentLanguage: "de"
+    defaultLanguage: "de"
+
+    stylesSet:
+      # block level styles
+      - { name: "small", element: "p", attributes: { 'class': 'Text-body--small' } }
+      - { name: "large", element: "p", attributes: { 'class': 'Text-body--large' } }
+      # object styles
+#      - { name: "Check List", element: "ul", attributes: { 'class': 'Base-ul-check' } }
+
+    format_tags: "p;h2;h3;h4;h5;h6"
+
+    toolbarGroups:
+      - { name: styles, groups: [ styles, format ] }
+      - { name: colors }
+      - { name: basicstyles, groups: [ basicstyles ] }
+      - { name: paragraph, groups: [ list, align, blocks ] }
+      - { name: specialcharacters,   groups: [ insertcharacters ] }
+      - { name: links, groups: [ links ] }
+      - { name: clipboard, groups: [ clipboard, cleanup, undo ] }
+      - { name: editing, groups: [ spellchecker ] }
+      - { name: insert, groups: [ insert ] }
+      - { name: tools, groups: [ table, specialchar ] }
+      - { name: document, groups: [ mode ] }
+
+    justifyClasses:
+      - u-textAlign--left
+      - u-textAlign--center
+      - u-textAlign--right
+
+    extraPlugins:
+      - justify
+      - autolink
+
+    removePlugins:
+      - null
+
+    removeButtons:
+      - Anchor
+      - Underline
+      - Strike
+      - Image
+
+# Info https://www.thomaskieslich.de/blog/135-links-im-ckeditor-mit-eigenen-css-klassen/
+# https://forge.typo3.org/issues/81381
+# https://forge.typo3.org/issues/82865
+classes:
+  Link:
+    name: "Normaler Link"
+  Button:
+    name: "Button Link"
+
+
+#Button config and defaults
+buttons:
+  link:
+    options:
+      removeItems: folder
+    relAttribute:
+      enabled: false
+    targetSelector:
+      disabled: false
+    properties:
+      class:
+        allowedClasses: "Link, Button"
+    page:
+      properties:
+        class:
+          default: "Link"
+    file:
+      properties:
+        class:
+          default: "Link"
+    url:
+      properties:
+        class:
+          default: "Link"
+    mail:
+      properties:
+        class:
+          default: "Link"
+    telephone:
+      properties:
+        class:
+          default: "Link"
+    tx_news_news:
+      properties:
+        class:
+          default: "Link"
+
+
+#Classes config
+classesAnchor:
+  linkInternal:
+    class: "Link"
+    type: "page"
+  linkDownload:
+    class: "Link"
+    type: "file"
+  linkExternal:
+    class: "Link"
+    type: "url"
+  linkMail:
+    class: "Link"
+    type: "mail"
+  linkPhone:
+    class: "Link"
+    type: "telephone"
+  newsLink:
+    class: "Link"
+    type: "tx_news_news"

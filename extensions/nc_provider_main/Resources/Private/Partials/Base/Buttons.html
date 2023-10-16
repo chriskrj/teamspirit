@@ -1,0 +1,41 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:section name="Example">
+  <div>
+    <f:render partial="Styleguide/Headline" section="Headline" arguments="{title:'Buttons'}"/>
+
+    <div class="u-container u-mb-r4">
+      <div class="u-limitWidth-12 u-align-center">
+        <section class="GridCol2Even-row u-row">
+          <div class="GridCol2Even-col u-col u-py-sm u-bg-default u-stack-text" data-theme="light">
+            <f:render section="ExampleContent" />
+          </div>
+          <div class="GridCol2Even-col u-col u-py-sm u-bg-default u-stack-text" data-theme="dark">
+            <f:render section="ExampleContent" />
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</f:section>
+
+<f:section name="ExampleContent">
+  <button class="Button" title="Das ist ein button" type="button">Das ist ein button</button>
+  <button class="Button" title="Das ist ein button" type="button">Das ist ein button mit sehr viel Text, damit  dieser umbricht.
+  </button>
+  <button class="Button is-active" type="button">Das ist ein aktivierter button</button>
+  <button class="Button" disabled type="button">Das ist ein deaktivierter button</button>
+  <a class="Button" href="#">Das ist ein Link im Buttonstyle</a>
+  <button class="Button Button--block" type="button">Das ist ein block button</button>
+  <p class="Text-body">Es folgt ein Button im p-tag <a class="Button" href="#">Link Button</a></p>
+  <button class="Button" title="Das ist ein button" type="button">Das ist ein Icon button<span class="Button-icon"><f:render partial="Base/Symbols" section="Symbol" arguments="{name:'close'}"/></span></button>
+  <button class="Button" title="Das ist ein button" type="button">Das ist ein icon button mit sehr viel Text, damit dieser umbricht.<span class="Button-icon"><f:render partial="Base/Symbols" section="Symbol" arguments="{name:'close'}"/></span></button>
+  <button class="Button Button--block" title="Das ist ein button" type="button">Das ist ein Icon Block Button<span class="Button-icon"><f:render partial="Base/Symbols" section="Symbol" arguments="{name:'close'}"/></span></button>
+  <button class="Button Button--iconOnly" type="submit" title="Button Icon Only">
+    <span class="Button-icon"><f:render partial="Base/Symbols" section="Symbol" arguments="{name:'close'}"/></span>
+  </button>
+</f:section>
+
+
+</html>

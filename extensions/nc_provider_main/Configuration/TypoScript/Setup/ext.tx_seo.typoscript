@@ -1,0 +1,54 @@
+plugin.tx_seo.config {
+  xmlSitemap {
+    sitemaps {
+      news {
+        provider = GeorgRinger\News\Seo\NewsXmlSitemapDataProvider
+        config {
+          # exclude news with type "internal and external"
+          excludedTypes = 1,2
+          additionalWhere =
+
+          sortField = datetime
+          lastModifiedField = tstamp
+          pid = 44
+          recursive = 0
+          url {
+            pageId = 45
+
+            fieldToParameterMap {
+              uid = tx_news_pi1[news]
+            }
+
+            additionalGetParameters {
+              tx_news_pi1.controller = News
+              tx_news_pi1.action = detail
+            }
+
+            useCacheHash = 1
+          }
+        }
+      }
+      events {
+        provider = TYPO3\CMS\Seo\XmlSitemap\RecordsXmlSitemapDataProvider
+        config {
+          table = tx_sfeventmgt_domain_model_event
+          sortField = tstamp
+          lastModifiedField = tstamp
+          pid = 29
+          recursive = 1
+          url {
+            pageId = 32
+            fieldToParameterMap {
+              uid = tx_sfeventmgt_pieventdetail[event]
+            }
+            additionalGetParameters {
+              tx_sfeventmgt_pieventdetail.controller = Event
+              tx_sfeventmgt_pieventdetail.action = detail
+            }
+            useCacheHash = 1
+          }
+        }
+      }
+    }
+  }
+}

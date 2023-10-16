@@ -1,0 +1,11 @@
+mod.wizards.newContentElement {
+  wizardItems {
+    content.elements.accordiongroup {
+      iconIdentifier = content-AccordionGroup
+      title = Akkordeon-Gruppe [AccordionGroup]
+      description = Mit diesem Element können ein oder mehrere ausklappbare Inhalte (Akkordeons) erstellt werden.
+      tt_content_defValues.CType = accordiongroup
+    }
+    content.show := addToList(accordiongroup)
+  }
+}

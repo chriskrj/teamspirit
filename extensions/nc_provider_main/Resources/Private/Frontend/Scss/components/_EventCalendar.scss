@@ -1,0 +1,77 @@
+// from https://css-tricks.com/a-calendar-in-three-lines-of-css/
+
+.EventCalendar-monthBrowser {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: var(--nc-semantic-color-bg-default);
+  padding: 0.5rem 0;
+}
+
+.EventCalendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  gap: 1px;
+}
+
+.EventCalendar-weekday {
+  font-weight: var(--nc-semantic-font-weight-regular);
+  color: var(--nc-semantic-color-fg-default);
+  font-size: var(--nc-semantic-font-size-base);
+  background-color: var(--nc-semantic-color-bg-default);
+  padding: 1rem 0.5rem;
+}
+
+.EventCalendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  gap: 1px;
+}
+
+.EventCalendar-day {
+  font-weight: var(--nc-semantic-font-weight-bold);
+  color: var(--nc-semantic-color-fg-highlight);
+  font-size: var(--nc-semantic-font-size-sm);
+  background-color: var(--nc-semantic-color-bg-accent);
+  padding: 0.5rem 0.5rem;
+  min-height: 5em;
+}
+
+.EventCalendar-day--otherMonth {
+  background-color: var(--nc-semantic-color-bg-default);
+  color: var(--nc-semantic-color-fg-default);
+}
+
+.EventCalendar-day--today {
+  background-color: var(--nc-semantic-color-bg-highlight) !important;
+}
+
+.EventCalendar-eventLink {
+  --nc-component-link-color: var(--nc-semantic-color-fg-action);
+  color: var(--nc-component-link-color);
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+  display: inline;
+
+  &:hover {
+    --nc-component-link-color: var(--nc-semantic-color-fg-action--hover);
+  }
+}

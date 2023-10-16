@@ -1,0 +1,81 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:comment><!--Generated file from npm build. Do not edit!--></f:comment>
+<f:section name="Symbols">
+    <f:spaceless>
+        <svg aria-hidden="true" style="display: none;" xmlns="http://www.w3.org/2000/svg" >
+            {{#each svgSymbols as |svgSymbol|}}<symbol id="symbol-{{svgSymbol.name}}" viewBox="{{svgSymbol.viewBox}}">{{{svgContent}}}</symbol>{{/each}}
+        </svg>
+    </f:spaceless>
+</f:section>
+
+<f:section name="Symbol">
+    <svg class="u-scalingInlineSVG {class}" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 512 512" preserveAspectRatio="xMidYMin slice" style="padding-bottom: 100%;">
+        <use href="#symbol-{name}" aria-hidden="true" x="0" y="0"/>
+    </svg>
+</f:section>
+
+<f:section name="Example">
+    <style>
+        .sg-symbols {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+
+        .sg-symbol {
+            display: block;
+            padding: 0;
+            margin: 0 16px 24px 0;
+            width: 128px;
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.24);
+        }
+
+        .sg-symbol-symbol {
+            background-color: #e7e7e7;
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+
+        .sg-symbol-data {
+            padding: 8px;
+            display: block;
+        }
+
+        .sg-symbol-name {
+            font-size: .8em;
+            display: block;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: bold;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+    </style>
+
+    <div>
+        <f:render partial="Styleguide/Headline" section="Headline" arguments="{title:'Symbols'}"/>
+        <div class="u-container">
+            <div class="u-limitWidth-12 u-align-center u-mb-r4">
+                <ul class="sg-symbols">
+                    {{#each svgSymbols as |svgSymbol|}}
+                    <li class="sg-symbol">
+                        <div class="sg-symbol-symbol">
+                            <f:render section="Symbol" arguments="{name:'{{svgSymbol.name}}'}"/>
+                        </div>
+                        <div class="sg-symbol-data"><span class="sg-symbol-name">{{svgSymbol.name}}</span></div>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</f:section>
+
+</html>

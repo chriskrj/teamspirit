@@ -1,0 +1,19 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+
+<f:section name="Main">
+
+  <div class="vstack gap-3">
+    <f:if condition="{content.processedPages}">
+      <ul class="list-group" style="max-width: 400px;">
+        <f:for each="{content.processedPages}" as="page">
+          <li class="list-group-item {f:if(condition: page.hidden, then:'disabled')}">{page.title} ({page.uid})</li>
+        </f:for>
+      </ul>
+    </f:if>
+  </div>
+
+</f:section>
+
+</html>

@@ -1,0 +1,14 @@
+config.additionalHeaders {
+  900.header = Strict-Transport-Security: max-age=31536000; includeSubDomains
+  910.header = X-Frame-Options: SAMEORIGIN
+  920.header = X-Xss-Protection: 1; mode=block
+  930.header = X-Content-Type-Options: nosniff
+  940.header = Referrer-Policy: strict-origin-when-cross-origin
+  950.header = Feature-Policy: geolocation 'none'; payment 'none'; midi 'none'; microphone 'none'; fullscreen 'none'; camera 'none'; autoplay 'none'
+  960.header = Permissions-Policy: geolocation=(), payment=(), midi=(), microphone=(), fullscreen=(), camera=(), autoplay=()
+  970.header = X-Permitted-Cross-Domain-Policies: none
+  980.header = Expect-CT: enforce, max-age=86400
+
+  # CSP conflicts in vite dev mode
+#  990.header = Content-Security-Policy: default-src 'self'; object-src 'none'; frame-src 'self' www.youtube-nocookie.com matomo.dataport.de; font-src 'self' data:; img-src 'self' data: 'unsafe-inline' dataport-dp.dwebanalytics.de *.openstreetmap.de *.ytimg.com; connect-src 'self' dataport-dp.dwebanalytics.de nominatim.openstreetmap.org ;script-src 'self' 'unsafe-eval' https://mobiliteam.nah.intern.intern:5173; style-src 'self' 'unsafe-inline';
+}

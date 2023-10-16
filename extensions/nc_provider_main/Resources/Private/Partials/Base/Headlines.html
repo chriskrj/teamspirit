@@ -1,0 +1,43 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:section name="Example">
+  <div>
+    <f:render partial="Styleguide/Headline" section="Headline" arguments="{title:'Headlines'}"/>
+
+    <div class="u-container u-mb-r4">
+      <div class="u-limitWidth-12 u-align-center">
+        <section class="GridCol2Even-row u-row">
+          <div class="GridCol2Even-col u-col u-py-sm u-bg-light u-stack-text" data-theme="light">
+            <f:render section="ExampleContent" />
+          </div>
+          <div class="GridCol2Even-col u-col u-py-sm u-bg-default u-stack-text" data-theme="dark">
+            <f:render section="ExampleContent" />
+          </div>
+        </section>
+      </div>
+  </div>
+  </div>
+
+
+</f:section>
+
+<f:section name="ExampleContent">
+  <h1 class="Text-heading-4xl">Das ist eine Überschrift Level 1 <a href="#" class="Link">dieser Text ist ein Link</a></h1>
+  <h2 class="Text-heading-3xl">Das ist eine Überschrift Level 2 <a href="#" class="Link">dieser Text ist ein Link</a></h2>
+  <h3 class="Text-heading-2xl">Das ist eine Überschrift Level 3 <a href="#" class="Link">dieser Text ist ein Link</a></h3>
+  <h4 class="Text-heading-xl">Das ist eine Überschrift Level 4 <a href="#" class="Link">dieser Text ist ein Link</a></h4>
+  <h5 class="Text-heading-lg">Das ist eine Überschrift Level 5 <a href="#" class="Link">dieser Text ist ein Link</a></h5>
+  <h6 class="Text-heading-md">Das ist eine Überschrift Level 6 <a href="#" class="Link">dieser Text ist ein Link</a></h6>
+</f:section>
+
+
+
+</html>
+
+
+
+
+
+
+

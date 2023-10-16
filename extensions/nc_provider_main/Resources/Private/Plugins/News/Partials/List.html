@@ -1,0 +1,24 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:section name="Main">
+
+  <f:switch expression="{settings.templateLayout}">
+    <f:case value="100">
+      <f:comment>Default Liste mit Bilder Links</f:comment>
+      <f:render partial="DefaultTeaserList" section="List" arguments="{_all}"/>
+    </f:case>
+    <f:case value="110">
+      <f:comment>Minimale Liste ohne Bilder</f:comment>
+      <f:render partial="MinimalTeaserList" section="List" arguments="{_all}"/>
+    </f:case>
+    <f:defaultCase>
+      <f:comment>Default Liste mit Bilder Links</f:comment>
+      <f:render partial="DefaultTeaserList" section="List" arguments="{_all}"/>
+    </f:defaultCase>
+  </f:switch>
+</f:section>
+
+
+</html>

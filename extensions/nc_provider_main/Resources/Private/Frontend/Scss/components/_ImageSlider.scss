@@ -1,0 +1,127 @@
+@use "sass:math";
+@use "../abstracts/mixins";
+
+.ImageSlider {
+  position: relative;
+  background-color: var(--nc-semantic-color-bg-default);
+}
+
+.ImageSlider-slides {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  scrollbar-color: var(--nc-semantic-color-fg-action) #fff;
+  scrollbar-width: thin;
+
+  // fallback styling scrollbar for webkit (chrome)
+  &::-webkit-scrollbar {
+    background-color: #fff;
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #fff;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--nc-semantic-color-fg-action);
+    border-radius: 4px;
+  }
+}
+
+.ImageSlider-slide {
+
+  position: relative;
+  display: block;
+  width: 100%;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+.ImageSlider-slideImage {
+  background-color: var(--nc-semantic-color-bg-accent);
+  width: 100%;
+  max-width: none;
+  aspect-ratio: 4/3;
+  object-fit: contain;
+}
+
+.ImageSlider-slideFigcaption {
+  padding: 0.5rem 0;
+  font-weight: var(--nc-semantic-font-weight-regular);
+  color: var(--nc-semantic-color-fg-default);
+  font-size: var(--nc-semantic-font-size-sm);
+}
+
+.ImageSlider-controls {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  top: 0;
+  // padding-top: 56.25%; // 16:9
+  overflow: hidden;
+  z-index: 2;
+}
+
+.ImageSlider-slideArrows {
+  // width: 340px;
+  // position: absolute;
+  // z-index: 1;
+  // top: 0;
+  // right: 0;
+  display: flex;
+  justify-content: flex-end;
+
+  // &::before {
+  //   content: "";
+  //   background-image: linear-gradient(-10deg, var(--nc-semantic-color-bg-default) calc(50% - 1px), transparent 50%);
+  //   padding-bottom: 18%;
+  //   display: block;
+  //   position: absolute;
+  //   width: 100%;
+  //   height: 0;
+  //   left: 0;
+  //   bottom: 0;
+  //   z-index: -1;
+  // }
+}
+
+.Imageslider-controlPrev,
+.Imageslider-controlNext {
+  width: 24px;
+  height: 24px;
+  line-height: 1;
+  border: none;
+  background-color: transparent;
+  color: var(--nc-semantic-color-fg-action);
+  fill: currentColor;
+  padding: 0;
+  margin: 12px 1rem;
+  display: block;
+  cursor: pointer;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.5));
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--nc-semantic-color-fg-action--hover);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.Imageslider-controlPrev {
+
+}
+
+.Imageslider-controlNext {
+
+}

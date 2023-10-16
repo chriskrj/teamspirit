@@ -1,0 +1,251 @@
+@use "../abstracts/mixins";
+
+// .ce-align-left {
+//  text-align: left;
+// }
+
+// .ce-align-center {
+//  text-align: center;
+// }
+
+// .ce-align-right {
+//  text-align: right;
+// }
+
+.ce-table td,
+.ce-table th {
+  vertical-align: top;
+}
+
+.ce-gallery figure {
+  // display: table;
+  // margin-bottom: constants.$gutter-width;
+  // display: flex;
+  // flex-wrap: wrap;
+  // flex-direction: column;
+
+  display: table;
+
+  // ie11 fix
+  a {
+    min-height: 1px;
+  }
+}
+
+.ce-left .ce-row {
+  justify-content: flex-start;
+}
+
+.ce-center .ce-row {
+  justify-content: center;
+}
+
+.ce-right .ce-row {
+  justify-content: flex-end;
+}
+
+.ce-gallery figcaption {
+  // display: table-caption;
+  // caption-side: bottom;
+
+  font-weight: var(--nc-semantic-font-weight-regular);
+  color: var(--nc-semantic-color-fg-default);
+  font-size: var(--nc-semantic-font-size-sm);
+
+  font-style: normal;
+
+  // margin-bottom: constants.$gutter-width;
+
+  margin-top: 1rem;
+
+  // margin-bottom: constants.$gutter-width;
+  display: block;
+
+  // width: 100%;
+}
+
+.ce-gallery img {
+  display: block;
+  min-height: 1px; // ie11 fix
+  // margin-bottom: constants.$gutter-width;
+  // flex-shrink: 0;
+
+  // display: table-row;
+  // width: 100%;
+}
+
+.ce-gallery iframe {
+  border-width: 0;
+}
+
+// .ce-border img,
+// .ce-border iframe {
+//  border: 1px solid $color-quartz;
+//  padding: $susy-gutter-width;
+// }
+
+// .ce-intext.ce-right .ce-gallery,
+// .ce-intext.ce-left .ce-gallery,
+// .ce-above .ce-gallery {
+//  margin-bottom: $susy-gutter-width;
+// }
+
+// .ce-intext.ce-right .ce-gallery {
+//  margin-left: $susy-gutter-width;
+// }
+
+// .ce-intext.ce-left .ce-gallery {
+//  margin-right: $susy-gutter-width;
+// }
+
+.ce-below .ce-gallery {
+  margin-top: 2rem;
+}
+
+.ce-column {
+  // width: 100%; // ie11 fix
+  margin-right: 2rem;
+}
+
+.ce-column:last-child {
+  margin-right: 0;
+}
+
+.ce-row {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.ce-row:last-child {
+  margin-bottom: 0;
+}
+
+.ce-above .ce-bodytext {
+  clear: both;
+}
+
+// .ce-intext.ce-left ol,
+// .ce-intext.ce-left ul {
+//  padding-left: 40px;
+//  overflow: auto;
+// }
+
+/* Headline */
+// .ce-headline-left {
+//  text-align: left;
+// }
+
+// .ce-headline-center {
+//  text-align: center;
+// }
+
+// .ce-headline-right {
+//  text-align: right;
+// }
+
+/* Uploads */
+// .ce-uploads {
+//  margin: 0;
+//  padding: 0;
+// }
+
+// .ce-uploads li {
+//  list-style: none outside none;
+//  margin: 1em 0;
+// }
+
+// .ce-uploads img {
+//  float: left;
+//  padding-right: 1em;
+//  vertical-align: top;
+// }
+
+// .ce-uploads span {
+//  display: block;
+// }
+
+/* Table */
+// .ce-table {
+//  width: 100%;
+//  max-width: 100%;
+// }
+
+// .ce-table th, .ce-table td {
+//  padding: 0.5em 0.75em;
+//  vertical-align: top;
+// }
+
+// .ce-table thead th {
+//  border-bottom: 2px solid #dadada;
+// }
+
+// .ce-table th, .ce-table td {
+//  border-top: 1px solid #dadada;
+// }
+
+// .ce-table-striped tbody tr:nth-of-type(odd) {
+//  background-color: rgba(0, 0, 0, .05);
+// }
+
+// .ce-table-bordered th, .ce-table-bordered td {
+//  border: 1px solid #dadada;
+// }
+
+/* Frame */
+// .frame-ruler-before:before {
+//  content: '';
+//  display: block;
+//  border-top: 1px solid rgba(0, 0, 0, 0.25);
+//  margin-bottom: 2em;
+// }
+
+// .frame-ruler-after:after {
+//  content: '';
+//  display: block;
+//  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+//  margin-top: 2em;
+// }
+
+// .frame-indent {
+//  margin-left: 15%;
+//  margin-right: 15%;
+// }
+
+// .frame-indent-left {
+//  margin-left: 33%;
+// }
+
+// .frame-indent-right {
+//  margin-right: 33%;
+// }
+
+.ce-column--type4 {
+  flex-basis: 100%;
+}
+
+.ce-gallery .video {
+  width: 100%;
+}
+
+// .ce-gallery .video-embed {
+//  position: relative;
+//  padding-bottom: 56.25%;
+//  height: 0;
+//  overflow: hidden;
+//  margin-bottom: $susy-gutter-width;
+// }
+
+// .ce-gallery .video-embed-item {
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  width: 100%;
+//  height: 100%;
+// }
+
+// .ce-bodytext {
+//  & > * + * {
+//    margin-top: 1.25em;
+//  }
+// }

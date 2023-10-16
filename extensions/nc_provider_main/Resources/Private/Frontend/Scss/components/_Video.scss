@@ -1,0 +1,53 @@
+@use "../abstracts/functions";
+
+.Video {
+  position: relative;
+
+  // &::before {
+  //   content: "";
+  //   color: #fff;
+  //   width: 42px;
+  //   height: 42px;
+  //   position: absolute;
+  //   top: calc(50% - 42px);
+  //   left: calc(50% - 42px);
+  //   text-align: center;
+  //   transition: 0.2s ease;
+  //   pointer-events: none;
+  //   filter: drop-shadow(0 0 20px rgb(0, 0, 0, 25%));
+  //   // background-image: functions.svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="#{icons.$logo-youtube-viewbox}" preserveAspectRatio="xMidYMin slice" ><g fill="#{colors.$white}">#{icons.$logo-youtube}</g></svg>');
+  //   background-repeat: no-repeat;
+  //   background-position: center center;
+  //   background-size: 42px;
+  // }
+}
+
+.Video-layer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(255, 255, 255, 80%);
+  padding: 1rem;
+}
+
+.Video-previewImage {
+  margin-bottom: 0 !important;
+  max-width: none;
+  width: 100%;
+}
+
+.Video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.Video-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

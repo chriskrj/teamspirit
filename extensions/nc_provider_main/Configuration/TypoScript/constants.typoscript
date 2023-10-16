@@ -1,0 +1,11 @@
+# External Extensions
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript'
+@import 'EXT:seo/Configuration/TypoScript/XmlSitemap/constants.typoscript'
+
+
+# Configuration
+@import 'EXT:nc_provider_main/Configuration/TypoScript/Constants/config.typoscript'
+
+# Extension Overrides
+@import 'EXT:nc_provider_main/Configuration/TypoScript/Constants/ext.fluid_styled_content.typoscript'
+@import 'EXT:nc_provider_main/Configuration/TypoScript/Constants/ext.tx_seo.typoscript'

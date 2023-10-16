@@ -1,0 +1,11 @@
+mod.wizards.newContentElement {
+  wizardItems {
+    develop.elements.styleguide {
+      iconIdentifier = content-Styleguide
+      title = Styleguide for base Theming [Styleguide]
+      description = Styleguide for base Theming
+      tt_content_defValues.CType = styleguide
+    }
+    develop.show := addToList(styleguide)
+  }
+}

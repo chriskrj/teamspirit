@@ -1,0 +1,11 @@
+mod.wizards.newContentElement {
+	wizardItems {
+		menu.elements.pageteaser {
+			iconIdentifier = content-PageTeaser
+			title = Seiten-Teaser [PageTeaser]
+			description = Hiermit können Seiten angeteasert werden. In den Teasern werden Texte und Medien aus den Seiteneigenschaften angezeigt. Es können maximal 24 Seiten angeteasert werden.
+			tt_content_defValues.CType = pageteaser
+		}
+		menu.show := addToList(pageteaser)
+	}
+}

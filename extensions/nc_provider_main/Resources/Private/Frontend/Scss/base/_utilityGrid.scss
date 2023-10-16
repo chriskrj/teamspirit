@@ -1,0 +1,70 @@
+@use "../abstracts/coreTokenGrid";
+@use "sass:math";
+@use "sass:map";
+
+// TODO: check grid system with Custom Properties  https://codepen.io/MadeByMike/pen/zWxqNY
+
+/*
+
+limitWidth always inside the container, not in same div
+
+<div class="u-container [colorstyle here]">
+
+  <p>Text can be placed here</p>
+
+  <div class="u-limitWidth-[limitSize] u-align-center">
+    <p>Text can be placed here</p>
+
+    <div class="u-row">
+      <div class="[colwidth]">
+        <p>Text can be placed here</p>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+</div>
+
+ */
+
+// Grid Settings
+// $_breakpoints: (
+//    xxs: 20rem,
+//    xs: 36rem,
+//    sm: 48rem,
+//    md: 60rem,
+//    lg: 78rem,
+//    xl: 96rem
+// );
+
+
+
+.u-container {
+  padding-right: coreTokenGrid.$container-spacing;
+  padding-left: coreTokenGrid.$container-spacing;
+  width: 100%;
+}
+
+.u-row {
+  margin-left: - coreTokenGrid.$gutter-width;
+  margin-right: - coreTokenGrid.$gutter-width;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex: 1;
+}
+
+.u-col {
+  padding-left: coreTokenGrid.$gutter-width;
+  padding-right: coreTokenGrid.$gutter-width;
+  width: 100%;
+}
+
+// 1 col = 8x16px = 128px, 1rem = 16px
+@for $i from 1 through 20 {
+  .u-limitWidth-#{$i} {
+    width: 100%;
+    max-width: coreTokenGrid.$col-width * $i - 2rem;
+  }
+}

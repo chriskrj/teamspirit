@@ -1,0 +1,11 @@
+mod.wizards.newContentElement {
+  wizardItems {
+    content.elements.{{lowercase ceName}} {
+      iconIdentifier = content-{{ceName}}
+      title = [{{ceName}}]
+      description = Mit diesem Element kann ein {{ceName}} eingefügt werden.
+      tt_content_defValues.CType = {{lowercase ceName}}
+    }
+    content.show := addToList({{lowercase ceName}})
+  }
+}

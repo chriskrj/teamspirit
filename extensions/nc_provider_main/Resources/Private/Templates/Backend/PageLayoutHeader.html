@@ -1,0 +1,94 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers"
+      xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+  <f:if condition="{page}">
+
+    <f:if condition="{page.doktype} == 1 ">
+
+      <table class="table table-condensed table-hover news-table">
+        <thead>
+        <tr>
+          <th colspan="2"><strong><a href="{be:uri.editRecord(uid:page.uid, table:'pages')}">
+            <core:icon identifier="actions-document-open"/>
+            Seiteneigenschaften
+          </a></strong><br></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th>Titel</th>
+          <td>{page.title}</td>
+        </tr>
+        <f:if condition="{page.headline}">
+          <tr>
+            <th>Überschrift</th>
+            <td><f:format.htmlentitiesDecode>{page.headline}</f:format.htmlentitiesDecode></td>
+          </tr>
+        </f:if>
+        <f:if condition="{page.subtitle}">
+          <tr>
+            <th>Überschrift</th>
+            <td>{page.subtitle}</td>
+          </tr>
+        </f:if>
+        <f:if condition="{files}">
+          <tr>
+            <th>Einleitungsbild</th>
+            <td>
+              <f:for each="{files}" as="file">
+                <figure>
+                  <f:image image="{file}" height="60"/>
+                  <figcaption>{file.description}</figcaption>
+                </figure>
+              </f:for>
+            </td>
+          </tr>
+        </f:if>
+        <f:if condition="{icons}">
+          <tr>
+            <th>Icon</th>
+            <td>
+              <f:for each="{icons}" as="icon">
+                <figure>
+                  <f:image image="{icon}" width="100"/>
+                </figure>
+              </f:for>
+            </td>
+          </tr>
+        </f:if>
+        <f:if condition="{page.abstract}">
+          <tr>
+            <th>Teasertext</th>
+            <td>{page.abstract}</td>
+          </tr>
+        </f:if>
+        <f:if condition="{page.description}">
+          <tr>
+            <th>Meta Description</th>
+            <td>{page.description}</td>
+          </tr>
+        </f:if>
+        </tbody>
+      </table>
+
+      <f:if condition="{page.no_index}">
+        <f:else>
+          <f:if condition="{page.description} || {page.backend_layout} == 'pagets__detail'">
+            <f:else>
+              <f:be.infobox title="Meta Description fehlt!" state="1" iconName="warning" >
+                <p>Bitte pflegen Sie die Beschreibung im SEO Reiter. </p>
+              </f:be.infobox>
+            </f:else>
+          </f:if>
+        </f:else>
+      </f:if>
+
+
+    </f:if>
+
+
+  </f:if>
+
+</html>

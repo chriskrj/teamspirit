@@ -1,0 +1,33 @@
+@use "../abstracts/functions";
+
+// static sizes
+$static-0: 0;
+$static-4: 0.25rem;
+$static-8: 0.50rem;
+$static-12: 0.75rem;
+$static-16: 1rem;
+$static-18: 1.125rem;
+$static-20: 1.25rem;
+$static-24: 1.5rem;
+$static-28: 1.75rem;
+$static-32: 2rem;
+$static-36: 2.25rem;
+$static-48: 3rem;
+$static-56: 3.5rem;
+$static-64: 4rem;
+$static-72: 4.5rem;
+$static-80: 5rem;
+$static-96: 6rem;
+$static-128: 8rem;
+
+// fluid sizes
+$fluid-32: #{functions.fluidSize(2rem)};
+$fluid-36: #{functions.fluidSize(2.25rem)};
+$fluid-40: #{functions.fluidSize(2.5rem)};
+$fluid-48: #{functions.fluidSize(3rem)};
+$fluid-56: #{functions.fluidSize(3.5rem)};
+$fluid-60: #{functions.fluidSize(3.75rem)};
+$fluid-72: #{functions.fluidSize(4.5rem)};
+$fluid-80: #{functions.fluidSize(5rem)};
+$fluid-96: #{functions.fluidSize(6rem)};
+$fluid-128: #{functions.fluidSize(8rem)};
