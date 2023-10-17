@@ -17,13 +17,13 @@
 .MainNavigation-level1-item {
   display: block;
   // position: relative;
-  background-color: var(--nc-semantic-color-bg-default);
+  background-color: var(--ts-semantic-color-bg-default);
 }
 
 .MainNavigation-level1-link {
-  --nc-component-link-color: var(--nc-semantic-color-fg-action);
-  font-size: var(--nc-semantic-font-size-md);
-  color: var(--nc-component-link-color);
+  --ts-component-link-color: var(--ts-semantic-color-fg-action);
+  font-size: var(--ts-semantic-font-size-md);
+  color: var(--ts-component-link-color);
 
   text-decoration: none;
   font-style: normal;
@@ -42,16 +42,16 @@
 
   &:focus-visible,
   &:hover {
-    --nc-component-link-color: var(--nc-semantic-color-fg-action--hover);
+    --ts-component-link-color: var(--ts-semantic-color-fg-action--hover);
   }
 
   &.is-activePage,
   &.is-open {
-    --nc-component-link-color: var(--nc-semantic-color-fg-action--hover);
+    --ts-component-link-color: var(--ts-semantic-color-fg-action--hover);
   }
 
   &.is-open {
-    border-bottom: 2px solid var(--nc-semantic-color-fg-default);
+    border-bottom: 2px solid var(--ts-semantic-color-fg-default);
   }
 
   @include mixins.respond-to-grid(10) {
@@ -82,7 +82,7 @@
 .MainNavigation-level2 {
   height: 0;
   overflow: hidden;
-  background-color: var(--nc-semantic-color-bg-accent);
+  background-color: var(--ts-semantic-color-bg-accent);
   visibility: hidden;
   transition: opacity 0.2s ease;
   opacity: 0;
@@ -115,9 +115,9 @@
 // }
 
 .MainNavigation-level2-link {
-  --nc-component-link-color: var(--nc-semantic-color-fg-action);
-  font-size: var(--nc-semantic-font-size-md);
-  color: var(--nc-component-link-color);
+  --ts-component-link-color: var(--ts-semantic-color-fg-action);
+  font-size: var(--ts-semantic-font-size-md);
+  color: var(--ts-component-link-color);
 
   text-decoration: none;
   font-style: normal;
@@ -132,11 +132,11 @@
 
   &:focus-visible,
   &:hover {
-    --nc-component-link-color: var(--nc-semantic-color-fg-action--hover);
+    --ts-component-link-color: var(--ts-semantic-color-fg-action--hover);
   }
 
   &.is-activePage {
-    --nc-component-link-color: var(--nc-semantic-color-fg-action--hover);
+    --ts-component-link-color: var(--ts-semantic-color-fg-action--hover);
   }
 }
 

@@ -6,7 +6,7 @@
 .SectionFooter {
   position: relative;
   z-index: functions.z(coreTokenIndexes.$z-root, footer);
-  background-color: var(--nc-semantic-color-bg-default);
+  background-color: var(--ts-semantic-color-bg-default);
   margin-top: coreTokenSizes.$fluid-40;
 }
 

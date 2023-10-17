@@ -2,15 +2,15 @@
 
 // default bullet list
 .List-bullets {
-  font-weight: var(--nc-semantic-font-weight-regular);
-  color: var(--nc-semantic-color-fg-default);
-  font-size: var(--nc-semantic-font-size-base);
+  font-weight: var(--ts-semantic-font-weight-regular);
+  color: var(--ts-semantic-color-fg-default);
+  font-size: var(--ts-semantic-font-size-base);
   list-style-type: disc;
   list-style-position: outside;
   padding-left: 1.5em;
 
   & * + * {
-    margin-top: var(--nc-semantic-space-sm);
+    margin-top: var(--ts-semantic-space-sm);
     // map.get(space.$static-sizes, "sm");
   }
 
@@ -22,7 +22,7 @@
     list-style-type: disc;
     list-style-position: outside;
     padding-left: 1.5em;
-    margin-top: var(--nc-semantic-space-sm);
+    margin-top: var(--ts-semantic-space-sm);
 
     li {
 
@@ -36,9 +36,9 @@
 
 // default ordered list
 .List-numbers {
-  font-weight: var(--nc-semantic-font-weight-regular);
-  color: var(--nc-semantic-color-fg-default);
-  font-size: var(--nc-semantic-font-size-base);
+  font-weight: var(--ts-semantic-font-weight-regular);
+  color: var(--ts-semantic-color-fg-default);
+  font-size: var(--ts-semantic-font-size-base);
   font-style: normal;
   list-style-type: decimal;
   list-style-position: outside;
@@ -57,8 +57,8 @@
 
     &::marker {
       content: counters(ol-item, '.') '';
-      font-weight: var(--nc-semantic-font-weight-bold);
-      color: var(--nc-semantic-color-fg-default);
+      font-weight: var(--ts-semantic-font-weight-bold);
+      color: var(--ts-semantic-color-fg-default);
     }
   }
 
@@ -80,8 +80,8 @@
   display: block;
 
   & > * + * {
-    padding-top: var(--nc-semantic-space-sm);
-    border-top: 1px solid var(--nc-semantic-color-stroke-subtle);
+    padding-top: var(--ts-semantic-space-sm);
+    border-top: 1px solid var(--ts-semantic-color-stroke-subtle);
   }
 }
 
@@ -90,23 +90,23 @@
   flex-wrap: wrap;
   justify-content: space-between;
   column-gap: 1rem;
-  margin-bottom: var(--nc-semantic-space-sm);
+  margin-bottom: var(--ts-semantic-space-sm);
 }
 
 // dt
 .List-description-term {
-  font-size: var(--nc-semantic-font-size-base);
-  font-weight: var(--nc-semantic-font-weight-bold);
-  color: var(--nc-semantic-color-fg-default);
+  font-size: var(--ts-semantic-font-size-base);
+  font-weight: var(--ts-semantic-font-weight-bold);
+  color: var(--ts-semantic-color-fg-default);
   font-style: normal;
   list-style: none;
 }
 
 // dd
 .List-description-details {
-  font-size: var(--nc-semantic-font-size-base);
-  font-weight: var(--nc-semantic-font-weight-regular);
-  color: var(--nc-semantic-color-fg-default);
+  font-size: var(--ts-semantic-font-size-base);
+  font-weight: var(--ts-semantic-font-weight-regular);
+  color: var(--ts-semantic-color-fg-default);
   font-style: normal;
   list-style: none;
   text-align: right;

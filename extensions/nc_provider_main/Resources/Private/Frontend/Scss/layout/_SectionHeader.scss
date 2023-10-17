@@ -6,8 +6,8 @@
 .SectionHeader {
   position: relative;
   z-index: functions.z(coreTokenIndexes.$z-root, footer);
-  background-color: var(--nc-semantic-color-bg-default);
-  box-shadow: 0 -5px 20px 0 var(--nc-semantic-color-stroke-subtle);
+  background-color: var(--ts-semantic-color-bg-default);
+  box-shadow: 0 -5px 20px 0 var(--ts-semantic-color-stroke-subtle);
 }
 
 .SectionHeader-sectionTop {
@@ -36,7 +36,7 @@
 }
 
 .SectionHeader-portalLink {
-  color: var(--nc-semantic-color-fg-action);
+  color: var(--ts-semantic-color-fg-action);
   fill: currentColor;
   text-decoration: none;
   display: flex;
@@ -46,7 +46,7 @@
   align-self: start;
 
   &:hover {
-    --nc-component-link-color: var(--nc-semantic-color-fg-action--hover);
+    --ts-component-link-color: var(--ts-semantic-color-fg-action--hover);
   }
 }
 
@@ -69,13 +69,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--nc-semantic-color-fg-action);
+  color: var(--ts-semantic-color-fg-action);
   background: transparent;
   border: none;
   margin-bottom: 2rem;
 
   &:hover {
-    --nc-component-link-color: var(--nc-semantic-color-fg-action--hover);
+    --ts-component-link-color: var(--ts-semantic-color-fg-action--hover);
   }
 
   @include mixins.respond-to-grid(10) {
@@ -136,7 +136,7 @@
   opacity: 0;
   transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
   //border-top: 1px solid colors.$black-20;
-  border-top: 2px solid var(--nc-semantic-color-fg-default);
+  border-top: 2px solid var(--ts-semantic-color-fg-default);
 
   &.is-open {
     transition: opacity 0.2s ease, transform 0.2s ease;
@@ -162,7 +162,7 @@
 }
 
 .SectionHeader-sectionBreadcrumb {
-  background-color: var(--nc-semantic-color-bg-accent);
+  background-color: var(--ts-semantic-color-bg-accent);
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }

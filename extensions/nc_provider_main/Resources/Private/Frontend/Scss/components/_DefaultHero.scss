@@ -5,9 +5,9 @@
 }
 
 .DefaultHero-headline {
-  font-weight: var(--nc-semantic-font-weight-regular);
-  color: var(--nc-semantic-color-fg-default);
-  font-size: var(--nc-semantic-font-size-4xl);
+  font-weight: var(--ts-semantic-font-weight-regular);
+  color: var(--ts-semantic-color-fg-default);
+  font-size: var(--ts-semantic-font-size-4xl);
   line-height: 1.6;
   position: absolute;
   z-index: 2;
@@ -22,7 +22,7 @@
 
 .DefaultHero-headline-bars {
   padding: .05em .1em;
-  background-color: var(--nc-semantic-color-bg-default);
+  background-color: var(--ts-semantic-color-bg-default);
   box-decoration-break: clone;
 }
 
@@ -48,9 +48,9 @@
   left: 50%;
   z-index: 3;
   width: 4rem;
-  color: var(--nc-semantic-color-fg-on-contrast);
+  color: var(--ts-semantic-color-fg-on-contrast);
   fill: currentColor;
-  background-color: var(--nc-semantic-color-bg-action-default);
+  background-color: var(--ts-semantic-color-bg-action-default);
   display: block;
   text-align: center;
   padding: 1rem;
@@ -59,6 +59,6 @@
   transform: translateX(-50%);
 
   &:hover {
-    background-color: var(--nc-semantic-color-bg-action-default--hover);
+    background-color: var(--ts-semantic-color-bg-action-default--hover);
   }
 }

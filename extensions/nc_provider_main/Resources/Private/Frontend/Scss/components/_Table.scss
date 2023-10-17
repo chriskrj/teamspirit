@@ -28,36 +28,36 @@
   }
 
   th {
-    font-weight: var(--nc-semantic-font-weight-bold);
-    color: var(--nc-semantic-color-fg-default);
-    font-size: var(--nc-semantic-font-size-base);
+    font-weight: var(--ts-semantic-font-weight-bold);
+    color: var(--ts-semantic-color-fg-default);
+    font-size: var(--ts-semantic-font-size-base);
     text-align: left;
     vertical-align: middle;
-    padding: var(--nc-semantic-space-sm) var(--nc-semantic-space-lg);
+    padding: var(--ts-semantic-space-sm) var(--ts-semantic-space-lg);
 
     // background-color: colors.$baltic-blue-100;
     // border-right: 1px solid colors.$baltic-blue-50;
   }
 
   td {
-    font-weight: var(--nc-semantic-font-weight-regular);
-    color: var(--nc-semantic-color-fg-default);
-    font-size: var(--nc-semantic-font-size-base);
+    font-weight: var(--ts-semantic-font-weight-regular);
+    color: var(--ts-semantic-color-fg-default);
+    font-size: var(--ts-semantic-font-size-base);
     text-align: left;
     vertical-align: middle;
-    padding: var(--nc-semantic-space-sm) var(--nc-semantic-space-lg);
+    padding: var(--ts-semantic-space-sm) var(--ts-semantic-space-lg);
   }
 
   thead {
     tr {
       border: 0;
-      border-bottom: 2px solid var(--nc-semantic-color-fg-highlight);
+      border-bottom: 2px solid var(--ts-semantic-color-fg-highlight);
     }
   }
 
   tbody {
     tr {
-       border-bottom: 1px solid var(--nc-semantic-color-fg-highlight);
+       border-bottom: 1px solid var(--ts-semantic-color-fg-highlight);
     }
 
     // tr:nth-child(odd) {

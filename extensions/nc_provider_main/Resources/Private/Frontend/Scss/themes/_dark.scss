@@ -8,35 +8,35 @@
 [data-theme="dark"] {
 
   // fg
-  --nc-semantic-color-fg-default: #{coreTokenColors.$white};
-  --nc-semantic-color-fg-highlight: #{coreTokenColors.$brown-100};
-  --nc-semantic-color-fg-error: #{coreTokenColors.$red-100};
-  --nc-semantic-color-fg-success: #{coreTokenColors.$green-100};
-  --nc-semantic-color-fg-action: #{coreTokenColors.$white};
-  --nc-semantic-color-fg-action--hover: #{coreTokenColors.$brown-100};
-  --nc-semantic-color-fg-static-light: #{coreTokenColors.$white};
-  --nc-semantic-color-fg-static-dark: #{coreTokenColors.$black};
-  --nc-semantic-color-fg-on-contrast: #{coreTokenColors.$white};
-  --nc-semantic-color-fg-on-contrast--hover: #{coreTokenColors.$yellow-100};
+  --ts-semantic-color-fg-default: #{coreTokenColors.$white};
+  --ts-semantic-color-fg-highlight: #{coreTokenColors.$brown-100};
+  --ts-semantic-color-fg-error: #{coreTokenColors.$red-100};
+  --ts-semantic-color-fg-success: #{coreTokenColors.$green-100};
+  --ts-semantic-color-fg-action: #{coreTokenColors.$white};
+  --ts-semantic-color-fg-action--hover: #{coreTokenColors.$brown-100};
+  --ts-semantic-color-fg-static-light: #{coreTokenColors.$white};
+  --ts-semantic-color-fg-static-dark: #{coreTokenColors.$black};
+  --ts-semantic-color-fg-on-contrast: #{coreTokenColors.$white};
+  --ts-semantic-color-fg-on-contrast--hover: #{coreTokenColors.$yellow-100};
 
   // stroke
-  --nc-semantic-color-stroke-default: #{coreTokenColors.$brown-100};
-  --nc-semantic-color-stroke-subtle: #{coreTokenColors.$brown-180};
+  --ts-semantic-color-stroke-default: #{coreTokenColors.$brown-100};
+  --ts-semantic-color-stroke-subtle: #{coreTokenColors.$brown-180};
 
   // bg
-  --nc-semantic-color-bg-default: #{coreTokenColors.$brown-180};
-  --nc-semantic-color-bg-accent: #{coreTokenColors.$mint-100};
-  --nc-semantic-color-bg-highlight: #{coreTokenColors.$yellow-100};
-  --nc-semantic-color-bg-action-default: #{coreTokenColors.$brown-180};
-  --nc-semantic-color-bg-action-default--hover: #{coreTokenColors.$brown-100};
-  --nc-semantic-color-bg-action-accent: #{coreTokenColors.$mint-100};
-  --nc-semantic-color-bg-action-accent--hover: #{coreTokenColors.$yellow-100};
+  --ts-semantic-color-bg-default: #{coreTokenColors.$brown-180};
+  --ts-semantic-color-bg-accent: #{coreTokenColors.$mint-100};
+  --ts-semantic-color-bg-highlight: #{coreTokenColors.$yellow-100};
+  --ts-semantic-color-bg-action-default: #{coreTokenColors.$brown-180};
+  --ts-semantic-color-bg-action-default--hover: #{coreTokenColors.$brown-100};
+  --ts-semantic-color-bg-action-accent: #{coreTokenColors.$mint-100};
+  --ts-semantic-color-bg-action-accent--hover: #{coreTokenColors.$yellow-100};
 
   // Icons (css)
-  // --nc-semantic-icon-arrow-right: #{functions.svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMin slice" ><g fill="#{coreTokenColors.$white}">#{coreTokenIcons.$arrow-right}</g></svg>')};
-  // --nc-semantic-icon-arrow-down: #{functions.svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMin slice" ><g fill="#{coreTokenColors.$white}">#{coreTokenIcons.$arrow-down}</g></svg>')};
-  // --nc-semantic-icon-arrow-up: #{functions.svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMin slice" ><g fill="#{coreTokenColors.$white}">#{coreTokenIcons.$arrow-up}</g></svg>')};
-  // --nc-semantic-icon-download: #{functions.svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMin slice" ><g fill="#{coreTokenColors.$white}">#{coreTokenIcons.$download}</g></svg>')};
-  // --nc-semantic-icon-mail: #{functions.svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMin slice" ><g fill="#{coreTokenColors.$white}">#{coreTokenIcons.$mail}</g></svg>')};
+  // --ts-semantic-icon-arrow-right: #{functions.svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMin slice" ><g fill="#{coreTokenColors.$white}">#{coreTokenIcons.$arrow-right}</g></svg>')};
+  // --ts-semantic-icon-arrow-down: #{functions.svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMin slice" ><g fill="#{coreTokenColors.$white}">#{coreTokenIcons.$arrow-down}</g></svg>')};
+  // --ts-semantic-icon-arrow-up: #{functions.svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMin slice" ><g fill="#{coreTokenColors.$white}">#{coreTokenIcons.$arrow-up}</g></svg>')};
+  // --ts-semantic-icon-download: #{functions.svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMin slice" ><g fill="#{coreTokenColors.$white}">#{coreTokenIcons.$download}</g></svg>')};
+  // --ts-semantic-icon-mail: #{functions.svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMin slice" ><g fill="#{coreTokenColors.$white}">#{coreTokenIcons.$mail}</g></svg>')};
 
 }

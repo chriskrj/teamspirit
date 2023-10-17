@@ -23,84 +23,84 @@
   justify-content: flex-start;
 
   & > * + * {
-    margin-top: var(--nc-component-stack-space, 1rem);
+    margin-top: var(--ts-component-stack-space, 1rem);
   }
 }
 
 .u-stack-text > * + * {
-  --nc-component-stack-space: 1.25em;
+  --ts-component-stack-space: 1.25em;
 }
 
 .u-stack-none > * + * {
-  --nc-component-stack-space: 0;
+  --ts-component-stack-space: 0;
 }
 
 .u-stack-2xs > * + * {
-  --nc-component-stack-space: var(--nc-semantic-space-2xs);
+  --ts-component-stack-space: var(--ts-semantic-space-2xs);
 }
 
 .u-stack-xs > * + * {
-  --nc-component-stack-space: var(--nc-semantic-space-xs);
+  --ts-component-stack-space: var(--ts-semantic-space-xs);
 }
 
 .u-stack-sm > * + * {
-  --nc-component-stack-space: var(--nc-semantic-space-sm);
+  --ts-component-stack-space: var(--ts-semantic-space-sm);
 }
 
 .u-stack-md > * + * {
-  --nc-component-stack-space: var(--nc-semantic-space-md);
+  --ts-component-stack-space: var(--ts-semantic-space-md);
 }
 
 .u-stack-lg > * + * {
-  --nc-component-stack-space: var(--nc-semantic-space-lg);
+  --ts-component-stack-space: var(--ts-semantic-space-lg);
 }
 
 .u-stack-xl > * + * {
-  --nc-component-stack-space: var(--nc-semantic-space-xl);
+  --ts-component-stack-space: var(--ts-semantic-space-xl);
 }
 
 .u-stack-2xl > * + * {
-  --nc-component-stack-space: var(--nc-semantic-space-2xl);
+  --ts-component-stack-space: var(--ts-semantic-space-2xl);
 }
 
 .u-stack-3xl > * + * {
-  --nc-component-stack-space: var(--nc-semantic-space-3xl);
+  --ts-component-stack-space: var(--ts-semantic-space-3xl);
 }
 
 
 
 .u-stack-item--none {
-  --nc-component-stack-space: 0;
+  --ts-component-stack-space: 0;
 }
 
 .u-stack-item--2xs {
-  --nc-component-stack-space: var(--nc-semantic-space-2xs);
+  --ts-component-stack-space: var(--ts-semantic-space-2xs);
 }
 
 .u-stack-item--xs {
-  --nc-component-stack-space: var(--nc-semantic-space-xs);
+  --ts-component-stack-space: var(--ts-semantic-space-xs);
 }
 
 .u-stack-item--sm  {
-  --nc-component-stack-space: var(--nc-semantic-space-sm);
+  --ts-component-stack-space: var(--ts-semantic-space-sm);
 }
 
 .u-stack-item--md {
-  --nc-component-stack-space: var(--nc-semantic-space-md);
+  --ts-component-stack-space: var(--ts-semantic-space-md);
 }
 
 .u-stack-item--lg {
-  --nc-component-stack-space: var(--nc-semantic-space-lg);
+  --ts-component-stack-space: var(--ts-semantic-space-lg);
 }
 
 .u-stack-item--xl {
-  --nc-component-stack-space: var(--nc-semantic-space-xl);
+  --ts-component-stack-space: var(--ts-semantic-space-xl);
 }
 
 .u-stack-item--2xl{
-  --nc-component-stack-space: var(--nc-semantic-space-2xl);
+  --ts-component-stack-space: var(--ts-semantic-space-2xl);
 }
 
 .u-stack-item--3xl {
-  --nc-component-stack-space: var(--nc-semantic-space-3xl);
+  --ts-component-stack-space: var(--ts-semantic-space-3xl);
 }

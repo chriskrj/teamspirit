@@ -1,8 +1,8 @@
 .AccordionGroup {
   list-style-type: none;
 
-  --nc-component-accordiongroup-item-bg-color: var(--nc-semantic-color-bg-action-accent);
-  --nc-component-accordiongroup-item-fg-color: var(--nc-semantic-color-fg-action);
+  --ts-component-accordiongroup-item-bg-color: var(--ts-semantic-color-bg-action-accent);
+  --ts-component-accordiongroup-item-fg-color: var(--ts-semantic-color-fg-action);
 
   //border-top: 1px solid colors.$blue;
 }
@@ -12,7 +12,7 @@
   transition: background-color 0.2s ease;
 
   //border-bottom: 1px solid colors.$blue;
-  background-color: var(--nc-component-accordiongroup-item-bg-color);
+  background-color: var(--ts-component-accordiongroup-item-bg-color);
   margin-bottom: 8px;
 }
 
@@ -34,7 +34,7 @@
   width: 1.5em;
   height: 1.5em;
   line-height: 1;
-  color: var(--nc-component-accordiongroup-item-fg-color);
+  color: var(--ts-component-accordiongroup-item-fg-color);
   fill: currentcolor;
   flex-shrink: 0;
   margin-left: 0.5em;
@@ -43,29 +43,29 @@
 
   .is-open & {
     transform: scale(-1);
-    --nc-component-accordiongroup-item-fg-color: var(--nc-semantic-color-fg-action--hover);
+    --ts-component-accordiongroup-item-fg-color: var(--ts-semantic-color-fg-action--hover);
   }
 
   .AccordionGroup-title:hover & {
-    --nc-component-accordiongroup-item-fg-color: var(--nc-semantic-color-fg-action--hover);
+    --ts-component-accordiongroup-item-fg-color: var(--ts-semantic-color-fg-action--hover);
   }
 }
 
 .AccordionGroup-label {
-  font-weight: var(--nc-semantic-font-weight-bold);
-  color: var(--nc-component-accordiongroup-item-fg-color);
-  font-size: var(--nc-semantic-font-size-md);
-  line-height: var(--nc-semantic-font-line-height-sm);
+  font-weight: var(--ts-semantic-font-weight-bold);
+  color: var(--ts-component-accordiongroup-item-fg-color);
+  font-size: var(--ts-semantic-font-size-md);
+  line-height: var(--ts-semantic-font-line-height-sm);
   font-style: normal;
 
   transition: transform 0.2s ease, color 0.2s ease;
 
   .is-open & {
-    --nc-component-accordiongroup-item-fg-color: var(--nc-semantic-color-fg-action--hover);
+    --ts-component-accordiongroup-item-fg-color: var(--ts-semantic-color-fg-action--hover);
   }
 
   .AccordionGroup-title:hover & {
-    --nc-component-accordiongroup-item-fg-color: var(--nc-semantic-color-fg-action--hover);
+    --ts-component-accordiongroup-item-fg-color: var(--ts-semantic-color-fg-action--hover);
   }
 }
 

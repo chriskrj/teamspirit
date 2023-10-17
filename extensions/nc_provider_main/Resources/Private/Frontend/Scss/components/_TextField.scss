@@ -1,19 +1,19 @@
 // Styling form input and textarea
 .TextField {
-  --nc-component-text-field-border-color: var(--nc-semantic-color-stroke-default);
+  --ts-component-text-field-border-color: var(--ts-semantic-color-stroke-default);
 
   // appearance: none;
   resize: vertical;
   font-family: inherit;
-  font-weight: var(--nc-semantic-font-weight-regular);
-  color: var(--nc-semantic-color-fg-default);
-  font-size: var(--nc-semantic-font-size-base);
+  font-weight: var(--ts-semantic-font-weight-regular);
+  color: var(--ts-semantic-color-fg-default);
+  font-size: var(--ts-semantic-font-size-base);
   font-style: normal;
-  line-height: var(--nc-semantic-font-line-height-sm);
+  line-height: var(--ts-semantic-font-line-height-sm);
   width: 100%;
-  padding: var(--nc-semantic-space-sm);
-  border: 1px solid var(--nc-component-text-field-border-color);
-  background-color: var(--nc-semantic-color-bg-default);
+  padding: var(--ts-semantic-space-sm);
+  border: 1px solid var(--ts-component-text-field-border-color);
+  background-color: var(--ts-semantic-color-bg-default);
   min-height: 2em;
   overflow: hidden;
   transition: border-color 0.5s ease;
@@ -21,10 +21,10 @@
   border-radius: 0;
 
   &:focus {
-    --nc-component-text-field-border-color: var(--nc-semantic-color-fg-highlight);
+    --ts-component-text-field-border-color: var(--ts-semantic-color-fg-highlight);
   }
 }
 
 .TextField--error {
-  --nc-component-text-field-border-color: var(--nc-semantic-color-fg-error);
+  --ts-component-text-field-border-color: var(--ts-semantic-color-fg-error);
 }

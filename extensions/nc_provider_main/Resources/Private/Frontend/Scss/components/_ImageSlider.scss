@@ -3,7 +3,7 @@
 
 .ImageSlider {
   position: relative;
-  background-color: var(--nc-semantic-color-bg-default);
+  background-color: var(--ts-semantic-color-bg-default);
 }
 
 .ImageSlider-slides {
@@ -15,7 +15,7 @@
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 
-  scrollbar-color: var(--nc-semantic-color-fg-action) #fff;
+  scrollbar-color: var(--ts-semantic-color-fg-action) #fff;
   scrollbar-width: thin;
 
   // fallback styling scrollbar for webkit (chrome)
@@ -30,7 +30,7 @@
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: var(--nc-semantic-color-fg-action);
+    background-color: var(--ts-semantic-color-fg-action);
     border-radius: 4px;
   }
 }
@@ -45,7 +45,7 @@
 }
 
 .ImageSlider-slideImage {
-  background-color: var(--nc-semantic-color-bg-accent);
+  background-color: var(--ts-semantic-color-bg-accent);
   width: 100%;
   max-width: none;
   aspect-ratio: 4/3;
@@ -54,9 +54,9 @@
 
 .ImageSlider-slideFigcaption {
   padding: 0.5rem 0;
-  font-weight: var(--nc-semantic-font-weight-regular);
-  color: var(--nc-semantic-color-fg-default);
-  font-size: var(--nc-semantic-font-size-sm);
+  font-weight: var(--ts-semantic-font-weight-regular);
+  color: var(--ts-semantic-color-fg-default);
+  font-size: var(--ts-semantic-font-size-sm);
 }
 
 .ImageSlider-controls {
@@ -80,7 +80,7 @@
 
   // &::before {
   //   content: "";
-  //   background-image: linear-gradient(-10deg, var(--nc-semantic-color-bg-default) calc(50% - 1px), transparent 50%);
+  //   background-image: linear-gradient(-10deg, var(--ts-semantic-color-bg-default) calc(50% - 1px), transparent 50%);
   //   padding-bottom: 18%;
   //   display: block;
   //   position: absolute;
@@ -99,7 +99,7 @@
   line-height: 1;
   border: none;
   background-color: transparent;
-  color: var(--nc-semantic-color-fg-action);
+  color: var(--ts-semantic-color-fg-action);
   fill: currentColor;
   padding: 0;
   margin: 12px 1rem;
@@ -109,7 +109,7 @@
   transition: color 0.2s ease;
 
   &:hover {
-    color: var(--nc-semantic-color-fg-action--hover);
+    color: var(--ts-semantic-color-fg-action--hover);
   }
 
   &:disabled {

@@ -1,21 +1,21 @@
 .Button {
-  --nc-component-button-font-size: var(--nc-semantic-font-size-base);
-  --nc-component-button-background-color: var(--nc-semantic-color-bg-action-default);
-  --nc-component-button-border-color: var(--nc-semantic-color-bg-action-default);
-  --nc-component-button-color: var(--nc-semantic-color-fg-on-contrast);
+  --ts-component-button-font-size: var(--ts-semantic-font-size-base);
+  --ts-component-button-background-color: var(--ts-semantic-color-bg-action-default);
+  --ts-component-button-border-color: var(--ts-semantic-color-bg-action-default);
+  --ts-component-button-color: var(--ts-semantic-color-fg-on-contrast);
 
   font-family: inherit;
   line-height: inherit;
   -webkit-appearance: button;
   text-decoration: none;
-  font-weight: var(--nc-semantic-font-weight-bold);
-  color: var(--nc-component-button-color);
-  font-size: var(--nc-component-button-font-size);
+  font-weight: var(--ts-semantic-font-weight-bold);
+  color: var(--ts-component-button-color);
+  font-size: var(--ts-component-button-font-size);
   font-style: normal;
   //text-transform: uppercase;
   cursor: pointer;
-  background-color: var(--nc-component-button-background-color);
-  border: 1px solid var(--nc-component-button-border-color);
+  background-color: var(--ts-component-button-background-color);
+  border: 1px solid var(--ts-component-button-border-color);
   padding: 0.75rem 2rem;
   display: inline-flex;
   transition: color 0.2s ease, background-color 0.2s ease;
@@ -28,8 +28,8 @@
   &:hover,
   &.is-active,
   &:active {
-    --nc-component-button-background-color: var(--nc-semantic-color-bg-action-default--hover);
-    --nc-component-button-border-color: var(--nc-semantic-color-bg-action-default--hover);
+    --ts-component-button-background-color: var(--ts-semantic-color-bg-action-default--hover);
+    --ts-component-button-border-color: var(--ts-semantic-color-bg-action-default--hover);
   }
 
   &:disabled {
@@ -59,7 +59,7 @@
 }
 
 .Button-icon {
-  --nc-component-button-icon-color: var(--nc-semantic-color-fg-on-contrast);
+  --ts-component-button-icon-color: var(--ts-semantic-color-fg-on-contrast);
 
   /* autoprefixer: off */
   display: inline-flex;
@@ -79,7 +79,7 @@
   .Button:hover &,
   .Button.is-active &,
   .Button:active & {
-    color: var(--nc-component-button-icon-color);
+    color: var(--ts-component-button-icon-color);
   }
 }
 

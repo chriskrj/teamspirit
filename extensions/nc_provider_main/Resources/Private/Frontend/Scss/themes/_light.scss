@@ -13,50 +13,50 @@
 :root, [data-theme="light"] {
 
   // fg
-  --nc-semantic-color-fg-default: #{coreTokenColors.$black};
-  --nc-semantic-color-fg-highlight: #{coreTokenColors.$yellow-100};
-  --nc-semantic-color-fg-error: #{coreTokenColors.$red-100};
-  --nc-semantic-color-fg-success: #{coreTokenColors.$green-100};
-  --nc-semantic-color-fg-action: #{coreTokenColors.$brown-100};
-  --nc-semantic-color-fg-action--hover: #{coreTokenColors.$brown-180};
-  --nc-semantic-color-fg-static-light: #{coreTokenColors.$white};
-  --nc-semantic-color-fg-static-dark: #{coreTokenColors.$black};
-  --nc-semantic-color-fg-on-contrast: #{coreTokenColors.$white};
-  --nc-semantic-color-fg-on-contrast--hover: #{coreTokenColors.$white};
+  --ts-semantic-color-fg-default: #{coreTokenColors.$black};
+  --ts-semantic-color-fg-highlight: #{coreTokenColors.$yellow-100};
+  --ts-semantic-color-fg-error: #{coreTokenColors.$red-100};
+  --ts-semantic-color-fg-success: #{coreTokenColors.$green-100};
+  --ts-semantic-color-fg-action: #{coreTokenColors.$brown-100};
+  --ts-semantic-color-fg-action--hover: #{coreTokenColors.$brown-180};
+  --ts-semantic-color-fg-static-light: #{coreTokenColors.$white};
+  --ts-semantic-color-fg-static-dark: #{coreTokenColors.$black};
+  --ts-semantic-color-fg-on-contrast: #{coreTokenColors.$white};
+  --ts-semantic-color-fg-on-contrast--hover: #{coreTokenColors.$white};
 
   // stroke
-  --nc-semantic-color-stroke-default: #{coreTokenColors.$brown-100};
-  --nc-semantic-color-stroke-subtle: #{coreTokenColors.$brown-180};
+  --ts-semantic-color-stroke-default: #{coreTokenColors.$brown-100};
+  --ts-semantic-color-stroke-subtle: #{coreTokenColors.$brown-180};
 
   // bg
-  --nc-semantic-color-bg-transparent: transparent;
-  --nc-semantic-color-bg-default: #{coreTokenColors.$white};
-  --nc-semantic-color-bg-accent: #{coreTokenColors.$brown-100};
-  --nc-semantic-color-bg-highlight: #{coreTokenColors.$mint-100};
-  --nc-semantic-color-bg-action-default: #{coreTokenColors.$brown-100};
-  --nc-semantic-color-bg-action-default--hover: #{coreTokenColors.$brown-180};
-  --nc-semantic-color-bg-action-accent: #{coreTokenColors.$mint-100};
-  --nc-semantic-color-bg-action-accent--hover: #{coreTokenColors.$yellow-100};
+  --ts-semantic-color-bg-transparent: transparent;
+  --ts-semantic-color-bg-default: #{coreTokenColors.$white};
+  --ts-semantic-color-bg-accent: #{coreTokenColors.$brown-100};
+  --ts-semantic-color-bg-highlight: #{coreTokenColors.$mint-100};
+  --ts-semantic-color-bg-action-default: #{coreTokenColors.$brown-100};
+  --ts-semantic-color-bg-action-default--hover: #{coreTokenColors.$brown-180};
+  --ts-semantic-color-bg-action-accent: #{coreTokenColors.$mint-100};
+  --ts-semantic-color-bg-action-accent--hover: #{coreTokenColors.$yellow-100};
 
   // coreTokenIcons (css)
-  // --nc-semantic-icon-arrow-right: #{functions.svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMin slice" ><g fill="#{coreTokenColors.$blue-100}">#{coreTokenIcons.$arrow-right}</g></svg>')};
-  // --nc-semantic-icon-arrow-down: #{functions.svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMin slice" ><g fill="#{coreTokenColors.$blue-100}">#{coreTokenIcons.$arrow-down}</g></svg>')};
-  // --nc-semantic-icon-arrow-up: #{functions.svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMin slice" ><g fill="#{coreTokenColors.$blue-100}">#{coreTokenIcons.$arrow-up}</g></svg>')};
-  // --nc-semantic-icon-download: #{functions.svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMin slice" ><g fill="#{coreTokenColors.$blue-100}">#{coreTokenIcons.$download}</g></svg>')};
-  // --nc-semantic-icon-mail: #{functions.svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMin slice" ><g fill="#{coreTokenColors.$blue-100}">#{coreTokenIcons.$mail}</g></svg>')};
+  // --ts-semantic-icon-arrow-right: #{functions.svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMin slice" ><g fill="#{coreTokenColors.$blue-100}">#{coreTokenIcons.$arrow-right}</g></svg>')};
+  // --ts-semantic-icon-arrow-down: #{functions.svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMin slice" ><g fill="#{coreTokenColors.$blue-100}">#{coreTokenIcons.$arrow-down}</g></svg>')};
+  // --ts-semantic-icon-arrow-up: #{functions.svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMin slice" ><g fill="#{coreTokenColors.$blue-100}">#{coreTokenIcons.$arrow-up}</g></svg>')};
+  // --ts-semantic-icon-download: #{functions.svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMin slice" ><g fill="#{coreTokenColors.$blue-100}">#{coreTokenIcons.$download}</g></svg>')};
+  // --ts-semantic-icon-mail: #{functions.svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMin slice" ><g fill="#{coreTokenColors.$blue-100}">#{coreTokenIcons.$mail}</g></svg>')};
 }
 
 
 // 64x16 = 1024
 // @media (min-width: 64rem) {
 //  :root, [data-theme="light"] {
-//    --nc-semantic-font-size-sm: #{coreTokenSizes.$static-16};
-//    --nc-semantic-font-size-base: #{coreTokenSizes.$static-18};
-//    --nc-semantic-font-size-md: #{coreTokenSizes.$static-20};
-//    --nc-semantic-font-size-lg: #{coreTokenSizes.$static-32 * coreTokenSizes.$font-size-scale-desktop};
-//    --nc-semantic-font-size-xl: #{coreTokenSizes.$static-36 * coreTokenSizes.$font-size-scale-desktop};
-//    --nc-semantic-font-size-2xl: #{coreTokenSizes.$static-48 * coreTokenSizes.$font-size-scale-desktop};
-//    --nc-semantic-font-size-3xl: #{coreTokenSizes.$static-64 * coreTokenSizes.$font-size-scale-desktop};
-//    --nc-semantic-font-size-4xl: #{coreTokenSizes.$static-80 * coreTokenSizes.$font-size-scale-desktop};
+//    --ts-semantic-font-size-sm: #{coreTokenSizes.$static-16};
+//    --ts-semantic-font-size-base: #{coreTokenSizes.$static-18};
+//    --ts-semantic-font-size-md: #{coreTokenSizes.$static-20};
+//    --ts-semantic-font-size-lg: #{coreTokenSizes.$static-32 * coreTokenSizes.$font-size-scale-desktop};
+//    --ts-semantic-font-size-xl: #{coreTokenSizes.$static-36 * coreTokenSizes.$font-size-scale-desktop};
+//    --ts-semantic-font-size-2xl: #{coreTokenSizes.$static-48 * coreTokenSizes.$font-size-scale-desktop};
+//    --ts-semantic-font-size-3xl: #{coreTokenSizes.$static-64 * coreTokenSizes.$font-size-scale-desktop};
+//    --ts-semantic-font-size-4xl: #{coreTokenSizes.$static-80 * coreTokenSizes.$font-size-scale-desktop};
 //  }
 // }

@@ -22,9 +22,9 @@
 }
 
 .TeaserItemImageTop-headline {
-  font-weight: var(--nc-semantic-font-weight-regular);
-  color: var(--nc-semantic-color-fg-default);
-  font-size: var(--nc-semantic-font-size-3xl);
+  font-weight: var(--ts-semantic-font-weight-regular);
+  color: var(--ts-semantic-color-fg-default);
+  font-size: var(--ts-semantic-font-size-3xl);
   line-height: 1.6;
   position: absolute;
   z-index: 2;
@@ -40,6 +40,6 @@
 
 .TeaserItemImageTop-headline-bars {
   padding: .05em .1em;
-  background-color: var(--nc-semantic-color-bg-accent);
+  background-color: var(--ts-semantic-color-bg-accent);
   box-decoration-break: clone;
 }

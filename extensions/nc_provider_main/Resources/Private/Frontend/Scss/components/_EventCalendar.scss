@@ -7,7 +7,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  background-color: var(--nc-semantic-color-bg-default);
+  background-color: var(--ts-semantic-color-bg-default);
   padding: 0.5rem 0;
 }
 
@@ -23,10 +23,10 @@
 }
 
 .EventCalendar-weekday {
-  font-weight: var(--nc-semantic-font-weight-regular);
-  color: var(--nc-semantic-color-fg-default);
-  font-size: var(--nc-semantic-font-size-base);
-  background-color: var(--nc-semantic-color-bg-default);
+  font-weight: var(--ts-semantic-font-weight-regular);
+  color: var(--ts-semantic-color-fg-default);
+  font-size: var(--ts-semantic-font-size-base);
+  background-color: var(--ts-semantic-color-bg-default);
   padding: 1rem 0.5rem;
 }
 
@@ -42,26 +42,26 @@
 }
 
 .EventCalendar-day {
-  font-weight: var(--nc-semantic-font-weight-bold);
-  color: var(--nc-semantic-color-fg-highlight);
-  font-size: var(--nc-semantic-font-size-sm);
-  background-color: var(--nc-semantic-color-bg-accent);
+  font-weight: var(--ts-semantic-font-weight-bold);
+  color: var(--ts-semantic-color-fg-highlight);
+  font-size: var(--ts-semantic-font-size-sm);
+  background-color: var(--ts-semantic-color-bg-accent);
   padding: 0.5rem 0.5rem;
   min-height: 5em;
 }
 
 .EventCalendar-day--otherMonth {
-  background-color: var(--nc-semantic-color-bg-default);
-  color: var(--nc-semantic-color-fg-default);
+  background-color: var(--ts-semantic-color-bg-default);
+  color: var(--ts-semantic-color-fg-default);
 }
 
 .EventCalendar-day--today {
-  background-color: var(--nc-semantic-color-bg-highlight) !important;
+  background-color: var(--ts-semantic-color-bg-highlight) !important;
 }
 
 .EventCalendar-eventLink {
-  --nc-component-link-color: var(--nc-semantic-color-fg-action);
-  color: var(--nc-component-link-color);
+  --ts-component-link-color: var(--ts-semantic-color-fg-action);
+  color: var(--ts-component-link-color);
   border: none;
   cursor: pointer;
   background-color: transparent;
@@ -72,6 +72,6 @@
   display: inline;
 
   &:hover {
-    --nc-component-link-color: var(--nc-semantic-color-fg-action--hover);
+    --ts-component-link-color: var(--ts-semantic-color-fg-action--hover);
   }
 }

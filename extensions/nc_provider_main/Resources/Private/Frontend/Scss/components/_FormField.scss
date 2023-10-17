@@ -5,15 +5,15 @@
   justify-content: flex-start;
 
   & > * + * {
-    margin-top: var(--nc-semantic-space-2xs);
+    margin-top: var(--ts-semantic-space-2xs);
   }
 }
 
 // form label and legend
 .FormField-label {
-  font-weight: var(--nc-semantic-font-weight-regular);
-  color: var(--nc-semantic-color-fg-default);
-  font-size: var(--nc-semantic-font-size-base);
+  font-weight: var(--ts-semantic-font-weight-regular);
+  color: var(--ts-semantic-color-fg-default);
+  font-size: var(--ts-semantic-font-size-base);
 }
 
 // wrapper around input
@@ -21,20 +21,20 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: var(--nc-semantic-space-xs);
+  gap: var(--ts-semantic-space-xs);
 }
 
 // modifier for inline form elements
 .FormField-input--inline {
   flex-direction: row;
-  column-gap: var(--nc-semantic-space-md);
+  column-gap: var(--ts-semantic-space-md);
 }
 
 // Label for radiobutton and checkbox
 .FormField-choiceLabel {
-  font-weight: var(--nc-semantic-font-weight-regular);
-  color: var(--nc-semantic-color-fg-default);
-  font-size: var(--nc-semantic-font-size-base);
+  font-weight: var(--ts-semantic-font-weight-regular);
+  color: var(--ts-semantic-color-fg-default);
+  font-size: var(--ts-semantic-font-size-base);
 }
 
 // wrapper div around radiobutton and checkbox
@@ -42,5 +42,5 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  gap: var(--nc-semantic-space-xs);
+  gap: var(--ts-semantic-space-xs);
 }

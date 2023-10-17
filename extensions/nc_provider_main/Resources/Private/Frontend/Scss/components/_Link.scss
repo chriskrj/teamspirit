@@ -1,22 +1,22 @@
 .Link {
-  --nc-component-link-color: var(--nc-semantic-color-fg-action);
+  --ts-component-link-color: var(--ts-semantic-color-fg-action);
 
   font-size: inherit;
-  color: var(--nc-component-link-color);
+  color: var(--ts-component-link-color);
   border: none;
   cursor: pointer;
   background-color: transparent;
   text-decoration: underline;
   text-underline-offset: 0.2em;
   text-decoration-thickness: 2px;
-  text-decoration-color: var(--nc-component-link-color);
+  text-decoration-color: var(--ts-component-link-color);
   padding: 0;
   margin: 0;
   transition: color 0.2s ease, text-decoration-color 0.2s ease;
   display: inline;
 
   &:hover {
-    --nc-component-link-color: var(--nc-semantic-color-fg-action--hover);
+    --ts-component-link-color: var(--ts-semantic-color-fg-action--hover);
   }
 
 }
@@ -30,22 +30,22 @@
 
 // https://css-irl.info/styling-external-links-with-attribute-selectors/
 //.Base-svgIconLink {
-//  --nc-component-link-color: var(--nc-semantic-color-link-default);
+//  --ts-component-link-color: var(--ts-semantic-color-link-default);
 //
-//  color: var(--nc-component-link-color);
+//  color: var(--ts-component-link-color);
 //  border: none;
 //  cursor: pointer;
 //  background-color: transparent;
 //  text-decoration: underline;
 //  text-underline-offset: 0.2em;
 //  text-decoration-thickness: 3px;
-//  text-decoration-color: var(--nc-component-link-color);
+//  text-decoration-color: var(--ts-component-link-color);
 //  padding: 0;
 //  margin: 0;
 //  transition: color 0.2s ease, text-decoration-color 0.2s ease;
 //
 //  &:hover {
-//    --nc-component-link-color: var(--nc-semantic-color-link-hover);
+//    --ts-component-link-color: var(--ts-semantic-color-link-hover);
 //  }
 //}
 //
@@ -74,17 +74,17 @@
 // .Link-withIcon-email,
 // .Link-withIcon-phone,
 // .Link-withIcon-back {
-//   --nc-component-link-with-icon-color: var(--nc-semantic-color-fg-action);
-//   --nc-component-link-with-icon-icon: var(--nc-semantic-icon-arrow-right-double);
+//   --ts-component-link-with-icon-color: var(--ts-semantic-color-fg-action);
+//   --ts-component-link-with-icon-icon: var(--ts-semantic-icon-arrow-right-double);
 //
-//   color: var(--nc-component-link-with-icon-color);
+//   color: var(--ts-component-link-with-icon-color);
 //   border: none;
 //   cursor: pointer;
 //   background-color: transparent;
 //   text-decoration: underline;
 //   text-underline-offset: 0.2em;
 //   text-decoration-thickness: 2px;
-//   text-decoration-color: var(--nc-component-link-with-icon-color);
+//   text-decoration-color: var(--ts-component-link-with-icon-color);
 //   padding: 0;
 //   margin: 0;
 //   transition: text-underline-offset 0.1s ease, text-decoration-color 0.1s ease;
@@ -97,11 +97,11 @@
 //     background-repeat: no-repeat;
 //     background-position: left center;
 //     background-size: 1em;
-//     background-image: var(--nc-component-link-with-icon-icon);
+//     background-image: var(--ts-component-link-with-icon-icon);
 //   }
 //
 //   &:hover {
-//     --nc-component-link-with-icon-color: var(--nc-semantic-color-fg-action--hover);
+//     --ts-component-link-with-icon-color: var(--ts-semantic-color-fg-action--hover);
 //   }
 // }
 //
@@ -109,17 +109,17 @@
 // .Link-withIcon[href^="t3://page"],
 // .Link-withIcon[href^="t3://record"],
 // .Link-withIcon[href^="/"] {
-//   --nc-component-link-with-icon-icon: var(--nc-semantic-icon-arrow-right-double);
+//   --ts-component-link-with-icon-icon: var(--ts-semantic-icon-arrow-right-double);
 // }
 //
 // .Link-withIcon-section,
 // .Link-withIcon[href*="#"] {
-//   --nc-component-link-with-icon-icon: var(--nc-semantic-icon-arrow-down-double);
+//   --ts-component-link-with-icon-icon: var(--ts-semantic-icon-arrow-down-double);
 // }
 //
 // .Link-withIcon-url,
 // .Link-withIcon[href^="http"] {
-//   --nc-component-link-with-icon-icon: var(--nc-semantic-icon-arrow-up-right-double);
+//   --ts-component-link-with-icon-icon: var(--ts-semantic-icon-arrow-up-right-double);
 // }
 //
 // .Link-withIcon-file,
@@ -128,19 +128,19 @@
 // .Link-withIcon[href$=".pdf"],
 // .Link-withIcon[href$=".xlsx"],
 // .Link-withIcon[href$=".docx"] {
-//   --nc-component-link-with-icon-icon: var(--nc-semantic-icon-download);
+//   --ts-component-link-with-icon-icon: var(--ts-semantic-icon-download);
 // }
 //
 // .Link-withIcon-email,
 // .Link-withIcon[href^="mailto:"] {
-//   --nc-component-link-with-icon-icon: var(--nc-semantic-icon-mail);
+//   --ts-component-link-with-icon-icon: var(--ts-semantic-icon-mail);
 // }
 //
 // .Link-withIcon-phone,
 // .Link-withIcon[href^="tel:"] {
-//   --nc-component-link-with-icon-icon: var(--nc-semantic-icon-phone);
+//   --ts-component-link-with-icon-icon: var(--ts-semantic-icon-phone);
 // }
 //
 // .Link-withIcon-back {
-//   --nc-component-link-with-icon-icon: var(--nc-semantic-icon-arrow-right-double);
+//   --ts-component-link-with-icon-icon: var(--ts-semantic-icon-arrow-right-double);
 // }

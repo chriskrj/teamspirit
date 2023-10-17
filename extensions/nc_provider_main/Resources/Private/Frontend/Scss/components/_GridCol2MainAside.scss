@@ -2,16 +2,16 @@
 @use "../abstracts/mixins";
 
 .GridCol2MainAside-row {
-  row-gap: var(--nc-semantic-space-md);
+  row-gap: var(--ts-semantic-space-md);
   list-style: none;
 }
 
 .GridCol2MainAside-row--gap-lg {
-  row-gap: var(--nc-semantic-space-lg);
+  row-gap: var(--ts-semantic-space-lg);
 }
 
 .GridCol2MainAside-row--gap-xl {
-  row-gap: var(--nc-semantic-space-xl);
+  row-gap: var(--ts-semantic-space-xl);
 }
 
 .GridCol2MainAside-colMain {

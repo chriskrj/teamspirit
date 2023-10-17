@@ -16,7 +16,7 @@
 }
 
 .Downloadlist-colExtension {
-  background-color: var(--nc-semantic-color-bg-action-default);
+  background-color: var(--ts-semantic-color-bg-action-default);
   padding: 1rem;
   flex-basis: 15%;
   min-width: 100px;
@@ -29,23 +29,23 @@
 
 .Downloadlist-extension {
   text-transform: uppercase;
-  color: var(--nc-semantic-color-fg-on-contrast);
-  font-size: var(--nc-semantic-font-size-md);
-  font-weight: var(--nc-semantic-font-weight-bold);
+  color: var(--ts-semantic-color-fg-on-contrast);
+  font-size: var(--ts-semantic-font-size-md);
+  font-weight: var(--ts-semantic-font-weight-bold);
 }
 
 .Downloadlist-colText {
-  background-color: var(--nc-semantic-color-bg-accent);
+  background-color: var(--ts-semantic-color-bg-accent);
   padding: 1rem;
   flex-basis: 100%
 }
 
 .DownloadList-link {
 
-  font-weight: var(--nc-semantic-font-weight-bold);
-  color: var(--nc-semantic-color-fg-default);
-  font-size: var(--nc-semantic-font-size-md);
-  line-height: var(--nc-semantic-font-line-height-sm);
+  font-weight: var(--ts-semantic-font-weight-bold);
+  color: var(--ts-semantic-color-fg-default);
+  font-size: var(--ts-semantic-font-size-md);
+  line-height: var(--ts-semantic-font-line-height-sm);
   text-decoration: none;
   hyphens: auto;
   word-break: break-word;

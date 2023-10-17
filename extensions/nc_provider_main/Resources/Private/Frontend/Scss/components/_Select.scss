@@ -1,8 +1,8 @@
 // https://scottaohara.github.io/a11y_styled_form_controls/src/select/
 .Select {
   position: relative;
-  border: 1px solid var(--nc-semantic-color-stroke-default);
-  background-color: var(--nc-semantic-color-bg-default);
+  border: 1px solid var(--ts-semantic-color-stroke-default);
+  background-color: var(--ts-semantic-color-bg-default);
 
   &::after {
     content: "";
@@ -10,8 +10,8 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    border-bottom: 2px solid var(--nc-semantic-color-fg-action);
-    border-right: 2px solid var(--nc-semantic-color-fg-action);
+    border-bottom: 2px solid var(--ts-semantic-color-fg-action);
+    border-right: 2px solid var(--ts-semantic-color-fg-action);
     height: 0.5rem;
     margin: auto;
     right: 0.75rem;
@@ -24,9 +24,9 @@
   select {
     appearance: none;
     font-family: inherit;
-    font-weight: var(--nc-semantic-font-weight-regular);
-    color: var(--nc-semantic-color-fg-default);
-    font-size: var(--nc-semantic-font-size-base);
+    font-weight: var(--ts-semantic-font-weight-regular);
+    color: var(--ts-semantic-color-fg-default);
+    font-size: var(--ts-semantic-font-size-base);
     font-style: normal;
     background: transparent;
     box-shadow: none;
@@ -34,7 +34,7 @@
     border: 1px solid transparent;
     line-height: normal;
     max-width: 100%;
-     padding: var(--nc-semantic-space-sm);
+     padding: var(--ts-semantic-space-sm);
     width: 100%;
   }
 
@@ -68,7 +68,7 @@
 
   select:focus option:not(:disabled),
   select:focus optgroup:not(:disabled) {
-    color: var(--nc-semantic-color-fg-default);
+    color: var(--ts-semantic-color-fg-default);
   }
 
 }

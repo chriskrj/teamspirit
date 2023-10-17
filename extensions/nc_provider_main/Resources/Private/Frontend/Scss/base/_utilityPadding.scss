@@ -12,33 +12,33 @@ $static-sizes: (
 
 @each $size in $static-sizes {
   .u-pa-#{$size} {
-    padding: var(--nc-semantic-space-#{$size}) !important;
+    padding: var(--ts-semantic-space-#{$size}) !important;
   }
 
   .u-pt-#{$size} {
-    padding-top: var(--nc-semantic-space-#{$size}) !important;
+    padding-top: var(--ts-semantic-space-#{$size}) !important;
   }
 
   .u-pb-#{$size} {
-    padding-bottom: var(--nc-semantic-space-#{$size}) !important;
+    padding-bottom: var(--ts-semantic-space-#{$size}) !important;
   }
 
   .u-pl-#{$size} {
-    padding-left: var(--nc-semantic-space-#{$size}) !important;
+    padding-left: var(--ts-semantic-space-#{$size}) !important;
   }
 
   .u-pr-#{$size} {
-    padding-right: var(--nc-semantic-space-#{$size}) !important;
+    padding-right: var(--ts-semantic-space-#{$size}) !important;
   }
 
   .u-px-#{$size} {
-    padding-left: var(--nc-semantic-space-#{$size}) !important;
-    padding-right: var(--nc-semantic-space-#{$size}) !important;
+    padding-left: var(--ts-semantic-space-#{$size}) !important;
+    padding-right: var(--ts-semantic-space-#{$size}) !important;
   }
 
   .u-py-#{$size} {
-    padding-top: var(--nc-semantic-space-#{$size}) !important;
-    padding-bottom: var(--nc-semantic-space-#{$size}) !important;
+    padding-top: var(--ts-semantic-space-#{$size}) !important;
+    padding-bottom: var(--ts-semantic-space-#{$size}) !important;
   }
 }
 
@@ -53,32 +53,32 @@ $fluid-sizes: (
 
 @each $size in $fluid-sizes {
   .u-pa-fluid-#{$size} {
-    padding: var(--nc-semantic-space-fluid-#{$size}) !important;
+    padding: var(--ts-semantic-space-fluid-#{$size}) !important;
   }
 
   .u-pt-fluid-#{$size} {
-    padding-top: var(--nc-semantic-space-fluid-#{$size}) !important;
+    padding-top: var(--ts-semantic-space-fluid-#{$size}) !important;
   }
 
   .u-pb-fluid-#{$size} {
-    padding-bottom: var(--nc-semantic-space-fluid-#{$size}) !important;
+    padding-bottom: var(--ts-semantic-space-fluid-#{$size}) !important;
   }
 
   .u-pl-fluid-#{$size} {
-    padding-left: var(--nc-semantic-space-fluid-#{$size}) !important;
+    padding-left: var(--ts-semantic-space-fluid-#{$size}) !important;
   }
 
   .u-pr-fluid-#{$size} {
-    padding-right: var(--nc-semantic-space-fluid-#{$size}) !important;
+    padding-right: var(--ts-semantic-space-fluid-#{$size}) !important;
   }
 
   .u-px-fluid-#{$size} {
-    padding-left: var(--nc-semantic-space-fluid-#{$size}) !important;
-    padding-right: var(--nc-semantic-space-fluid-#{$size}) !important;
+    padding-left: var(--ts-semantic-space-fluid-#{$size}) !important;
+    padding-right: var(--ts-semantic-space-fluid-#{$size}) !important;
   }
 
   .u-py-fluid-#{$size} {
-    padding-top: var(--nc-semantic-space-fluid-#{$size}) !important;
-    padding-bottom: var(--nc-semantic-space-fluid-#{$size}) !important;
+    padding-top: var(--ts-semantic-space-fluid-#{$size}) !important;
+    padding-bottom: var(--ts-semantic-space-fluid-#{$size}) !important;
   }
 }

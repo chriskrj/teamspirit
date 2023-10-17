@@ -32,7 +32,7 @@ video {
 
 html {
   // 100% = 16px
-  font-size: var(--nc-semantic-font-scale-root);
+  font-size: var(--ts-semantic-font-scale-root);
   scroll-behavior: smooth;
 
   // Prevent font size inflation
@@ -51,23 +51,23 @@ html {
 }
 
 body {
-  background-color: var(--nc-semantic-color-bg-default);
-  line-height: var(--nc-semantic-font-line-height-md);
+  background-color: var(--ts-semantic-color-bg-default);
+  line-height: var(--ts-semantic-font-line-height-md);
   overscroll-behavior: none;  // https://www.smashingmagazine.com/2018/08/scroll-bouncing-websites/
-  font-family: var(--nc-semantic-font-family-default);
+  font-family: var(--ts-semantic-font-family-default);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--nc-semantic-font-family-headline);
+  font-family: var(--ts-semantic-font-family-headline);
 }
 
 b,
 strong {
-  font-weight: var(--nc-semantic-font-weight-bold);
+  font-weight: var(--ts-semantic-font-weight-bold);
 }
 
 em {
-  font-weight: var(--nc-semantic-font-weight-bold);
+  font-weight: var(--ts-semantic-font-weight-bold);
 }
 
 small {
@@ -102,7 +102,7 @@ iframe,
 [tabindex],
 [contentEditable=true] {
   &:focus-visible {
-   outline: 2px solid var(--nc-semantic-color-fg-highlight);
+   outline: 2px solid var(--ts-semantic-color-fg-highlight);
    outline-offset: 0;
   }
 }
