@@ -10,11 +10,12 @@
 
         <div class="SectionFooter-contentBox">
 
-          <ul class="FooterNavigation">
-            <f:render partial="Page/Navigations" section="FooterNavigation" arguments="{nav:metaNavigation}"/>
-          </ul>
-
-          <div></div>
+          <div class="Footer-contactBox u-stack-base">
+            <h3 class="Text-heading-3xl u-mb-fluid-lg">Kontakt</h3>
+            <p class="Text-body">Kerstin Anger</p>
+            <p class="Text-body"><f:link.typolink class="Link" parameter="tel:+491778404661">0177 840 4661</f:link.typolink></p>
+            <p class="Text-body"><f:link.email class="Link" email="info@teamspirit-therapie.de">info@teamspirit-therapie.de</f:link.email></p>
+          </div>
 
           <f:link.page pageUid="{settings.pidStartpage}" additionalAttributes="{title:'Startseite'}">
             <f:image src="EXT:nc_provider_main/Resources/Public/Images/logo-footer.svg" width="353" height="118" />

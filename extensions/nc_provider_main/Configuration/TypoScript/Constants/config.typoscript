@@ -27,7 +27,11 @@ config {
   spamProtectEmailAddresses_atSubst = [at]
   spamProtectEmailAddresses_lastDotSubst = .
 
-  author = New Communication
+  headerComment (
+    Umsetzung: Christopher Krawietz
+  )
+
+  author = Kerstin Anger
 
   # if compress set to 1, image paths to compressed folder not found.
   compress_js_enable = 0

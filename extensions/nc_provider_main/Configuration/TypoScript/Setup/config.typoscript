@@ -28,12 +28,6 @@ config {
   // Disable Image Upscaling
   noScaleUp = 1
 
-  headerComment (
-TYPO3-Umsetzung: New Communication GmbH & Co. KG | Werbe- und Marketingagentur
-Jägersberg 23 | 24103 Kiel | Fon 0431 - 90 60 7-0 | Fax 0431 - 90 60 7-77
-http://www.new-communication.de | hello[at]new-communication.de
-  )
-
   spamProtectEmailAddresses = {$config.spamProtectEmailAddresses}
   spamProtectEmailAddresses_atSubst = {$config.spamProtectEmailAddresses_atSubst}
   spamProtectEmailAddresses_lastDotSubst = {$config.spamProtectEmailAddresses_lastDotSubst}

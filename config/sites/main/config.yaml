@@ -36,6 +36,6 @@ routes:
     route: robots.txt
     type: staticText
     content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /typo3_src/\r\nAllow: /typo3conf/ext/\r\nAllow: /typo3temp/\r\nAllow: /typo3/sysext/frontend/Resources/Public/*\r\nAllow: /typo3conf/ext/nc_provider_main/Resources/Public/*\r\n\r\nUser-agent: Googlebot\r\nAllow: *.js\r\nAllow: *.css\r\nSitemap: https://www.teamspirit-therapie.de/sitemap.xml\r\n"
-websiteTitle: 'Team Spirit'
 settings:
-  pidStartpage: 1
+  pidStartpage: '1'
+websiteTitle: 'Team Spirit'

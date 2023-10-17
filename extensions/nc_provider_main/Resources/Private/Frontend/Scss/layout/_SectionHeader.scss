@@ -7,6 +7,7 @@
   position: relative;
   z-index: functions.z(coreTokenIndexes.$z-root, footer);
   background-color: var(--nc-semantic-color-bg-default);
+  box-shadow: 0 -5px 20px 0 var(--nc-semantic-color-stroke-subtle);
 }
 
 .SectionHeader-sectionTop {
@@ -14,13 +15,17 @@
   padding-bottom: 0;
   display: grid;
   gap: 1rem;
-  grid-template-columns: minmax(auto, 260px) auto;
-  grid-template-rows: auto;
+
+  /* Using three columns to control placement. */
+  grid-template-columns: 1fr minmax(auto, 260px) 1fr;
+  grid-template-rows: auto auto;
+
+  /* Adjusting the grid-template-areas for desired placement. */
   grid-template-areas:
-    "header-logo header-portallink"
-    "header-logo header-mainmenu";
-  // justify-items: end;
+    ". header-logo ."
+    ". header-logo header-mainmenu";
 }
+
 
 .SectionHeader-logolink {
   display: block;
@@ -28,7 +33,6 @@
   grid-area: header-logo;
   justify-self: center;
   align-self: center;
-  padding-bottom: 2rem;
 }
 
 .SectionHeader-portalLink {
