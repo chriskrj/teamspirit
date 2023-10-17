@@ -4,9 +4,9 @@
     "isEntry": true,
     "src": "Resources/Private/Frontend/Scss/rte.scss"
   },
-  "Resources/Private/Frontend/Webfonts/chocolate.woff2": {
-    "file": "assets/chocolate.woff2",
-    "src": "Resources/Private/Frontend/Webfonts/chocolate.woff2"
+  "Resources/Private/Frontend/Webfonts/august.woff2": {
+    "file": "assets/august.woff2",
+    "src": "Resources/Private/Frontend/Webfonts/august.woff2"
   },
   "Resources/Private/Frontend/Webfonts/poppins-v20-latin-300.woff2": {
     "file": "assets/poppins-v20-latin-300.woff2",
@@ -24,7 +24,7 @@
     "assets": [
       "assets/poppins-v20-latin-300.woff2",
       "assets/poppins-v20-latin-regular.woff2",
-      "assets/chocolate.woff2"
+      "assets/august.woff2"
     ],
     "css": [
       "assets/main.css"
