@@ -125,6 +125,6 @@ return [
         'features' => [
             'yamlImportsFollowDeclarationOrder' => true,
         ],
-        'sitename' => 'New TYPO3 site',
+        'sitename' => 'Team Spirit',
     ],
 ];

@@ -30,10 +30,6 @@ const config= {
     hmr: { host },
     origin: `https://${host}:${port}`,
     https: true,
-    // https: {
-    //   key: fs.readFileSync(`/Applications/MAMP/Library/OpenSSL/certs/${host}.key`),
-    //   cert: fs.readFileSync(`/Applications/MAMP/Library/OpenSSL/certs/${host}.crt`),
-    // },
   },
   base: '',
   publicDir: 'fake_dir_so_nothing_gets_copied',
@@ -68,7 +64,11 @@ const config= {
   plugins: [
     // vue(),
     svgLoader(),
-    mkcert(),
+    mkcert(
+      {
+        autoUpgrade: true,
+      }
+    ),
     hotUpdateHtml()
   ],
   css: {

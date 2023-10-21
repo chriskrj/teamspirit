@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host 0.0.0.0",
+    "dev": "vite --host 0.0.0.0 --https",
     "build": "npm run typo3-build && vite build",
     "typo3-build": "node ./scripts/typo3-build.js",
     "typo3-create-ce": "node ./scripts/typo3-create-ce.js"

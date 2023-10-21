@@ -12,6 +12,10 @@
     "file": "assets/poppins-v20-latin-300.woff2",
     "src": "Resources/Private/Frontend/Webfonts/poppins-v20-latin-300.woff2"
   },
+  "Resources/Private/Frontend/Webfonts/poppins-v20-latin-800.woff2": {
+    "file": "assets/poppins-v20-latin-800.woff2",
+    "src": "Resources/Private/Frontend/Webfonts/poppins-v20-latin-800.woff2"
+  },
   "Resources/Private/Frontend/Webfonts/poppins-v20-latin-regular.woff2": {
     "file": "assets/poppins-v20-latin-regular.woff2",
     "src": "Resources/Private/Frontend/Webfonts/poppins-v20-latin-regular.woff2"
@@ -24,6 +28,7 @@
     "assets": [
       "assets/poppins-v20-latin-300.woff2",
       "assets/poppins-v20-latin-regular.woff2",
+      "assets/poppins-v20-latin-800.woff2",
       "assets/august.woff2"
     ],
     "css": [

@@ -1,0 +1,11 @@
+{
+  "ignoreFiles": [
+    "**/*.html"
+  ],
+  "extends": [
+    "./extensions/nc_provider_main/Build/node_modules/stylelint-config-standard-scss"
+  ],
+  "rules": {
+    "selector-class-pattern": null
+  }
+}
