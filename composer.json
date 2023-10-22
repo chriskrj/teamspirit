@@ -60,8 +60,8 @@
 	},
 	"scripts": {
 		"typo3-cms-scripts": [
-			"typo3cms install:fixfolderstructure",
-			"typo3cms install:extensionsetupifpossible"
+			"@php typo3cms install:fixfolderstructure",
+			"@php typo3cms install:extensionsetupifpossible"
 		],
 		"post-autoload-dump": [
 			"@typo3-cms-scripts"

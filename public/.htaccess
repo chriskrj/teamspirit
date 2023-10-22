@@ -33,13 +33,13 @@
 # *) Set $GLOBALS['TYPO3_CONF_VARS']['FE']['compressionLevel'] = 9 together with the TypoScript properties
 #    config.compressJs and config.compressCss for GZIP compression of Frontend JS and CSS files.
 
-#<FilesMatch "\.js\.gzip$">
-#	AddType "text/javascript" .gzip
-#</FilesMatch>
-#<FilesMatch "\.css\.gzip$">
-#	AddType "text/css" .gzip
-#</FilesMatch>
-#AddEncoding gzip .gzip
+<FilesMatch "\.js\.gzip$">
+	AddType "text/javascript" .gzip
+</FilesMatch>
+<FilesMatch "\.css\.gzip$">
+	AddType "text/css" .gzip
+</FilesMatch>
+AddEncoding gzip .gzip
 
 <IfModule mod_deflate.c>
 	# Force compression for mangled `Accept-Encoding` request headers
@@ -111,7 +111,7 @@
 # This affects Frontend and Backend and increases performance.
 <IfModule mod_expires.c>
 
-	ExpiresActive On
+	ExpiresActive on
 	ExpiresDefault                                      "access plus 1 month"
 
 	ExpiresByType text/css                              "access plus 1 year"
@@ -259,7 +259,7 @@ AddDefaultCharset utf-8
 # Send the CORS header for images when browsers request it.
 <IfModule mod_setenvif.c>
 	<IfModule mod_headers.c>
-		<FilesMatch "\.(avifs?|bmp|cur|gif|ico|jpe?g|png|svgz?|webp)$">
+		<FilesMatch "\.(bmp|cur|gif|ico|jpe?g|png|svgz?|webp)$">
 			SetEnvIf Origin ":" IS_CORS
 			Header set Access-Control-Allow-Origin "*" env=IS_CORS
 		</FilesMatch>
@@ -286,18 +286,30 @@ AddDefaultCharset utf-8
 	# Enable URL rewriting
 	RewriteEngine On
 
+	RewriteCond %{HTTP_ACCEPT} image/webp
+
+	RewriteCond %{DOCUMENT_ROOT}/$1.$3.webp -f
+	#    RewriteCond %{REQUEST_FILENAME}\.webp -f
+	RewriteRule ^((fileadmin|typo3conf/ext/nc_provider_main/Resources/Public/Images)/.+)\.(png|jpg|jpeg)$ $1.$3.webp [L]
 	# Store the current location in an environment variable CWD to use
 	# mod_rewrite in .htaccess files without knowing the RewriteBase
 	RewriteCond $0#%{REQUEST_URI} ([^#]*)#(.*)\1$
 	RewriteRule ^.*$ - [E=CWD:%2]
 
+	# Enforce SSL for domains, which have a SSL certificate
+	RewriteCond %{HTTP_HOST} ^www.teamspirit-therapie\.de [NC]
+	RewriteCond %{HTTPS} off
+	RewriteRule ^(.*) https://www.teamspirit-therapie.de/$1 [L,R=301]
+
+	# Non www to www. But leave subdomains without www
+	RewriteCond %{HTTP_HOST} ^teamspirit-therapie\.de [NC]
+	RewriteRule ^(.*) https://www.teamspirit-therapie.de/$1 [L,R=301]
+
 	# Rules to set ApplicationContext based on hostname
 	#RewriteCond %{HTTP_HOST} ^dev\.example\.com$
 	#RewriteRule .? - [E=TYPO3_CONTEXT:Development]
-	#RewriteCond %{HTTP_HOST} ^staging\.example\.com$
-	#RewriteRule .? - [E=TYPO3_CONTEXT:Production/Staging]
-	#RewriteCond %{HTTP_HOST} ^www\.example\.com$
-	#RewriteRule .? - [E=TYPO3_CONTEXT:Production]
+	RewriteCond %{HTTP_HOST} ^www\.teamspirit-therapie\.de$
+	RewriteRule .? - [E=TYPO3_CONTEXT:Production]
 
 	# Rule for versioned static files, configured through:
 	# - $GLOBALS['TYPO3_CONF_VARS']['BE']['versionNumberInFilename']
@@ -377,7 +389,7 @@ Options -MultiViews
 <IfModule mod_headers.c>
 	# Force IE to render pages in the highest available mode
 	Header set X-UA-Compatible "IE=edge"
-	<FilesMatch "\.(appcache|avifs?|crx|css|eot|gif|htc|ico|jpe?g|js|m4a|m4v|manifest|mp4|oex|oga|ogg|ogv|otf|pdf|png|safariextz|svgz?|ttf|vcf|webapp|webm|webp|woff2?|xml|xpi)$">
+	<FilesMatch "\.(appcache|crx|css|eot|gif|htc|ico|jpe?g|js|m4a|m4v|manifest|mp4|oex|oga|ogg|ogv|otf|pdf|png|safariextz|svgz?|ttf|vcf|webapp|webm|webp|woff2?|xml|xpi)$">
 		Header unset X-UA-Compatible
 	</FilesMatch>
 
@@ -395,3 +407,6 @@ FileETag None
 
 
 # Add your own rules here.
+<IfModule mod_php8.c>
+  php_value max_execution_time 300
+</IfModule>
