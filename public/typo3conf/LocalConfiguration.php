@@ -18,13 +18,13 @@ return [
     ],
     'EXTENSIONS' => [
         'backend' => [
-            'backendFavicon' => '',
-            'backendLogo' => '',
+            'backendFavicon' => 'favicon.ico',
+            'backendLogo' => 'favicon-32x32.png',
             'loginBackgroundImage' => '',
-            'loginFootnote' => '',
-            'loginHighlightColor' => '',
-            'loginLogo' => '',
-            'loginLogoAlt' => '',
+            'loginFootnote' => '© Christopher Krawietz',
+            'loginHighlightColor' => '#973714',
+            'loginLogo' => 'EXT:nc_provider_main/Resources/Public/Images/login-logo.png',
+            'loginLogoAlt' => 'Team Spirit',
         ],
         'extensionmanager' => [
             'automaticInstallation' => '1',

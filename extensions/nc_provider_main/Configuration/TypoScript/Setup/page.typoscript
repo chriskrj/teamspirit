@@ -81,15 +81,6 @@ page.10 {
       expandAll = 1
       titleField = nav_title // title
     }
-
-    60 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-    60 {
-      special = rootline
-      special.range = 0|-1
-      # includeNotInMenu = 1
-      as = breadcrumb
-    }
-
   }
 
   #include provider extension settings

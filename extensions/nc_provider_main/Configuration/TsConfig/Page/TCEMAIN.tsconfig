@@ -25,16 +25,16 @@ TCEMAIN.table.tt_content {
 # https://www.clickstorm.de/blog/linkhandler-typo3/
 TCEMAIN {
   linkHandler {
-    tx_news_news {
-      handler = TYPO3\CMS\Recordlist\LinkHandler\RecordLinkHandler
-      label = Nachricht
-      configuration {
-        table = tx_news_domain_model_news
-        storagePid = 44
-        hidePageTree = 1
-      }
-      scanAfter = page
-    }
+#    tx_news_news {
+#      handler = TYPO3\CMS\Recordlist\LinkHandler\RecordLinkHandler
+#      label = Nachricht
+#      configuration {
+#        table = tx_news_domain_model_news
+#        storagePid = 44
+#        hidePageTree = 1
+#      }
+#      scanAfter = page
+#    }
 
 #    tx_sfeventmgt_event {
 #      handler = TYPO3\CMS\Recordlist\LinkHandler\RecordLinkHandler

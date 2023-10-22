@@ -95,10 +95,6 @@ buttons:
       properties:
         class:
           default: "Link"
-    tx_news_news:
-      properties:
-        class:
-          default: "Link"
 
 
 #Classes config
@@ -118,6 +114,3 @@ classesAnchor:
   linkPhone:
     class: "Link"
     type: "telephone"
-  newsLink:
-    class: "Link"
-    type: "tx_news_news"
