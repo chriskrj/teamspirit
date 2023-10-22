@@ -1,7 +1,7 @@
 <?php
 return [
     'BE' => [
-        'debug' => true,
+        'debug' => false,
         'explicitADmode' => 'explicitAllow',
         'passwordHashing' => [
             'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
@@ -60,8 +60,8 @@ return [
         'processor_colorspace' => 'RGB',
         'processor_effects' => false,
         'processor_enabled' => true,
-        'processor_path' => '/opt/homebrew/bin/',
-        'processor_path_lzw' => '/opt/homebrew/bin/',
+        'processor_path' => '/usr/bin/',
+        'processor_path_lzw' => '/usr/bin/',
     ],
     'LOG' => [
         'TYPO3' => [
@@ -118,11 +118,18 @@ return [
                 ],
             ],
         ],
-        'devIPmask' => '*',
-        'displayErrors' => 1,
-        'encryptionKey' => '310e106a7aa40c2f40da9d5f1e55b667af0e1021540972e12370dc70f2e802b88ad3e42c20ae0bd5eb4a02bfca5fcc45',
-        'exceptionalErrors' => 12290,
+        'devIPmask' => '',
+        'displayErrors' => 0,
+        'encryptionKey' => 'd92e2fbde11f2f2072974ee5e82c2d7a60a66fc41c9a7af4a3354dfd69e78ccfb5c8d04f95521ab29d2e58d030a01b7e',
+        'exceptionalErrors' => 4096,
         'features' => [
+            'felogin.extbase' => true,
+            'fluidBasedPageModule' => false,
+            'rearrangedRedirectMiddlewares' => true,
+            'redirects.hitCount' => false,
+            'security.backend.enforceReferrer' => true,
+            'security.frontend.keepSessionDataOnLogout' => false,
+            'unifiedPageTranslationHandling' => true,
             'yamlImportsFollowDeclarationOrder' => true,
         ],
         'sitename' => 'Team Spirit',
