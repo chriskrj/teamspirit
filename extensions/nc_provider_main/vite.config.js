@@ -4,7 +4,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import svgLoader from 'vite-svg-loader';
 import autoprefixer from 'autoprefixer';
-import mkcert from'vite-plugin-mkcert';
+// import mkcert from'vite-plugin-mkcert';
 
 const host = 'www.teamspirit-therapie.intern';
 const port = 5173;
@@ -29,7 +29,10 @@ const config= {
     port: port,
     hmr: { host },
     origin: `https://${host}:${port}`,
-    https: true,
+    https: {
+      key: fs.readFileSync(`/Applications/MAMP/Library/OpenSSL/certs/${host}.key`),
+      cert: fs.readFileSync(`/Applications/MAMP/Library/OpenSSL/certs/${host}.crt`),
+    },
   },
   base: '',
   publicDir: 'fake_dir_so_nothing_gets_copied',
@@ -64,11 +67,6 @@ const config= {
   plugins: [
     // vue(),
     svgLoader(),
-    mkcert(
-      {
-        autoUpgrade: true,
-      }
-    ),
     hotUpdateHtml()
   ],
   css: {

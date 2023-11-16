@@ -1,4 +1,0 @@
-tt_content.newsletterregister =< lib.contentElement
-tt_content.newsletterregister {
-  templateName = NewsletterRegister
-}

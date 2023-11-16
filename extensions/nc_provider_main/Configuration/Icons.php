@@ -17,8 +17,4 @@ return [
         'provider' => SvgIconProvider::class,
         'source' => $sourcePath . 'PageTeaser.svg',
     ],
-    'content-NewsletterRegister' => [
-        'provider' => SvgIconProvider::class,
-        'source' => $sourcePath . 'NewsletterRegister.svg',
-    ],
 ];

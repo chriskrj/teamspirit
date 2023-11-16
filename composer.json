@@ -19,7 +19,11 @@
 		}
 	},
 	"require": {
+		"b13/listelements": "^0.3.0",
+		"brotkrueml/schema": "^2.6.0",
 		"helhum/typo3-console": "^7.0.2",
+		"ichhabrecht/content-defender": "^3.2.3",
+		"nc/nc-provider-main": "@dev",
 		"typo3/cms-adminpanel": "^11.5",
 		"typo3/cms-backend": "^11.5",
 		"typo3/cms-belog": "^11.5",
@@ -52,11 +56,7 @@
 		"typo3/cms-sys-note": "^11.5",
 		"typo3/cms-t3editor": "^11.5",
 		"typo3/cms-tstemplate": "^11.5",
-		"typo3/cms-viewpage": "^11.5",
-		"b13/listelements": "^0.3.0",
-		"brotkrueml/schema": "^2.6.0",
-		"nc/nc-provider-main": "@dev",
-		"ichhabrecht/content-defender": "^3.2.3"
+		"typo3/cms-viewpage": "^11.5"
 	},
 	"scripts": {
 		"typo3-cms-scripts": [

@@ -8,5 +8,4 @@ config.additionalHeaders {
   960.header = Permissions-Policy: geolocation=(), payment=(), midi=(), microphone=(), fullscreen=(), camera=(), autoplay=()
   970.header = X-Permitted-Cross-Domain-Policies: none
   # CSP conflicts in vite dev mode
-#  990.header = Content-Security-Policy: default-src 'self'; object-src 'none'; frame-src 'self' www.youtube-nocookie.com matomo.dataport.de; font-src 'self' data:; img-src 'self' data: 'unsafe-inline' dataport-dp.dwebanalytics.de *.openstreetmap.de *.ytimg.com; connect-src 'self' dataport-dp.dwebanalytics.de nominatim.openstreetmap.org ;script-src 'self' 'unsafe-eval' https://mobiliteam.nah.intern.intern:5173; style-src 'self' 'unsafe-inline';
 }
