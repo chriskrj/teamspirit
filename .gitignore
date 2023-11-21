@@ -37,3 +37,5 @@ public/_assets/*
 # --------------------------------------------------
 /Build/*
 !Build/Patches
+
+php.ini
