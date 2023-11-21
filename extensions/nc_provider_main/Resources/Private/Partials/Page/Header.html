@@ -12,24 +12,21 @@
         <f:link.page class="SectionHeader-logolink" pageUid="{settings.pidStartpage}" additionalAttributes="{title:'Startseite'}">
           <f:image src="EXT:nc_provider_main/Resources/Public/Images/logo-header.svg" width="353" height="118"/>
         </f:link.page>
-        <div class="SectionHeader-portalLink"></div>
-        <f:comment>
-<!--        <nav class="SectionyHeader-mainmenu u-print-hide" aria-label="Seiten">-->
-<!--          <button class="SectionHeader-hamburger js-disclosure-trigger" aria-haspopup="true" aria-controls="headermainmenu" aria-expanded="false">-->
-<!--            <span class="SectionHeader-Hamburger-icons">-->
-<!--              <f:render partial="Base/Symbols" section="Symbol" arguments="{name:'menu', class:'SectionHeader-Hamburger-icon-hamburger'}"/>-->
-<!--              <f:render partial="Base/Symbols" section="Symbol" arguments="{name:'close', class:'SectionHeader-Hamburger-icon-close'}"/>-->
-<!--            </span>-->
-<!--            <span class="SectionHeader-Hamburger-label">Menü</span>-->
-<!--          </button>-->
+        <nav class="SectionyHeader-mainmenu u-print-hide" aria-label="Seiten">
+          <button class="SectionHeader-hamburger js-disclosure-trigger" aria-haspopup="true" aria-controls="headermainmenu" aria-expanded="false">
+            <span class="SectionHeader-Hamburger-icons">
+              <f:render partial="Base/Symbols" section="Symbol" arguments="{name:'menu', class:'SectionHeader-Hamburger-icon-hamburger'}"/>
+              <f:render partial="Base/Symbols" section="Symbol" arguments="{name:'close', class:'SectionHeader-Hamburger-icon-close'}"/>
+            </span>
+            <span class="SectionHeader-Hamburger-label">Menü</span>
+          </button>
 
-<!--          <div id="headermainmenu" class="SectionHeader-mainNav js-disclosure-panel" aria-hidden="true" data-disclosure-disable-at="(min-width:1392px)" >-->
-<!--            <ul class="MainNavigation js-disclosure-list" data-disclosure-multiexpand="false">-->
-<!--              <f:render section="MainNavigation" partial="Page/Navigations" arguments="{nav:mainNavigation}"/>-->
-<!--            </ul>-->
-<!--          </div>-->
-<!--        </nav>-->
-        </f:comment>
+          <div id="headermainmenu" class="SectionHeader-mainNav js-disclosure-panel" aria-hidden="true" data-disclosure-disable-at="(min-width:1392px)" >
+            <ul class="MainNavigation js-disclosure-list" data-disclosure-multiexpand="false">
+              <f:render section="MainNavigation" partial="Page/Navigations" arguments="{nav:mainNavigation}"/>
+            </ul>
+          </div>
+        </nav>
       </div>
     </div>
   </header>

@@ -17,6 +17,11 @@
             <p class="Text-body"><f:link.email class="Link" email="info@teamspirit-therapie.de">info@teamspirit-therapie.de</f:link.email></p>
           </div>
 
+          <ul class="FooterNavigation">
+            <f:render partial="Page/Navigations" section="FooterNavigation" arguments="{nav:metaNavigation}"/>
+          </ul>
+
+
           <f:link.page pageUid="{settings.pidStartpage}" additionalAttributes="{title:'Startseite'}">
             <f:image src="EXT:nc_provider_main/Resources/Public/Images/logo-footer.svg" width="353" height="118" />
           </f:link.page>

@@ -11,47 +11,28 @@
 }
 
 .SectionHeader-sectionTop {
-  padding-top: 2rem;
-  padding-bottom: 0;
   display: grid;
   gap: 1rem;
 
   /* Using three columns to control placement. */
-  grid-template-columns: 1fr minmax(auto, 260px) 1fr;
+  grid-template-columns: minmax(auto, 260px) 1fr;
   grid-template-rows: auto auto;
 
   /* Adjusting the grid-template-areas for desired placement. */
   grid-template-areas:
-    ". header-logo ."
-    ". header-logo header-mainmenu";
+    "header-logo header-mainmenu"
+    "header-logo header-mainmenu";
 }
 
 
 .SectionHeader-logolink {
   display: block;
+  min-width: 200px;
   max-width: 260px;
   grid-area: header-logo;
   justify-self: center;
   align-self: center;
-}
-
-.SectionHeader-portalLink {
-  color: var(--ts-semantic-color-fg-action);
-  fill: currentColor;
-  text-decoration: none;
-  display: flex;
-  gap: 0.25rem;
-  grid-area: header-portallink;
-  justify-self: end;
-  align-self: start;
-
-  &:hover {
-    --ts-component-link-color: var(--ts-semantic-color-fg-action--hover);
-  }
-}
-
-.SectionHeader-portalLink-icon {
-  width: 1rem;
+  padding: 2rem 0;
 }
 
 .SectionyHeader-mainmenu {

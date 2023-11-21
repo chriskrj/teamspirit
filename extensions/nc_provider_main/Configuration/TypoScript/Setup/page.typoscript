@@ -86,6 +86,7 @@ page.10 {
   #include provider extension settings
   settings {
     pidStartpage = {$pidStartpage}
+    pidMetaNavigation = {$pidMetaNavigation}
   }
 }
 

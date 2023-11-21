@@ -15,32 +15,28 @@
 
       <f:variable name="h1" value="{f:if(condition: data.headline, then:data.headline, else: data.title)}"/>
 
-
       <f:if condition="{media}">
         <f:then>
-          <div class="u-container u-my-fluid-3xl">
-
             <div class="u-limitWidth-12 u-align-center u-stack-xl">
-              <h1 class="Text-heading-4xl">
-                <f:format.htmlentitiesDecode><f:format.nl2br>{h1}</f:format.nl2br></f:format.htmlentitiesDecode>
-              </h1>
 
               <div class="GridCol2Even-row u-row">
                 <div class="GridCol2Even-col u-col">
-                  <div class="u-stack-xl">
-                    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}"/>
+                  <div class="u-container">
+                    <div class="u-stack-xl">
+                      <h1 class="Text-heading-4xl u-mt-md">
+                        <f:format.htmlentitiesDecode><f:format.nl2br>{h1}</f:format.nl2br></f:format.htmlentitiesDecode>
+                      </h1>
+                      <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}"/>
+                    </div>
                   </div>
                 </div>
                 <div class="GridCol2Even-col GridCol2Even--colOrderTop u-col">
                   <f:alias map="{firstMedia:media.0}">
-                    <f:image class="" image="{firstMedia}" cropVariant="4:3" width="960" alt="{firstMedia.alternative}"/>
+                    <f:image class="SubpageHero-image" image="{firstMedia}" cropVariant="4:3" width="960" alt="{firstMedia.alternative}"/>
                   </f:alias>
                 </div>
               </div>
             </div>
-
-
-          </div>
         </f:then>
         <f:else>
           <div class="u-container u-my-fluid-3xl u-stack-xl">
@@ -52,7 +48,7 @@
 
             {f:cObject(typoscriptObjectPath: 'lib.dynamicContent', data: {colPos: 1}) -> f:variable(name: 'introContent')}
             <f:if condition="{introContent}">
-              <div class="u-limitWidth-7 u-align-center u-stack-xl">
+              <div class="u-limitWidth-10 u-align-center u-stack-xl">
                 {introContent -> f:format.raw()}
               </div>
             </f:if>
