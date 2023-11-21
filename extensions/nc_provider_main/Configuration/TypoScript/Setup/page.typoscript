@@ -204,11 +204,9 @@ page.includeCSS {
 #
 #
 ## JavaScripts in footer
-#page.includeJSFooter {
-#  jquery = EXT:nc_provider_main/Resources/Public/JavaScript/Vendors/jquery-3.6.1.min.js
-#  glightbox = EXT:nc_provider_main/Resources/Public/JavaScript/Vendors/glightbox.min.js
-#  global = EXT:nc_provider_main/Resources/Public/JavaScript/Global/global.js
-#}
+page.includeJSFooter {
+  glightbox = EXT:nc_provider_main/Resources/Public/Frontend/assets/glightbox.min.js
+}
 
 
 # Compression

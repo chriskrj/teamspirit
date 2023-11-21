@@ -1,11 +1,12 @@
 import '@scss/main.scss';
-import disclosure from "@js/disclosure.js";
-import scrollCheck from "@js/scrollcheck.js";
-import jsToggle from "@js/jstoggle.js";
+import disclosure from '@js/disclosure.js';
+import scrollCheck from '@js/scrollcheck.js';
+import jsToggle from '@js/jstoggle.js';
 // import cookieConsent from '@js/cookieconsent.js';
 // import matomoTracking from "@js/matomo.js";
 // import youtubeInject from "@js/youtubeinject.js";
-// import imageSlider from "@js/imageslider.js";
+import imageSlider from '@js/imageslider.js';
+import lightbox from '@js/lightbox.js';
 
 jsToggle.initialize();
 disclosure.initialize();
@@ -16,7 +17,9 @@ scrollCheck.initialize({
   },
   windowWidthThreshold: 1024,
 });
-// imageSlider.initialize();
+
+imageSlider.initialize();
+lightbox.initialize();
 // cookieConsent.initialize(['matomo', 'youtube']);
 // matomoTracking.initialize();
 // youtubeInject.initialize();

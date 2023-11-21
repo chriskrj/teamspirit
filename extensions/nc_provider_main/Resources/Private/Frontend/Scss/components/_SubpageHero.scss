@@ -1,6 +1,32 @@
+@use "../abstracts/mixins";
+
+.SubpageHero-imageCol {
+  position: relative;
+  overflow: hidden;
+}
 .SubpageHero-image {
+  position: relative;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center center;
+}
+
+.SubpageHero-overlay {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 170px;
+  height: 100%;
+  margin-left: 1rem;
+
+  @include mixins.respond-to-grid(5) {
+    display: block;
+  }
+}
+
+.SubpageHero-svg {
+  overflow: visible !important;
 }

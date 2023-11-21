@@ -36,7 +36,7 @@ const cookieConsent = (() => {
       expires = '; expires=' + date.toUTCString();
     }
     document.cookie = cookieName + '=' + (value || '') + expires + '; path=/;SameSite=Lax';
-  }
+  };
   const getCookie = () => {
     var nameEQ = cookieName + '=';
     var ca = document.cookie.split(';');
@@ -46,7 +46,7 @@ const cookieConsent = (() => {
       if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
     }
     return null;
-  }
+  };
 
   const getCookieData = () => {
     const cookieString = getCookie();
@@ -59,11 +59,11 @@ const cookieConsent = (() => {
     } else {
       return JSON.parse(cookieString);
     }
-  }
+  };
 
   const dispatchCookieConsentEvent = () => {
     document.dispatchEvent(new CustomEvent('cookieconsent/update', {detail: getCookieData()}));
-  }
+  };
 
   const showCookieDialog = () => {
 
@@ -74,7 +74,7 @@ const cookieConsent = (() => {
       const checkBox = document.getElementById('cookieconsent-check-' + check);
 
       if (checkBox !== null) {
-        checkBox.checked = cookieData[check] === 1
+        checkBox.checked = cookieData[check] === 1;
       } else {
         console.warn('cookieconsent checkbox not found: ' + check);
       }
@@ -82,10 +82,10 @@ const cookieConsent = (() => {
 
     cookieBarDialog.showModal();
     cookieBarDialog.focus();
-  }
+  };
   const closeCookieDialog = () => {
     cookieBarDialog.close();
-  }
+  };
 
   const saveCookieSettings = () => {
 
@@ -94,7 +94,7 @@ const cookieConsent = (() => {
     checkList.forEach((check) => {
       const checkBox = document.getElementById('cookieconsent-check-' + check);
       if (checkBox !== null) {
-        cookieData[check] = checkBox.checked ? 1 : 0
+        cookieData[check] = checkBox.checked ? 1 : 0;
       } else {
         console.warn('cookieconsent checkbox not found: ' + check);
       }
@@ -107,13 +107,13 @@ const cookieConsent = (() => {
     hideCookieBar();
 
     dispatchCookieConsentEvent();
-  }
+  };
 
   const acceptAllCookies = () => {
 
     let cookieData = {};
     checkList.forEach((check) => {
-      cookieData[check] = 1
+      cookieData[check] = 1;
     });
     const cookieString = JSON.stringify(cookieData);
 
@@ -121,7 +121,7 @@ const cookieConsent = (() => {
     closeCookieDialog();
     hideCookieBar();
     dispatchCookieConsentEvent();
-  }
+  };
 
   const declineAllCookies = () => {
 
@@ -135,15 +135,15 @@ const cookieConsent = (() => {
     closeCookieDialog();
     hideCookieBar();
     dispatchCookieConsentEvent();
-  }
+  };
 
   const hideCookieBar = () => {
     cookieBar.classList.remove('is-open');
-  }
+  };
 
   const showCookieBar = () => {
     cookieBar.classList.add('is-open');
-  }
+  };
 
   const initialize = (checks) => {
 
@@ -184,9 +184,9 @@ const cookieConsent = (() => {
         closeCookieDialog();
       }
     });
-  }
+  };
 
-// intially check if cookieconsent cookie is set
+  // intially check if cookieconsent cookie is set
   const checkCookieConsent = () => {
 
     const cookieString = getCookie();
@@ -197,12 +197,12 @@ const cookieConsent = (() => {
     }
 
     dispatchCookieConsentEvent();
-  }
+  };
 
   return {
     initialize,
     checkCookieConsent
-  }
+  };
 })();
 
 export default cookieConsent;

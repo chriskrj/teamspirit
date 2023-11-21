@@ -29,7 +29,7 @@ const youtubeInject = (() => {
         video.parentNode.replaceChild(container, video);
       });
     }
-  }
+  };
 
   const initialize = () => {
     // console.log('initialize youtube inject');
@@ -39,11 +39,11 @@ const youtubeInject = (() => {
         injectVideos();
       }
     });
-  }
+  };
 
   return {
     initialize
-  }
+  };
 })();
 
 export default youtubeInject;

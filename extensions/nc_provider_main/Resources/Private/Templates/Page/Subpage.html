@@ -17,26 +17,30 @@
 
       <f:if condition="{media}">
         <f:then>
-            <div class="u-limitWidth-12 u-align-center u-stack-xl">
-
-              <div class="GridCol2Even-row u-row">
-                <div class="GridCol2Even-col u-col">
-                  <div class="u-container">
-                    <div class="u-stack-xl">
-                      <h1 class="Text-heading-4xl u-mt-md">
-                        <f:format.htmlentitiesDecode><f:format.nl2br>{h1}</f:format.nl2br></f:format.htmlentitiesDecode>
-                      </h1>
-                      <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}"/>
-                    </div>
+          <div class="u-align-center u-stack-xl u-mb-fluid-3xl">
+            <div class="GridCol2Even-row u-row">
+              <div class="GridCol2Even-col u-col">
+                <div class="u-container">
+                  <div class="u-stack-xl">
+                    <h1 class="Text-heading-4xl u-mt-fluid-2xl">
+                      <f:format.htmlentitiesDecode><f:format.nl2br>{h1}</f:format.nl2br></f:format.htmlentitiesDecode>
+                    </h1>
+                    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}"/>
                   </div>
                 </div>
-                <div class="GridCol2Even-col GridCol2Even--colOrderTop u-col">
-                  <f:alias map="{firstMedia:media.0}">
-                    <f:image class="SubpageHero-image" image="{firstMedia}" cropVariant="4:3" width="960" alt="{firstMedia.alternative}"/>
-                  </f:alias>
+              </div>
+              <div class="SubpageHero-imageCol GridCol2Even-col GridCol2Even--colOrderTop u-col">
+                <f:alias map="{firstMedia:media.0}">
+                  <f:image class="SubpageHero-image" image="{firstMedia}" cropVariant="4:3" width="960" alt="{firstMedia.alternative}"/>
+                </f:alias>
+                <div class="SubpageHero-overlay">
+                  <svg class="SubpageHero-svg u-scalingSvg" width="170" height="600" viewBox="0 0 170 600" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true" role="img" preserveAspectRatio="xMidYMin slice">
+                    <path d="M170 -1.73607e-07L2.61394e-05 -7.62939e-06L0 600H150.48C71.2887 534.987 25.286 442.295 25.286 318.138C25.286 184.105 78.8978 76.3901 170 -1.73607e-07Z" fill="white"/>
+                  </svg>
                 </div>
               </div>
             </div>
+          </div>
         </f:then>
         <f:else>
           <div class="u-container u-my-fluid-3xl u-stack-xl">

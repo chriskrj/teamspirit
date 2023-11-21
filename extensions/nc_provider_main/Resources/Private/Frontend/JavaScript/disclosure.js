@@ -18,7 +18,7 @@ const disclosure = (() => {
         closeDisclosure(panel);
       }
     }
-  }
+  };
 
   const openDisclosure = (panel) => {
 
@@ -49,7 +49,7 @@ const disclosure = (() => {
         });
       }
     }
-  }
+  };
 
   const closeDisclosure = (panel) => {
     // get all trigger with panel id aria-controls
@@ -61,7 +61,7 @@ const disclosure = (() => {
 
     panel.setAttribute('aria-hidden', 'true');
     panel.classList.remove('is-open');
-  }
+  };
 
   // check if disclosure panels should be disabled
   const updatePanelsDisableCheck = () => {
@@ -79,7 +79,7 @@ const disclosure = (() => {
         }
       });
     }
-  }
+  };
 
   const initialize = () => {
     document.addEventListener('click', (e) => {
@@ -111,11 +111,11 @@ const disclosure = (() => {
 
     updatePanelsDisableCheck();
 
-  }
+  };
 
   return {
     initialize
-  }
+  };
 })();
 
 export default disclosure;

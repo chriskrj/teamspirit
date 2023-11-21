@@ -13,7 +13,7 @@ const matomoTracking = (() => {
       // var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
       // g.async=true; g.src='https://matomo.example.com/js/container_RaTSOlmR.js'; s.parentNode.insertBefore(g,s);
     }
-  }
+  };
 
   const removeTrackingCode = () => {
 
@@ -26,7 +26,7 @@ const matomoTracking = (() => {
       trackingCodeAdded = false;
       console.log('remove matomo tracking code here');
     }
-  }
+  };
 
   const initialize = () => {
     document.addEventListener('cookieconsent/update', event => {
@@ -36,11 +36,11 @@ const matomoTracking = (() => {
         removeTrackingCode();
       }
     });
-  }
+  };
 
   return {
     initialize
-  }
+  };
 })();
 
 export default matomoTracking;

@@ -5,12 +5,12 @@ const jsToggle = (() => {
   const initialize = () => {
     document.documentElement.classList.remove('no-js');
     document.documentElement.classList.add('js');
-  }
+  };
 
   // Public API of the module (revealing module pattern).
   return {
     initialize
-  }
+  };
 })();
 
 // Export the module for use in other parts of your application if necessary.
