@@ -1,0 +1,109 @@
+@use "../abstracts/mixins";
+@use "../abstracts/functions";
+@use "sass:math";
+
+.LargeImageTextTeaser {
+  --component-edge-color: var(--ts-semantic-color-bg-default);
+
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  overflow: hidden;
+  margin-bottom: var(--ts-semantic-space-xl);
+
+  @include mixins.respond-to-grid(5) {
+    flex-flow: row nowrap;
+  }
+}
+
+.LargeImageTextTeaser-container {
+  width: 100%;
+  order: 2;
+
+  @include mixins.respond-to-grid(5) {
+    order: 1;
+  }
+}
+
+.LargeImageTextTeaser-content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2rem 0;
+
+  @include mixins.respond-to-grid(5) {
+    width: math.percentage(math.div(4, 12));
+    height: 550px;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+}
+
+.LargeImageTextTeaser-imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 2;
+  right: 0;
+  overflow: hidden;
+  order: 1;
+
+  &::after {
+    position: absolute;
+
+    @include mixins.edgeMobile();
+
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    content: "";
+    height: 100%;
+    left: 0;
+    top: 21px;
+    pointer-events: none;
+    width: 100%;
+  }
+
+  @include mixins.respond-to-grid(5) {
+    &::after {
+      @include mixins.edgeLeft();
+
+      top: 0;
+    }
+
+    .LargeImageTextTeaser-imageContainer--right {
+      &::after {
+        @include mixins.edgeRight();
+
+        background-position: right bottom;
+      }
+    }
+  }
+
+  @include mixins.respond-to-grid(5) {
+    position: absolute;
+    width: calc(100vw / 2 + 64px);
+    order: 2;
+
+    &--right {
+      left: 0;
+      right: inherit;
+    }
+  }
+
+  @include mixins.respond-to-grid(7) {
+    width: calc(100vw / 2 + 128px);
+  }
+}
+
+.LargeImageTextTeaser-imageWrap {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  min-height: 550px;
+}

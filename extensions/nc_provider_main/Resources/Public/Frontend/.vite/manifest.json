@@ -20,10 +20,6 @@
     "file": "assets/poppins-v20-latin-regular.woff2",
     "src": "Resources/Private/Frontend/Webfonts/poppins-v20-latin-regular.woff2"
   },
-  "Resources/Private/Frontend/main.css": {
-    "file": "assets/main.css",
-    "src": "Resources/Private/Frontend/main.css"
-  },
   "Resources/Private/Frontend/main.js": {
     "assets": [
       "assets/poppins-v20-latin-300.woff2",

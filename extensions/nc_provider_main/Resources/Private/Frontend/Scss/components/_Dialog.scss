@@ -1,0 +1,45 @@
+.Dialog {
+  margin: auto;
+  border: none;
+
+  &::backdrop {
+    background: rgba(0,0,0,60%);
+  }
+}
+
+.Dialog--content {
+  width: 100%;
+  max-width: 960px;
+  overflow-y: auto;
+  background-color: var(--ts-semantic-color-bg-default);
+  padding: 2rem;
+}
+
+.Dialog--image {
+  // max-width: 960px;
+  max-height: 100vh;
+  background-color: transparent;
+  padding: 0;
+}
+
+.Dialog-figure {
+  background-color: var(--ts-semantic-color-bg-default);
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+}
+
+.Dialog-image {
+  background-color: var(--ts-semantic-color-bg-transparent);
+  display: block;
+  object-fit: contain;
+  flex-shrink: 1;
+  flex-grow: 1;
+  height: 100%;
+  // margin: auto;
+  // max-height: 100vh;
+}
+
+.Dialog-figcaption {
+  flex-shrink: 0;
+}

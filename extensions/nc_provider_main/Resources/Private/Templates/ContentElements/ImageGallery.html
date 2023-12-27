@@ -1,0 +1,54 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Container"/>
+<f:section name="Main">
+
+  <div class="u-limitWidth-12 u-align-center">
+    <div class="u-stack-fluid-lg">
+      <div class="u-limitWidth-6 u-align-left">
+        <div class="u-stack-text">
+          <f:render partial="Header/All" arguments="{_all}"/>
+          <f:if condition="{data.bodytext}">
+            <div class="RTE u-stack-text">
+              <f:format.html>{data.bodytext}</f:format.html>
+            </div>
+          </f:if>
+        </div>
+      </div>
+      <f:render section="ImageGallery" arguments="{images:images}"/>
+    </div>
+  </div>
+</f:section>
+
+<f:section name="ImageGallery">
+  <ul class="GridCol3Even-row u-row-gap-static-4xl u-row u-mb-4xl">
+    <f:for each="{images}" as="mediaElement">
+      <li class="GridCol3Even-col u-col">
+        <dialog class="Dialog Dialog--image" id="dialog-image-{mediaElement.uid}">
+          <figure class="Dialog-figure">
+            <f:image image="{mediaElement}" class="Dialog-image" width="960" alt="{mediaElement.alternative}" loading="lazy"/>
+            <f:if condition="{mediaElement.description} || {mediaElement.title}">
+              <figcaption class="u-stack-text u-pa-static-md">
+                <p class="Text-body Text-body--base">{mediaElement.description}</p>
+              </figcaption>
+            </f:if>
+          </figure>
+        </dialog>
+        <figure>
+          <button class="ImageGallery-dialogButton js-dialog-trigger-open" data-dialog-id="dialog-image-{mediaElement.uid}" title="Bild groß darstellen">
+            <f:image image="{mediaElement}" class="ImageGallery-image" height="640" alt="{mediaElement.alternative}" loading="lazy" title=""/>
+            <span class="ImageGallery-dialogIcon">
+              <f:render partial="Base/Symbols" section="Symbol" arguments="{name:'plus'}"/>
+            </span>
+          </button>
+          <f:if condition="{mediaElement.description}">
+            <figcaption class="u-stack-text u-mt-static-md">
+              <p class="Text-body Text-body--base">{mediaElement.description}</p>
+            </figcaption>
+          </f:if>
+        </figure>
+      </li>
+    </f:for>
+  </ul>
+</f:section>
+
+</html>

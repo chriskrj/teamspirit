@@ -1,0 +1,44 @@
+.ImageGallery-figure {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.ImageGallery-image {
+  background-color: var(--ts-semantic-color-bg-transparent);
+  width: 100%;
+  max-width: none;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.ImageGallery-dialogButton {
+  position: relative;
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: zoom-in;
+}
+
+.ImageGallery-dialogIcon {
+  position: absolute;
+  bottom: 0.4rem;
+  right: 0.4rem;
+  width: 1.5rem;
+  color: var(--ts-semantic-color-fg-on-contrast);
+  fill: currentcolor;
+  z-index: 2;
+}
+
+.ImageGallery-dialogIconBg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 2.75rem;
+  color: var(--ts-semantic-color-bg-action-default);
+  fill: currentcolor;
+  z-index: 1;
+}

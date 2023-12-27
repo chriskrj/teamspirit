@@ -1,0 +1,11 @@
+mod.wizards.newContentElement {
+wizardItems {
+content.elements.image_gallery {
+iconIdentifier = content-ImageGallery
+title = Bilder Galerie [ImageGallery]
+description = Eine Bilder Galerie. Die Bilder werden dreispaltig nebeneinander dargestellt. Die Bilder können unterschiedliche Bildformate haben und mit einem Klick vergrößert werden.
+tt_content_defValues.CType = image_gallery
+}
+content.show := addToList(image_gallery)
+}
+}

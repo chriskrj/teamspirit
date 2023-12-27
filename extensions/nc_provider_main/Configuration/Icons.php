@@ -17,4 +17,8 @@ return [
         'provider' => SvgIconProvider::class,
         'source' => $sourcePath . 'PageTeaser.svg',
     ],
+    'content-ImageGallery' => [
+        'provider' => SvgIconProvider::class,
+        'source' => $sourcePath . 'ImageGallery.svg',
+    ],
 ];

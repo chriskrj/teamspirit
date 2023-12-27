@@ -24,7 +24,7 @@ TCEFORM.tt_content {
   #  imageheight.disabled = 1
   #  imagewidth.disabled = 1
   imageborder.disabled = 1
-  #image_zoom.disabled = 1
+  image_zoom.disabled = 1
 
   # image orient
   #0 = Above, center

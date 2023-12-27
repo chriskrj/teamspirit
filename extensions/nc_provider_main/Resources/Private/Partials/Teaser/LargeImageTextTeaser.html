@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:section name="LargeImageTextTeaser">
+  <f:variable name="imageurl" value="{f:uri.image(image: firstMedia, crop: firstMedia.properties.crop, cropVariant: '4:3')}"/>
+  <f:variable name="imageurlLG" value="{f:uri.image(image: firstMedia, width: '1040', crop: firstMedia.properties.crop, cropVariant: '16:9')}"/>
+  <f:variable name="imageurlXL" value="{f:uri.image(image: firstMedia, width: '2000', crop: firstMedia.properties.crop, cropVariant: '21:9')}"/>
+
+  <div class="LargeImageTextTeaser" data-theme="{theme}">
+    <div class="LargeImageTextTeaser-container u-container">
+      <div class="LargeImageTextTeaser-contentWrap u-limitWidth-12 u-align-center">
+        <div
+          class="LargeImageTextTeaser-content u-align-{position} u-stack-text Base-theme--{theme}">
+          <h1 class="Text-heading-4xl">{headline}</h1>
+          {content -> f:format.raw()}
+        </div>
+      </div>
+    </div>
+    <div class="LargeImageTextTeaser-imageContainer LargeImageTextTeaser-imageContainer--{position}">
+      <f:image class="LargeImageTextTeaser-imageWrap" image="{firstMedia}" crop="{firstMedia.properties.crop}" cropVariant="4:3" alt="{firstMedia.alternative}" additionalAttributes="{srcset: '{imageurlLG} 1040w, {imageurlXL} 2000w',  sizes: '100vw'}"/>
+
+    </div>
+  </div>
+
+</f:section>
+
+</html>

@@ -20,6 +20,7 @@
 @use "base/utilitySvg";
 @use "base/utilityHiding";
 @use "base/utilityAlign";
+@use "base/utilityGap";
 @use "base/utilityGrid";
 @use "base/utilityMargin";
 @use "base/utilityPadding";
@@ -44,6 +45,8 @@
 @use "components/HorizontalRule";
 @use "components/Link";
 @use "components/Text";
+@use "components/Dialog";
+@use "components/LargeImageTextTeaser";
 @use "components/List";
 @use "components/Checkbox";
 @use "components/RadioButton";
@@ -57,7 +60,6 @@
 @use "components/GridCol3Even";
 @use "components/GridCol4Even";
 @use "components/Dropdown";
-@use "components/Glightbox";
 @use "components/CookieBar";
 @use "components/Video";
 @use "components/DefaultHero";
@@ -68,6 +70,7 @@
 @use "components/EventCalendar";
 @use "components/ContactList";
 @use "components/ImageSlider";
+@use "components/ImageGallery";
 @use "components/SubpageHero";
 
 // pages

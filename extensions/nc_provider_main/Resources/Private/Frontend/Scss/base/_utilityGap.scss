@@ -1,0 +1,27 @@
+$sizes: (
+  "none",
+  "2xs",
+  "xs",
+  "sm",
+  "base",
+  "md",
+  "lg",
+  "xl",
+  "2xl",
+  "3xl",
+  "fluid-lg",
+  "fluid-xl",
+  "fluid-2xl",
+  "fluid-3xl",
+  "fluid-4xl"
+);
+
+@each $size in $sizes {
+  .u-row-gap-#{$size} {
+    row-gap: var(--nc-semantic-space-#{$size}) !important;
+  }
+
+  .u-column-gap-#{$size} {
+    column-gap: var(--nc-semantic-space-#{$size}) !important;
+  }
+}

@@ -203,11 +203,6 @@ page.includeCSS {
 }
 #
 #
-## JavaScripts in footer
-page.includeJSFooter {
-  glightbox = EXT:nc_provider_main/Resources/Public/Frontend/assets/glightbox.min.js
-}
-
 
 # Compression
 page.config.compressJs = {$config.compress_js_enable}

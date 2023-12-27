@@ -1,0 +1,116 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+
+<f:section name="Main">
+
+  <f:variable name="numImages" value="0"/>
+  <f:for each="{images}" as="mediaElement">
+    <f:if condition="{mediaElement.type} == 2 OR {mediaElement.type} == 5">
+      <f:variable name="numImages" value="{numImages + 1}"/>
+    </f:if>
+  </f:for>
+
+  <f:if condition="{numImages} > 0">
+    <f:if condition="{numImages} == 1">
+      <f:then>
+        <f:render section="ImageOnly" arguments="{images: images, id:id}"/>
+      </f:then>
+      <f:else>
+        <f:render section="ImageSlider" arguments="{images: images, id:id}"/>
+      </f:else>
+    </f:if>
+  </f:if>
+</f:section>
+
+
+<f:section name="ImageOnly">
+  <div class="ImageSlider">
+    <div class="ImageSlider-slides">
+      <f:alias map="{mediaElement:images.0}">
+        <dialog class="Dialog Dialog--image" id="dialog-image-{mediaElement.uid}">
+          <figure class="Dialog-figure">
+            <f:image image="{mediaElement}" class="Dialog-image" width="960" alt="{mediaElement.alternative}" loading="lazy"/>
+            <f:if condition="{mediaElement.description} || {mediaElement.title}">
+              <figcaption class="u-stack-text-lg u-pa-static-md">
+                <p class="Text-body Text-body--base">{mediaElement.description}</p>
+              </figcaption>
+            </f:if>
+          </figure>
+        </dialog>
+        <figure class="ImageSlider-slide">
+          <f:image image="{mediaElement}" class="ImageSlider-slideImage" height="640" alt="{mediaElement.alternative}" loading="lazy" />
+
+          <f:if condition="{mediaElement.description}">
+            <figcaption class="ImageSlider-slideFigcaption u-limitWidth-8 u-align-center">
+              {mediaElement.description}
+            </figcaption>
+          </f:if>
+        </figure>
+      </f:alias>
+    </div>
+  </div>
+</f:section>
+
+
+<f:section name="ImageSlider">
+
+  <f:for each="{images}" as="mediaElement" iteration="iterator">
+    <f:if condition="{mediaElement.type} == 2 OR {mediaElement.type} == 5">
+      <dialog class="Dialog Dialog--image" id="dialog-image-{mediaElement.uid}">
+        <figure class="Dialog-figure">
+          <f:image image="{mediaElement}" class="Dialog-image" width="960" alt="{mediaElement.alternative}" loading="lazy"/>
+          <f:if condition="{mediaElement.description} || {mediaElement.title}">
+            <figcaption class="u-stack-text-lg u-pa-static-md">
+              <p class="Text-body Text-body--base">{mediaElement.description}</p>
+            </figcaption>
+          </f:if>
+        </figure>
+      </dialog>
+    </f:if>
+  </f:for>
+
+  <div class="ImageSlider js-horizontalslider" role="region" aria-label="Bilder">
+    <div id="imageslider{id}" class="ImageSlider-slides js-horizontalslider-list" tabindex="0" role="list" >
+      <f:for each="{images}" as="mediaElement" iteration="iterator">
+
+        <f:if condition="{mediaElement.type} == 2 OR {mediaElement.type} == 5">
+          <figure id="imageslide{id}-{iterator.cycle}" class="ImageSlider-slide js-horizontalslider-item" >
+            <button class="ImageSlider-dialogButton js-dialog-trigger-open" data-dialog-id="dialog-image-{mediaElement.uid}" title="Bild groß darstellen">
+              <f:image image="{mediaElement}" class="ImageSlider-slideImage" height="640" alt="{mediaElement.alternative}" loading="lazy" />
+              <span class="ImageSlider-dialogIconBg">
+                <f:render partial="Base/Symbols" section="Symbol" arguments="{name:'bubble-bottom-right'}"/>
+              </span>
+              <span class="ImageSlider-dialogIcon">
+                <f:render partial="Base/Symbols" section="Symbol" arguments="{name:'lens'}"/>
+              </span>
+            </button>
+
+            <f:if condition="{mediaElement.description}">
+              <figcaption class="u-mt-static-md">
+                <p class="Text-body Text-body--base">{mediaElement.description}</p>
+              </figcaption>
+            </f:if>
+
+          </figure>
+        </f:if>
+      </f:for>
+    </div>
+
+    <div class="ImageSlider-controls js-horizontalslider-controls">
+      <ul class="ImageSlider-dotNavigation DotNavigation">
+        <f:for each="{images}" as="mediaElement" iteration="iterator">
+          <li>
+            <a href="#imageslide{id}-{iterator.cycle}" class="DotNavigation-link js-horizontalslider-trigger-id" title="Bild {iterator.cycle}"><span class="u-visuallyHidden">Bild {iterator.cycle}</span></a>
+          </li>
+        </f:for>
+      </ul>
+    </div>
+
+  </div>
+
+</f:section>
+
+
+</html>

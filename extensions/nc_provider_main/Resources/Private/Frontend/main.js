@@ -6,7 +6,7 @@ import jsToggle from '@js/jstoggle.js';
 // import matomoTracking from "@js/matomo.js";
 // import youtubeInject from "@js/youtubeinject.js";
 import imageSlider from '@js/imageslider.js';
-import lightbox from '@js/lightbox.js';
+import dialog from '@js/dialog.js';
 
 jsToggle.initialize();
 disclosure.initialize();
@@ -19,7 +19,7 @@ scrollCheck.initialize({
 });
 
 imageSlider.initialize();
-lightbox.initialize();
+dialog.initialize();
 // cookieConsent.initialize(['matomo', 'youtube']);
 // matomoTracking.initialize();
 // youtubeInject.initialize();

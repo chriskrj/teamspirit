@@ -28,9 +28,9 @@
   </f:if>
 
   <div class="Video js-youtubeinject" data-url="https://www.youtube-nocookie.com/embed/{youtubeId}?autohide=1&amp;controls=2&amp;showinfo=0&amp;enablejsapi=1&amp">
-    <div class="Video-layer u-stack u-print-hid">
+    <div class="Video-layer u-stack-text-lg u-print-hid">
       <p class="Text-body Text-body--small">{f:translate(key: 'youtubeinject.copy', extensionName: 'nc_provider_main')} <f:link.page pageUid="6" class="Link">{f:translate(key: 'youtubeinject.dataprotection', extensionName: 'nc_provider_main')}</f:link.page>.</p>
-      <p class="Text-body Text-body--small"><button class="Link js-cookieconsent-trigger-open-dialog">{f:translate(key: 'youtubeinject.cookiedetails', extensionName: 'nc_provider_main')}</button></p>
+      <p class="Text-body Text-body--small"><button class="Link js-dialog-trigger-open" data-dialog-id="cookieconsentdialog">{f:translate(key: 'youtubeinject.cookiedetails', extensionName: 'nc_provider_main')}</button></p>
     </div>
     <f:if condition="{file.id}">
       <f:then>
