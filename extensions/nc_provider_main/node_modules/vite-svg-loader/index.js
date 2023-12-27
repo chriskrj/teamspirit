@@ -1,5 +1,5 @@
 const fs = require('fs').promises
-const { compileTemplate } = require('@vue/compiler-sfc')
+const { compileTemplate } = require('vue/compiler-sfc')
 const { optimize: optimizeSvg } = require('svgo')
 
 module.exports = function svgLoader (options = {}) {
@@ -43,6 +43,9 @@ module.exports = function svgLoader (options = {}) {
           path
         }).data
       }
+
+      // To prevent compileTemplate from removing the style tag
+      svg = svg.replace(/<style/g, '<component is="style"').replace(/<\/style/g, '</component')
 
       const { code } = compileTemplate({
         id: JSON.stringify(id),
