@@ -43,7 +43,7 @@ class ViteUtility
      */
     public static function viteManifestFile(string $extension, string $extensionPath, string $outPath, string $srcPath, string $entry): array
     {
-        $manifestPath = $extensionPath . $outPath . '/manifest.json';
+        $manifestPath = $extensionPath . $outPath . '/.vite/manifest.json';
         if (!file_exists($manifestPath)) {
             return [];
         }
