@@ -116,7 +116,7 @@
   <f:if condition="{images}">
     <f:alias map="{image:images.0}">
       <figure class="CurveImage">
-        <f:image image="{image}" class="CurveImage-image" alt="{image.alternative}" maxWidth="1504" loading="lazy"/>
+        <f:image image="{image}" class="CurveImage-image" alt="{image.alternative}" maxWidth="1504" loading="lazy" crop="{image.properties.crop}" cropVariant="16:9"/>
         <f:if condition="{data.image_type} == 0">
           <div class="CurveImage-imageCurve u-print-hide">
             <svg class="u-scalingInlineSVG" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 1000 74" preserveAspectRatio="xMidYMin slice" style="padding-bottom: 7.4%;">
@@ -134,7 +134,7 @@
   <f:if condition="{images}">
     <f:alias map="{image:images.0}">
       <figure class="CurveImage u-print-hide">
-        <f:image image="{image}" class="CurveImage-image" alt="{image.alternative}" maxWidth="736" loading="lazy"/>
+        <f:image image="{image}" class="CurveImage-image" alt="{image.alternative}" maxWidth="736" loading="lazy" crop="{image.properties.crop}" cropVariant="4:3"/>
         <f:if condition="{data.image_type} == 0">
           <div class="CurveImage-imageCurve">
             <svg class="u-scalingInlineSVG" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 1000 140" preserveAspectRatio="xMidYMin slice" style="padding-bottom: 14%;">
