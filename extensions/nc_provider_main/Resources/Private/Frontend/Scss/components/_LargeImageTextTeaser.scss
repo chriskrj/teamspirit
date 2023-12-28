@@ -6,6 +6,7 @@
   --component-edge-color: var(--ts-semantic-color-bg-default);
 
   position: relative;
+  background-color: var(--component-edge-color);
   display: flex;
   flex-flow: column nowrap;
   overflow: hidden;

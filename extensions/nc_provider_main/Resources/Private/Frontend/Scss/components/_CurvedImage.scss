@@ -1,0 +1,30 @@
+@use "sass:math";
+@use "../abstracts/mixins";
+
+.CurveImage {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.CurveImage-image {
+  display: block;
+}
+
+.CurveImage-imageCurve {
+  position: absolute;
+  color: var(--ts-semantic-color-bg-default);
+  fill: currentcolor;
+  width: calc(100% + 1px);
+  bottom: -2px;
+  left: 0;
+
+  [data-theme="light"] & {
+    color: var(--ts-semantic-color-bg-default);
+  }
+
+  [data-theme="dark"] & {
+    color: var(--ts-semantic-color-bg-accent);
+  }
+}

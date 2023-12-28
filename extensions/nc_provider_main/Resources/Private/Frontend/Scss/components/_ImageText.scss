@@ -1,0 +1,39 @@
+@use "sass:math";
+@use "../abstracts/mixins";
+
+.ImageText-row {
+  row-gap: 2rem;
+}
+
+.ImageText-colImage {
+  @include mixins.respond-to-grid(5) {
+    width: math.percentage(math.div(6, 12));
+
+    .ImageText--layoutImageRight & {
+      margin-left: auto;
+    }
+  }
+
+  // @include mixins.respond-to-grid(7) {
+  //   width: math.percentage(math.div(4, 12));
+  // }
+}
+
+.ImageText-colText {
+  @include mixins.respond-to-grid(5) {
+    width: math.percentage(math.div(6, 12));
+    align-self: center;
+
+    .ImageText--layoutImageRight & {
+      order: -1;
+    }
+
+    .ImageText--layoutImageLeft & {
+      margin-left: auto;
+    }
+  }
+
+  // @include mixins.respond-to-grid(7) {
+  //   width: math.percentage(math.div(8, 12));
+  // }
+}

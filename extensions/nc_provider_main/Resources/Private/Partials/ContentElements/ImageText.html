@@ -1,5 +1,4 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en"
-      xmlns:nc="http://typo3.org/ns/NC/NcProviderMain/ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
 
@@ -32,13 +31,13 @@
 
 
 <f:section name="LayoutTextOnly">
-  <div class="u-stack-2">
+  <div class="u-stack-lg" data-theme="{data.theme}">
 
     <f:render partial="Header/All" arguments="{_all}"/>
 
     <f:if condition="{data.bodytext}">
       <div class="u-limitWidth-7 u-align-left">
-        <div class="RTE u-stack-text-md">
+        <div class="RTE u-stack-text">
           <f:format.html>{data.bodytext}</f:format.html>
         </div>
       </div>
@@ -49,7 +48,7 @@
 
 
 <f:section name="LayoutImageAbove">
-  <div class="u-stack-2">
+  <div class="u-stack-lg" data-theme="{data.theme}">
 
     <f:render partial="Header/All" arguments="{_all}"/>
 
@@ -57,7 +56,7 @@
 
     <f:if condition="{data.bodytext}">
       <div class="u-limitWidth-7 u-align-left">
-        <div class="RTE u-stack-text-md">
+        <div class="RTE u-stack-text">
           <f:format.html>{data.bodytext}</f:format.html>
         </div>
       </div>
@@ -68,7 +67,7 @@
 
 
 <f:section name="LayoutImageLeft">
-  <div class="u-stack-2">
+  <div class="u-stack-lg" data-theme="{data.theme}">
 
     <f:render partial="Header/All" arguments="{_all}"/>
 
@@ -80,7 +79,7 @@
 
       <f:if condition="{data.bodytext}">
         <div class="ImageText-colText u-col">
-          <div class="RTE u-stack-text-md">
+          <div class="RTE u-stack-text">
             <f:format.html>{data.bodytext}</f:format.html>
           </div>
         </div>
@@ -92,7 +91,7 @@
 
 
 <f:section name="LayoutImageRight">
-  <div class="u-stack-2">
+  <div class="u-stack-lg" data-theme="{data.theme}">
 
     <f:render partial="Header/All" arguments="{_all}"/>
 
@@ -102,7 +101,7 @@
       </div>
       <f:if condition="{data.bodytext}">
         <div class="ImageText-colText u-col">
-          <div class="RTE u-stack-text-md">
+          <div class="RTE u-stack-text">
             <f:format.html>{data.bodytext}</f:format.html>
           </div>
         </div>

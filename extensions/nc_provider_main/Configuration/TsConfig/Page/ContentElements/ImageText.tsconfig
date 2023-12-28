@@ -1,0 +1,11 @@
+mod.wizards.newContentElement {
+  wizardItems {
+    content.elements.image_text {
+      iconIdentifier = content-ImageText
+      title = Bild Text Kombination [ImageText]
+      description = Eine Bild Text Kombination. Das Bild kann links, rechts oder oben ausgerichtet werden.
+      tt_content_defValues.CType = image_text
+    }
+    content.show := addToList(image_text)
+  }
+}

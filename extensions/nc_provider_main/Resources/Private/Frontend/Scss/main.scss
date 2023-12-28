@@ -43,6 +43,8 @@
 @use "components/AccordionGroup";
 @use "components/Button";
 @use "components/HorizontalRule";
+@use "components/CurvedImage";
+@use "components/DotNavigation";
 @use "components/Link";
 @use "components/Text";
 @use "components/Dialog";
@@ -52,6 +54,7 @@
 @use "components/RadioButton";
 @use "components/TextField";
 @use "components/Select";
+@use "components/ImageText";
 @use "components/FormField";
 @use "components/Table";
 @use "components/RTE";

@@ -216,18 +216,18 @@ TCEFORM.tt_content {
 
     types {
 
-#      imagetext {
-#        label = Bild Layout
-#        disabled = 0
-#        addItems {
-#          100 = Bild links
-#          200 = Bild oben
-#        }
-#
-#        altLabels {
-#          0 = Bild rechts
-#        }
-#      }
+      image_text {
+        label = Bild Layout
+        disabled = 0
+        addItems {
+          100 = Bild links
+          200 = Bild oben
+        }
+
+        altLabels {
+          0 = Bild rechts
+        }
+      }
 #
 #      onlytextgroup {
 #        label = Bild Layout

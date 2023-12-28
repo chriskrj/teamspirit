@@ -1,0 +1,27 @@
+.DotNavigation {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.DotNavigation-link {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--ts-semantic-color-fg-action);
+  transition: background-color 0.2s ease, width 0.2s ease;
+  will-change: width;
+  pointer-events: auto;
+
+  &:hover {
+    background-color: var(--ts-semantic-color-fg-action--hover);
+  }
+
+  &.is-active {
+    background-color: var(--ts-semantic-color-fg-action);
+    width: 2rem;
+  }
+}
