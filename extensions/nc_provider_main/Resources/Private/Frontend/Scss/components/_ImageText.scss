@@ -22,7 +22,7 @@
 .ImageText-colText {
   @include mixins.respond-to-grid(5) {
     width: math.percentage(math.div(6, 12));
-    align-self: center;
+    align-self: flex-start;
 
     .ImageText--layoutImageRight & {
       order: -1;
