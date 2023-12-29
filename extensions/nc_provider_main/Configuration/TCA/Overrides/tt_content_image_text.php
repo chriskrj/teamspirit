@@ -52,12 +52,12 @@ $GLOBALS['TCA']['tt_content']['types']['image_text'] = [
                                     'default' => [
                                         'disabled' => true,
                                     ],
-                                    '4:3' => [
-                                        'title' => '4:3',
+                                    '3:4' => [
+                                        'title' => '3:4',
                                         'allowedAspectRatios' => [
-                                            '4:3' => [
-                                                'title' => '4:3',
-                                                'value' =>4 / 3,
+                                            '3:4' => [
+                                                'title' => '3:4',
+                                                'value' =>3 / 4,
                                             ],
                                         ],
                                     ],
