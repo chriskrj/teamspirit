@@ -61,6 +61,15 @@ $GLOBALS['TCA']['tt_content']['types']['image_text'] = [
                                             ],
                                         ],
                                     ],
+                                    '4:3' => [
+                                        'title' => '4:3',
+                                        'allowedAspectRatios' => [
+                                            '4:3' => [
+                                                'title' => '4:3',
+                                                'value' =>4 / 3,
+                                            ],
+                                        ],
+                                    ],
                                     '16:9' => [
                                         'title' => '16:9',
                                         'allowedAspectRatios' => [

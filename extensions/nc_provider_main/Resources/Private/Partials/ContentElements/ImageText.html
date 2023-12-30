@@ -36,7 +36,7 @@
     <f:render partial="Header/All" arguments="{_all}"/>
 
     <f:if condition="{data.bodytext}">
-      <div class="u-limitWidth-7 u-align-left">
+      <div class="u-limitWidth-8 u-align-left">
         <div class="RTE u-stack-text">
           <f:format.html>{data.bodytext}</f:format.html>
         </div>
@@ -134,7 +134,14 @@
   <f:if condition="{images}">
     <f:alias map="{image:images.0}">
       <figure class="CurveImage u-print-hide">
-        <f:image image="{image}" class="CurveImage-image" alt="{image.alternative}" maxWidth="736" loading="lazy" crop="{image.properties.crop}" cropVariant="3:4"/>
+        <f:switch expression="{data.frame_class}">
+          <f:case value="3:4">
+            <f:image image="{image}" class="CurveImage-image CurveImage-image--3-4" alt="{image.alternative}" maxWidth="736" loading="lazy" crop="{image.properties.crop}" cropVariant="3:4"/>
+          </f:case>
+          <f:defaultCase>
+            <f:image image="{image}" class="CurveImage-image CurveImage-image--4-3" alt="{image.alternative}" maxWidth="736" loading="lazy" crop="{image.properties.crop}" cropVariant="4:3"/>
+          </f:defaultCase>
+        </f:switch>
         <f:if condition="{data.image_type} == 0">
           <div class="CurveImage-imageCurve">
             <svg class="u-scalingInlineSVG" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 1000 140" preserveAspectRatio="xMidYMin slice" style="padding-bottom: 14%;">

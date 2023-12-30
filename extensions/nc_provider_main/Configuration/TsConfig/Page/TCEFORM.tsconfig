@@ -176,10 +176,17 @@ TCEFORM.tt_content {
 
   # Frame Class
   frame_class {
-    removeItems = ruler-before, ruler-after, indent, indent-left, indent-right, none
+    removeItems = default, ruler-before, ruler-after, indent, indent-left, indent-right, none
     disabled = 1
     types {
-
+      image_text {
+        label = Bild Formatierung
+        disabled = 0
+        addItems {
+          4:3 = 4:3
+          3:4 = 3:4
+        }
+      }
 #      textmedia {
 #        disabled = 0
 #        addItems {
