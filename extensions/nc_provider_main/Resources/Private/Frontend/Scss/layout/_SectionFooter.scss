@@ -6,6 +6,10 @@
 
 
 .SectionFooter {
+  --ts-semantic-color-fg-default: #{coreTokenColors.$white};
+  --ts-semantic-color-fg-action: #{coreTokenColors.$white};
+  --ts-semantic-color-fg-action--hover: #{coreTokenColors.$white};
+
   position: relative;
   z-index: functions.z(coreTokenIndexes.$z-root, footer);
   background-color: var(--ts-semantic-color-bg-default);

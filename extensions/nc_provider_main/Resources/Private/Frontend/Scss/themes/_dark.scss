@@ -8,12 +8,12 @@
 [data-theme="dark"] {
 
   // fg
-  --ts-semantic-color-fg-default: #{coreTokenColors.$white};
+  --ts-semantic-color-fg-default: #{coreTokenColors.$brown-180};
   --ts-semantic-color-fg-highlight: #{coreTokenColors.$brown-100};
   --ts-semantic-color-fg-error: #{coreTokenColors.$red-100};
   --ts-semantic-color-fg-success: #{coreTokenColors.$green-100};
-  --ts-semantic-color-fg-action: #{coreTokenColors.$white};
-  --ts-semantic-color-fg-action--hover: #{coreTokenColors.$yellow-100};
+  --ts-semantic-color-fg-action: #{coreTokenColors.$brown-100};
+  --ts-semantic-color-fg-action--hover: #{coreTokenColors.$brown-180};
   --ts-semantic-color-fg-static-light: #{coreTokenColors.$white};
   --ts-semantic-color-fg-static-dark: #{coreTokenColors.$black};
   --ts-semantic-color-fg-on-contrast: #{coreTokenColors.$white};
@@ -25,11 +25,11 @@
 
   // bg
   --ts-semantic-color-bg-default: #{coreTokenColors.$brown-180};
-  --ts-semantic-color-bg-accent: #{coreTokenColors.$mint-100};
+  --ts-semantic-color-bg-accent: #{coreTokenColors.$mint-60};
   --ts-semantic-color-bg-highlight: #{coreTokenColors.$yellow-100};
   --ts-semantic-color-bg-action-default: #{coreTokenColors.$brown-180};
   --ts-semantic-color-bg-action-default--hover: #{coreTokenColors.$brown-100};
-  --ts-semantic-color-bg-action-accent: #{coreTokenColors.$mint-100};
+  --ts-semantic-color-bg-action-accent: #{coreTokenColors.$mint-60};
   --ts-semantic-color-bg-action-accent--hover: #{coreTokenColors.$yellow-100};
 
   // Icons (css)

@@ -10,7 +10,7 @@
 }
 
 .FooterNavigation-link {
-  --ts-component-link-color: var(--ts-semantic-color-fg-action);
+  --ts-component-link-color: var(--ts-semantic-color-fg-on-contrast);
   font-size: var(--ts-semantic-font-size-md);
 
   color: var(--ts-component-link-color);
@@ -26,6 +26,6 @@
   display: inline;
 
   &:hover {
-    --ts-component-link-color: var(--ts-semantic-color-fg-action--hover);
+    --ts-component-link-color: var(--ts-semantic-color-fg-on-contrast--hover);
   }
 }
