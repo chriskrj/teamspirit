@@ -35,7 +35,7 @@ routes:
   -
     route: robots.txt
     type: staticText
-    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /typo3_src/\r\nAllow: /typo3conf/ext/\r\nAllow: /typo3temp/\r\nAllow: /typo3/sysext/frontend/Resources/Public/*\r\nAllow: /typo3conf/ext/nc_provider_main/Resources/Public/*\r\n\r\nUser-agent: Googlebot\r\nAllow: *.js\r\nAllow: *.css\r\nSitemap: https://www.teamspirit-therapie.de/sitemap.xml\r\n"
+    content: "User-agent: *\nAllow: /\nDisallow: /typo3/\nDisallow: /typo3conf/\nDisallow: /typo3temp/var/*\nAllow: /typo3conf/ext/\nAllow: /typo3temp/\n\nDisallow: /*/Private/*\nDisallow: /*?id=*\nDisallow: /*cHash\nDisallow: /*tx_powermail_pi1\n\nSitemap: https://www.teamspirit-therapie.de/sitemap.xml\n"
 settings:
   pidStartpage: '1'
   pidMetaNavigation: '22'
