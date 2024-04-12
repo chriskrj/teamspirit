@@ -1,0 +1,30 @@
+@use "sass:math";
+@use "../abstracts/coreTokenColors";
+@use "../abstracts/mixins";
+
+.SocialChannels {
+  display: flex;
+  justify-content: flex-start;
+  gap: 24px;
+  list-style: none;
+}
+
+.SocialChannels-item {
+
+}
+
+.SocialChannels-link {
+  display: block;
+  pointer-events: auto;
+  width: 42px;
+  height: 42px;
+  color: var(--ts-semantic-color-fg-on-contrast);
+  fill: currentColor;
+  transition: color 0.2s ease;
+  line-height: 1;
+
+  &:focus,
+  &:hover {
+    color: var(--ts-semantic-color-fg-on-contrast--hover);
+  }
+}

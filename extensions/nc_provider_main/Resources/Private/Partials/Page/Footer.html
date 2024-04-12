@@ -15,6 +15,9 @@
             <p class="Text-body">Kerstin Anger</p>
             <p class="Text-body"><f:link.typolink class="Link" parameter="tel:+491778404661">0177 840 4661</f:link.typolink></p>
             <p class="Text-body"><f:link.email class="Link" email="info@teamspirit-therapie.de">info@teamspirit-therapie.de</f:link.email></p>
+            <div class="u-my-lg">
+              <f:render section="SocialChannels"/>
+            </div>
           </div>
 
           <ul class="FooterNavigation">
@@ -33,6 +36,17 @@
 
 
   </footer>
+</f:section>
+
+<f:section name="SocialChannels">
+
+  <ul class="SocialChannels">
+    <li class="SocialChannels-item">
+      <f:link.external class="SocialChannels-link" uri="https://www.instagram.com/team_spirit_therapie?igsh=NWUwbzZ0OHk0ZDBm" rel="noopener noreferrer" target="_blank" additionalAttributes="{aria-label:'Instagram Profil', title:'Instagram Profil'}">
+        <f:render partial="Base/Symbols" section="Symbol" arguments="{name:'logo-instagram'}"/>
+      </f:link.external>
+    </li>
+  </ul>
 </f:section>
 
 
