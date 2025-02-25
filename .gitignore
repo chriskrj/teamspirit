@@ -4,6 +4,7 @@
 .env
 .php_cs.cache
 .php-cs-fixer.cache
+.ddev
 node_modules
 composer.lock
 yarn.lock
