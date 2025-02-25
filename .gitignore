@@ -39,3 +39,4 @@ public/_assets/*
 !Build/Patches
 
 php.ini
+extensions/nc_provider_main/node_modules
